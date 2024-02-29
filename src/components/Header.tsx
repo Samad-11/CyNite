@@ -1,10 +1,13 @@
 'use client'
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
+import ReactToPrint from 'react-to-print';
 
 const Header = () => {
-
+    const router = useRouter();
     const pathname = usePathname();
     const [isDashboard, setisDashboard] = useState(false)
     useEffect(() => {
@@ -31,7 +34,9 @@ const Header = () => {
                             <li><Link href={'/dashboard?verified=false'}>Unverified</Link></li>
                         </ul>
                     </li>
-                    <li><Link href={''}>Logout</Link></li>
+                    <li>
+                        <button onClick={() => signOut()}>Sign out</button>
+                    </li>
                 </ul>
             </div >
 

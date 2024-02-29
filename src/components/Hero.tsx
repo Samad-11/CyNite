@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                     <p className="mb-5">Here a chance to get participation in most exciting IT fest <span className='text-2xl'>CyNite</span></p>
-                    <button className="btn btn-accent rounded-full"> <Link href={'/registration'}>Register Now</Link></button>
+                    <Link href={'/registration'} className='btn btn-accent rounded-full'>Register Now</Link>
                 </div>
             </div>
         </div>

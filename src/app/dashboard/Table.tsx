@@ -3,13 +3,23 @@ import { toggleVerificationStatus } from '@/lib/server'
 import { participants } from '@prisma/client'
 import React, { useRef } from 'react'
 import UpdateButton from './UpdateButton'
+import ReactToPrint from 'react-to-print'
 
 const Table = ({ participants }: { participants: participants[] }) => {
+    const ref = useRef<HTMLTableElement>(null)
     let i = 0;
     return (
         <div className="overflow-x-auto">
-
-            <table className="table">
+            <ReactToPrint
+                bodyClass="print-agreement"
+                content={() => ref.current}
+                trigger={() => (
+                    <button className='btn text-lg rounded-full'>
+                        Print List
+                    </button>
+                )}
+            />
+            <table className="table" ref={ref}>
                 {/* head */}
                 <thead>
                     <tr>
