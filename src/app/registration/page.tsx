@@ -5,9 +5,13 @@ import img from '../../../public/pexels-pixabay-270408.jpg'
 import { registerParticipant } from '@/lib/actions'
 import SubmitButton from './SubmitButton'
 import toast from 'react-hot-toast'
+import UserNameInput from './UserNameInput'
+import TransactionInput from './TransactionInput'
+import CourseSelect from './CourseSelect'
 
 const RegistrationPage = () => {
     const ref = useRef<HTMLFormElement>(null)
+
     const [submitOk, setSubmitOk] = useState(false)
     return (
         <div className="grid grid-cols-10 gap-3 bg-neutral">
@@ -26,14 +30,14 @@ const RegistrationPage = () => {
                             <span className="label-text">What is your name?</span>
                             <span className="label-text-alt text-red-700 text-lg">*</span>
                         </div>
-                        <input required type="text" minLength={3} name='name' placeholder="Enter your full name" className="input input-bordered w-full max-w-xs" />
+                        <UserNameInput />
                     </label>
                     <label className="form-control w-full max-w-xs mb-4">
                         <div className="label">
                             <span className="label-text">Transaction ID <i>(fill correctly)</i></span>
                             <span className="label-text-alt text-red-700 text-lg">*</span>
                         </div>
-                        <input required type="text" minLength={3} name='transactionId' placeholder="Transaction Id" className="input input-bordered w-full max-w-xs" />
+                        <TransactionInput />
                     </label>
                     {/* course dropdown */}
                     <label className="form-control w-full max-w-xs mb-4">
@@ -41,13 +45,7 @@ const RegistrationPage = () => {
                             <span className="label-text">Your Course</span>
                             <span className="label-text-alt text-red-700 text-lg">*</span>
                         </div>
-                        <select className="select select-bordered" required name='course' defaultValue={''}>
-                            <option disabled value={''} >Select</option>
-                            <option value={'bca'}>BCA</option>
-                            <option value={'bba'}>BBA</option>
-                            <option value={'bjmc'}>BJMC</option>
-                            <option value={'other'}>Other</option>
-                        </select>
+                        <CourseSelect />
                     </label>
                     <SubmitButton />
                 </form>
