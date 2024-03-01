@@ -8,7 +8,6 @@ export const authOptions:AuthOptions = {
         async redirect({url, baseUrl}:{url:string,baseUrl:string}) {
             console.log('url', url);
             console.log('baseUrl', baseUrl);
-            
             return url.startsWith(baseUrl) ? url : baseUrl + '/dashboard';
           }
     },
