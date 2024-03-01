@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from './Table'
-import { getAllParticipants } from '@/lib/server'
+import { getAllParticipants } from '@/lib/actions'
 import { participants } from '@prisma/client';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';

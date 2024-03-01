@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import img from '../../../public/pexels-pixabay-270408.jpg'
-import { registerParticipant } from '@/lib/server'
+import { registerParticipant } from '@/lib/actions'
 import SubmitButton from './SubmitButton'
 import toast from 'react-hot-toast'
 

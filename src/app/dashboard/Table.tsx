@@ -1,5 +1,5 @@
 'use client'
-import { toggleVerificationStatus } from '@/lib/server'
+import { toggleVerificationStatus } from '@/lib/actions'
 import { participants } from '@prisma/client'
 import React, { useRef } from 'react'
 import UpdateButton from './UpdateButton'
