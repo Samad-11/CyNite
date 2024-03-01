@@ -6,8 +6,8 @@ const mySecret = process.env.NEXTAUTH_SECRET
 export const authOptions:AuthOptions = {
     callbacks:{
         async redirect({url, baseUrl}:{url:string,baseUrl:string}) {
-            console.log('url', url);
-            console.log('baseUrl', baseUrl);
+            // console.log('url', url);
+            // console.log('baseUrl', baseUrl);
             return url.startsWith(baseUrl) ? url : baseUrl + '/dashboard';
           }
     },

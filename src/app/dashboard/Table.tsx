@@ -1,9 +1,11 @@
 'use client'
-import { toggleVerificationStatus } from '@/lib/actions'
+import { deleteParticipant, toggleVerificationStatus } from '@/lib/actions'
 import { participants } from '@prisma/client'
-import React, { useRef } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import UpdateButton from './UpdateButton'
 import ReactToPrint from 'react-to-print'
+import Image from 'next/image'
+import DeleteButton from './DeleteButton'
 
 const Table = ({ participants }: { participants: participants[] }) => {
     const ref = useRef<HTMLTableElement>(null)
@@ -32,6 +34,8 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Name</th>
                         <th>Course</th>
                         <th>Transaction Id</th>
+                        <th className=''>Receipt</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,6 +73,50 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                     {participant.course}
                                 </td>
                                 <td>{participant.transactionId}</td>
+                                <td>
+                                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+                                    <button
+                                        className=""
+                                        onClick={() => {
+                                            if (document) {
+                                                (document.getElementById(participant.id) as HTMLFormElement).showModal();
+                                            }
+                                        }}
+                                    >
+                                        {/*  */}
+                                        <div className='h-20 w-20 relative'>
+
+                                            {participant.receiptPath &&
+                                                <Image className="mask mask-square border object-cover" src={`/tmp/${participant.receiptPath}`} alt='receipt' fill />
+                                            }
+                                        </div>
+                                        {/*  */}
+                                    </button>
+                                    <dialog id={participant.id} className="modal modal-bottom sm:modal-middle">
+                                        <div className="modal-box w-full h-full relative">
+                                            <h3 className="font-bold text-lg capitalize">{participant.name}</h3>
+                                            <h4 className="font-semibold text-md">{participant.transactionId}</h4>
+                                            <Image className=" object-contain" src={`/tmp/${participant.receiptPath}`} alt='receipt' fill />
+                                            <div className="modal-action absolute z-50">
+                                                <form method="dialog">
+                                                    {/* if there is a button in form, it will close the modal */}
+                                                    <button className="btn">Close</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
+
+                                </td>
+                                <td>
+                                    <form action={deleteParticipant}>
+                                        <input type="hidden" name="id" value={participant.id} />
+                                        {
+                                            participant.receiptPath &&
+                                            <input type='hidden' name='receiptPath' value={participant.receiptPath} />
+                                        }
+                                        <DeleteButton />
+                                    </form>
+                                </td>
                             </tr>
                         ))
                     }
@@ -81,6 +129,8 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Name</th>
                         <th>Course</th>
                         <th>Transaction Id</th>
+                        <th>Receipt</th>
+                        <th></th>
                     </tr>
                 </tfoot>
 

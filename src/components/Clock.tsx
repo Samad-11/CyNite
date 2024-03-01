@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Countdown } from 'react-daisyui';
 
 const Clock = () => {
 
@@ -10,15 +9,17 @@ const Clock = () => {
 
 
     //remain days
-    const remainDays = eventDate.getDate() - dateNow.getDate();
+    // const remainDays = eventDate.getDate() - dateNow.getDate();
+    const [remainDays, setRemainDays] = useState<number>(eventDate.getDate() - dateNow.getDate())
     //remain hours of the current day
-    const remainHours = 24 - dateNow.getHours();
+    const [remainHours, setRemainHours] = useState<number>(24 - dateNow.getHours());
     // remain minutes in current hour
-    const remainMinutes = 60 - dateNow.getMinutes()
+    const [remainMinutes, setRemainMinutes] = useState<number>(60 - dateNow.getMinutes());
     //remaining seconds in current minutes
-    const remainSeconds = 60 - dateNow.getSeconds();
+    const [remainSeconds, setRemainSeconds] = useState<number>(60 - dateNow.getSeconds());
     const [seconds, setSeconds] = useState<number>(60);
     useEffect(() => {
+
         const timer = setTimeout(() => {
             setSeconds(prev => {
                 if (prev == 0) {
@@ -27,29 +28,40 @@ const Clock = () => {
                     return --prev
                 }
             })
+            setRemainDays(eventDate.getDate() - dateNow.getDate())
+            setRemainHours(24 - dateNow.getHours())
+            setRemainMinutes(60 - dateNow.getMinutes())
+            setRemainSeconds(60 - dateNow.getSeconds())
         }, 1000);
         return () => {
             clearTimeout(timer);
         };
-    }, [seconds]);
-    return (<div className="grid grid-flow-col gap-5 mb-5">
-        <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content ">
-            <Countdown className="font-mono text-5xl" value={remainDays} />
-            days
-        </div>
-        <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <Countdown className="font-mono text-5xl" value={remainHours} />
-            hours
-        </div>
-        <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <Countdown className="font-mono text-5xl" value={remainMinutes} />
-            min
-        </div>
-        <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <Countdown className="font-mono text-5xl" value={remainSeconds} />
-            sec
-        </div>
-    </div>)
+    }, [dateNow, eventDate]);
+    return (
+        <>
+            <div className="flex flex-wrap gap-2 justify-center items-center mb-7">
+
+                <div className="h-28 w-28 rounded-full bg-accent flex flex-col justify-center items-center text-3xl font-semibold font-mono">
+                    <h1 suppressHydrationWarning>{remainDays}</h1>
+                    <h2 className='text-xs font-extralight'>{'Days'}</h2>
+                </div>
+                <div className="h-28 w-28 rounded-full bg-accent flex flex-col justify-center items-center text-3xl font-semibold font-mono">
+                    <h1 suppressHydrationWarning>
+                        {remainHours}
+                    </h1>
+                    <h2 className='text-xs font-extralight'>{'Hours'}</h2>
+                </div>
+                <div className="h-28 w-28 rounded-full bg-accent flex flex-col justify-center items-center text-3xl font-semibold font-mono">
+                    <h1 suppressHydrationWarning>{remainMinutes}</h1>
+                    <h2 className='text-xs font-extralight'>{'Minutes'}</h2>
+                </div>
+                <div className="h-28 w-28 rounded-full bg-accent flex flex-col justify-center items-center text-3xl font-semibold font-mono">
+                    <h1 suppressHydrationWarning>{remainSeconds}</h1>
+                    <h2 className='text-xs font-extralight'>{'seconds'}</h2>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default Clock

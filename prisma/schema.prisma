@@ -12,6 +12,7 @@ model participants {
   course              String
   name                String
   transactionId       String
+  receiptPath         String?
   isTransactionVerify Boolean  @default(false)
   createdAt           DateTime @default(now())
 }

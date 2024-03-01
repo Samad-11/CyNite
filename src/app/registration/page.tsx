@@ -8,6 +8,7 @@ import toast from 'react-hot-toast'
 import UserNameInput from './UserNameInput'
 import TransactionInput from './TransactionInput'
 import CourseSelect from './CourseSelect'
+import ReceiptInput from './ReceiptInput'
 
 const RegistrationPage = () => {
     const ref = useRef<HTMLFormElement>(null)
@@ -46,6 +47,15 @@ const RegistrationPage = () => {
                             <span className="label-text-alt text-red-700 text-lg">*</span>
                         </div>
                         <CourseSelect />
+                    </label>
+                    <label className="form-control w-full max-w-xs mb-4">
+                        <div className="label">
+                            <span className="label-text">Upload Transaction Receipt</span>
+                            <span className="label-text-alt text-red-700 text-lg">*</span>
+                        </div>
+                        <ReceiptInput />
+                        <div className="label">
+                        </div>
                     </label>
                     <SubmitButton />
                 </form>
