@@ -5,12 +5,25 @@ import { participants } from '@prisma/client';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 import authOptions from '../api/auth/options';
+import { prisma } from '../../../server';
 
 const DashboardPage = async ({ searchParams }: { searchParams: { verified: string } }) => {
     const session = await getServerSession(authOptions)
     if (!session?.user?.name) {
         redirect("/api/auth/signin")
-        return <>Unauthorized...</>
+
+    } else {
+        if (session.user) {
+            const admin = await prisma.admin.findUnique({
+                where: {
+                    name: session.user.name
+                }
+            })
+            if (!admin) {
+                return <>Unauthorized...</>
+            }
+        }
+
     }
     const data = await getAllParticipants(searchParams.verified);
     return (
