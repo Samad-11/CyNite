@@ -1,9 +1,11 @@
 'use client'
+import { useEdgeStore } from '@/lib/edgestore';
 import React from 'react'
 import { useFormStatus } from 'react-dom'
 
 const DeleteButton = () => {
     const { pending } = useFormStatus();
+
     return (
         <button disabled={pending} type="submit" className="btn btn-danger">
             {

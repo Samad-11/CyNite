@@ -6,9 +6,11 @@ import UpdateButton from './UpdateButton'
 import ReactToPrint from 'react-to-print'
 import Image from 'next/image'
 import DeleteButton from './DeleteButton'
+import { useEdgeStore } from '@/lib/edgestore'
 
 const Table = ({ participants }: { participants: participants[] }) => {
     const ref = useRef<HTMLTableElement>(null)
+    const { edgestore } = useEdgeStore()
     let i = 0;
     return (
         <div className="overflow-x-auto">
@@ -75,37 +77,45 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                 <td>{participant.transactionId}</td>
                                 <td>
                                     {/* Open the modal using document.getElementById('ID').showModal() method */}
-                                    <button
-                                        className=""
-                                        onClick={() => {
-                                            if (document) {
-                                                (document.getElementById(participant.id) as HTMLFormElement).showModal();
-                                            }
-                                        }}
-                                    >
-                                        {/*  */}
-                                        <div className='h-20 w-20 relative'>
+                                    {participant.receiptPath &&
 
-                                            {participant.receiptPath &&
-                                                <Image className="mask mask-square border object-cover" src={`/tmp/${participant.receiptPath}`} alt='receipt' fill />
-                                            }
-                                        </div>
-                                        {/*  */}
-                                    </button>
-                                    <dialog id={participant.id} className="modal modal-bottom sm:modal-middle">
-                                        <div className="modal-box w-full h-full relative">
-                                            <h3 className="font-bold text-lg capitalize">{participant.name}</h3>
-                                            <h4 className="font-semibold text-md">{participant.transactionId}</h4>
-                                            <Image className=" object-contain" src={`/tmp/${participant.receiptPath}`} alt='receipt' fill />
-                                            <div className="modal-action absolute z-50">
-                                                <form method="dialog">
-                                                    {/* if there is a button in form, it will close the modal */}
-                                                    <button className="btn">Close</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </dialog>
+                                        <>
 
+                                            <button
+                                                className=""
+                                                onClick={() => {
+                                                    if (document) {
+                                                        (document.getElementById(participant.id) as HTMLFormElement).showModal();
+                                                    }
+                                                }}
+                                            >
+                                                {/*  */}
+                                                <div className='h-20 w-20 relative'>
+
+
+                                                    <Image className="mask mask-square border object-cover" src={participant.receiptPath} alt='receipt' fill />
+
+                                                </div>
+                                                {/*  */}
+                                            </button>
+
+                                            <dialog id={participant.id} className="modal modal-bottom sm:modal-middle">
+                                                <div className="modal-box w-full h-full">
+                                                    <h3 className="font-bold text-lg capitalize">{participant.name}</h3>
+                                                    <h4 className="font-semibold text-md">{participant.transactionId}</h4>
+                                                    <div className="relative h-full w-full">
+                                                        <Image className=" object-contain" src={participant.receiptPath} alt='receipt' fill />
+                                                    </div>
+                                                    <div className="modal-action z-50">
+                                                        <form method="dialog">
+                                                            {/* if there is a button in form, it will close the modal */}
+                                                            <button className="btn">Close</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </dialog>
+                                        </>
+                                    }
                                 </td>
                                 <td>
                                     <form action={deleteParticipant}>
@@ -135,7 +145,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                 </tfoot>
 
             </table>
-        </div>
+        </div >
     )
 }
 

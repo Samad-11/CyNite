@@ -3,34 +3,26 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "../../server";
 import { Prisma } from "@prisma/client";
-import { join } from "path";
-import { buffer } from "stream/consumers";
-import { unlink, writeFile } from "fs/promises";
+
+
 
 export async function registerParticipant(formData:FormData) {
     const date = new Date();
     const name = formData.get("name") as string
     const transactionId = formData.get("transactionId") as string
     const course = formData.get("course") as string
-    const receipt:File | null = formData.get("receipt") as unknown as File
+    const url = formData.get("receipt") as unknown as string
 
-    if (!receipt) {
+    if (!url) {
         return {message:"Receipt Image is required"}
-    }
-    const dateString = date.getUTCMilliseconds() as unknown as string
-    const bytes =  await receipt.arrayBuffer();
-    const buffer = Buffer.from(bytes)
-    const path = join('public/tmp',dateString as string + receipt.name)
-    const fileName = dateString + receipt.name 
-    
-    await writeFile(path,buffer)
+    }    
     try {
         const newParticipant = await prisma.participants.create({
             data:{
                 name,
                 course,
                 transactionId,
-                receiptPath:fileName
+                receiptPath:url
             }
         })
         return{message:`You have been successfully registered as ${name}`,ok:true}
@@ -41,10 +33,9 @@ export async function registerParticipant(formData:FormData) {
 
 export async function deleteParticipant(formData:FormData) {
     const id = formData.get("id") as string;
-    const fileName = formData.get("receiptPath") as string;
-    if (fileName) {
-        const path = join('public/tmp',fileName)
-        await unlink(path)
+    const url = formData.get("receiptPath") as string;
+    if (url) {
+       
     }
     try {
         const deletedParticipant = await prisma.participants.delete({
