@@ -15,3 +15,38 @@
 *::after {
     @apply cursor-none
 }
+
+@keyframes heroTextAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.heroText1 {
+    animation-name: heroTextAnimation;
+    animation: heroTextAnimation 1000ms 1 ease-in;
+}
+
+.heroText2 {
+    animation-name: heroTextAnimation;
+    animation: heroTextAnimation 1500ms 1 ease-in;
+}
+
+.heroText3 {
+    animation-name: heroTextAnimation;
+    animation: heroTextAnimation 2s 1 ease-in;
+}
+
+.heroText4 {
+    animation-name: heroTextAnimation;
+    animation: heroTextAnimation 2.5s 1 ease-in;
+}
+
+.heroText5 {
+    animation-name: heroTextAnimation;
+    animation: heroTextAnimation 3s 1 ease-in;
+}
