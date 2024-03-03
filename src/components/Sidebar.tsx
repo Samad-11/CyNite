@@ -1,15 +1,16 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
     const [isSideOpen, setIsSideOpen] = useState(false)
+    const toggleRef = useRef<any>()
     const sideStatusChange = () => {
         setIsSideOpen(!isSideOpen)
     }
     const links = [
         {
-            href: "/home",
+            href: "/",
             label: "home",
         },
         {
@@ -34,7 +35,7 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 {/* Page content here */}
-                <label onClick={sideStatusChange} htmlFor="my-drawer-4" className={`swap swap-rotate drawer-button btn btn-circle btn-ghost absolute bg-accent right-5 top-5 z-50 ${isDashboard && "hidden"}`}>
+                <label ref={toggleRef} onClick={sideStatusChange} htmlFor="my-drawer-4" className={`swap swap-rotate drawer-button btn btn-circle btn-ghost border border-neutral-content fixed bg-accent right-5 top-5 z-50 ${isDashboard && "hidden"}`}>
 
                     {/* ${isDashboard && "hidden"} */}
                     {
@@ -54,18 +55,19 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             </div>
             <div className="drawer-side z-10">
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="menu p-4 w-screen min-h-full bg-base-200 text-base-content flex justify-center items-center">
+                <div className="menu p-4 w-screen min-h-full bg-accent text-base-content flex justify-center items-center">
                     {/* Sidebar content here */}
                     <ul>
                         {
                             links.map((link) => (
-                                <li key={link.href} className='flex justify-center items-center my-4'>
-                                    <Link href={link.href} className='cinzel hover:bg-base-200 font-extrabold text-3xl  sm:text-5xl link link-hover cursor-none uppercase'>{link.label}</Link>
+                                <li key={link.href} className='flex justify-center items-center my-4' onClick={() => {
+                                    toggleRef.current?.click()
+                                }}>
+                                    <Link href={link.href} className='cinzel  hover:bg-inherit font-extrabold text-3xl  sm:text-5xl link link-hover cursor-none uppercase'>{link.label}</Link>
                                 </li>
                             ))
                         }
                     </ul>
-
                 </div>
             </div>
         </div>
