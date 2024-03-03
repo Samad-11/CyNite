@@ -1,7 +1,7 @@
 'use client'
 import { deleteParticipant, toggleVerificationStatus } from '@/lib/actions'
 import { participants } from '@prisma/client'
-import React, { Suspense, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import UpdateButton from './UpdateButton'
 import ReactToPrint from 'react-to-print'
 import Image from 'next/image'

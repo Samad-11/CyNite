@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { useFormStatus } from 'react-dom'
 
 const SubmitButton = ({ url }: { url: boolean }) => {

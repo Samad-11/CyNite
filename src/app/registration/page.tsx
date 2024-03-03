@@ -8,7 +8,6 @@ import toast from 'react-hot-toast'
 import UserNameInput from './UserNameInput'
 import TransactionInput from './TransactionInput'
 import CourseSelect from './CourseSelect'
-import ReceiptInput from './ReceiptInput'
 import { useEdgeStore } from '@/lib/edgestore'
 
 const RegistrationPage = () => {
@@ -108,7 +107,7 @@ const RegistrationPage = () => {
                 <h3 className={` mt-4 p-3 bg-secondary rounded-full text-primary px-5 ${!submitOk && 'hidden'}`}>If Transaction Id is incorrect your registration will be withdraw</h3>
             </div>
 
-            <div className="md:col-span-5 col-span-10 h-screen relative">
+            <div className="md:col-span-5 max-sm:hidden col-span-10 h-screen relative">
                 <Image src={img} alt='img' fill className='object-cover' />
             </div>
         </div>
