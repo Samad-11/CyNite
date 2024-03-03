@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cinzel {
+    font-family: var(--font-cinzel);
+}
+
+.faunaOne {
+    font-family: var(--font-faunaOne);
+}
+
+*,
+*::before,
+*::after {
+    @apply cursor-none
+}

@@ -3,18 +3,28 @@ import Link from 'next/link'
 import React from 'react'
 import heroImg from '../../public/heroImg.jpg'
 import Clock from './Clock'
+import HeroText from './HeroText'
 
 const Hero = () => {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(${heroImg.src}) ` }}>
+        <div className="hero min-h-screen " style={{ backgroundImage: `url(${heroImg.src}) ` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-lg">
-                    <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p className="mb-5">Here a chance to get participation in most exciting IT fest <span className='text-2xl'>CyNite</span></p>
-                    <p className="mb-5 text-2xl ">Time left for the greatest IT Fest</p>
+                <div className="max-w-full">
+                    {/* <h1 className="mb-5 lg:text-[15rem] md:text-[10rem] sm:text-9xl text-6xl tracking-widest font-extrabold uppercase cinzel">CYNET</h1> */}
+                    <HeroText />
+                    <Link href='' className='flex justify-center items-center gap-3 animate-bounce'>
+
+                        <p className="mb-5 md:text-2xl text-sm font-semibold  faunaOne  tracking-wider">HURRY UP !
+                        </p>
+                        <p className='pb-4'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                            </svg>
+                        </p>
+                    </Link>
                     <Clock />
-                    <Link href={'/registration'} className='btn btn-accent rounded-full'>Register Now</Link>
+                    <Link href={'/registration'} className='btn btn-accent rounded-tr-full rounded-bl-full px-10 text-neutral-content cursor-none cinzel font-light tracking-wide'>Register Now</Link>
                 </div>
             </div>
         </div>
