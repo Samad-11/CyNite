@@ -7,7 +7,7 @@ import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   return (
-    <main className="cursor-none">
+    <main >
       <ScrollYProgress />
       <Hero />
       <EventSection />

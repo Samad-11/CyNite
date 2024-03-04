@@ -21,11 +21,11 @@ body {
     -webkit-text-stroke-color: black;
 } */
 
-*,
+/* *,
 *::before,
 *::after {
     @apply cursor-none
-}
+} */
 
 @keyframes heroTextAnimation {
     from {

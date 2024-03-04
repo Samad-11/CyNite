@@ -12,7 +12,7 @@ const EventSection = () => {
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">
                     <SectionHeading heading='Events' />
-                    <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center">
+                    <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center my-10">
                         <EventCard eventName={'coding'} />
                         <EventCard eventName={'Innovation'} />
                         <EventCard eventName={'Gaming'} />

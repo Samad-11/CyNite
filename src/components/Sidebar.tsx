@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
+import img from '../../public/prallax3.gif'
 
 const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
     const [isSideOpen, setIsSideOpen] = useState(false)
@@ -50,12 +51,16 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             </div>
             <div className="drawer-side z-10">
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="menu p-4 w-screen min-h-full bg-accent text-base-content flex justify-center items-center">
+                <div className="menu p-4 w-screen min-h-full bg-accent text-base-content flex justify-center items-center
+                bg-cover
+                bg-opacity-65
+                "
+                    style={{ backgroundImage: `url(${img.src})` }}>
                     {/* Sidebar content here */}
                     <ul>
                         {
                             links.map((link) => (
-                                <li key={link.href} className='flex justify-center items-center my-4' onClick={() => {
+                                <li key={link.href} className='flex justify-center items-center my-8' onClick={() => {
                                     toggleRef.current?.click()
                                 }}>
                                     <Link href={link.href} className='cinzel  hover:bg-inherit font-extrabold text-3xl  sm:text-5xl link link-hover cursor-none uppercase'>{link.label}</Link>

@@ -39,11 +39,10 @@ export default function RootLayout({
         <Provider>
           <EdgeStoreProvider>
             <Toaster />
-            <Cursor1 />
+            {/* <Cursor1 /> */}
             <Header />
-
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </EdgeStoreProvider>
         </Provider>
       </body>

@@ -5,7 +5,7 @@ import AboutSectionContent from './AboutSectionContent'
 
 const AboutSection = () => {
     return (
-        <section className="events hero min-h-[120vh] bgTransition bg-fixed" style={{ backgroundImage: `url(${plx2.src}) ` }}>
+        <section className="events hero min-h-[120vh] bgTransition bg-fixed cursor-default" style={{ backgroundImage: `url(${plx2.src}) ` }}>
             <div className="hero-overlay bg-opacity-55"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">

@@ -17,6 +17,7 @@ const EventCard = ({ eventName = 'coding' }: { eventName: string }) => {
         hover:skew-x-3
         duration-75
         relative
+        cursor-pointer
         "
             style={{
                 backgroundImage: `url(${placeholder.src})`,
