@@ -4,7 +4,7 @@ import React from 'react'
 const HeroBounceText = () => {
     return (
         <div className='flex justify-center items-center'>
-            <Link href='' className='flex justify-center items-center gap-3 animate-bounce  w-fit'>
+            <h1 className='flex justify-center items-center gap-3 animate-bounce  w-fit'>
                 <p className="mb-5 md:text-2xl text-sm font-semibold  faunaOne  tracking-wider">HURRY UP !
                 </p>
                 <p className='pb-4'>
@@ -12,7 +12,7 @@ const HeroBounceText = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
                 </p>
-            </Link>
+            </h1>
         </div>
     )
 }

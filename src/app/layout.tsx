@@ -7,6 +7,7 @@ import Provider from "@/components/Provider";
 import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import Cursor1 from "@/components/Cursor1";
+import ScrollYProgress from "@/components/ScrollProgress";
 
 const inter = Inter({ subsets: ["latin"] });
 const cinzel = Cinzel({
@@ -33,15 +34,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme='luxury'>
-      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} `}>
+      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} min-h-[300vh]`}>
 
         <Provider>
           <EdgeStoreProvider>
             <Toaster />
             <Cursor1 />
             <Header />
+
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </EdgeStoreProvider>
         </Provider>
       </body>

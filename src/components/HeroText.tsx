@@ -6,7 +6,6 @@ const HeroText = () => {
 
     return (
         <div className='mb-10 mt-20'>
-
             <div className="flex justify-center items-center">
                 <div className="C heroText1 uppercase">
                     <span className='sm:text-sm text-[0.5rem] faunaOne md:tracking-[1rem] font-black text-secondary-content'>Jims</span>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 .cinzel {
     font-family: var(--font-cinzel);
 }
@@ -41,30 +47,30 @@
 
 .heroText1 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 2.5s 1 ease-in;
+    animation: heroTextAnimation 1s ease-in 1 0s;
 }
 
 .heroText2 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 3s 1 ease-in;
+    animation: heroTextAnimation 2s ease-in 1;
 }
 
 .heroText3 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 3.5s 1 ease-in;
+    animation: heroTextAnimation 3s ease-in 1;
 }
 
 .heroText4 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 4s 1 ease-in;
+    animation: heroTextAnimation 4s ease-in 1;
 }
 
 .heroText5 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 4.5s 1 ease-in;
+    animation: heroTextAnimation 5s ease-in 1;
 }
 
 .bgTransition {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 2s 1 ease-in;
+    animation: heroTextAnimation 100ms 1;
 }
