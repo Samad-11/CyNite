@@ -5,6 +5,7 @@ import React, { useRef } from 'react'
 const AboutSectionContent = () => {
     const contentRef = useRef(null);
     const isInView = useInView(contentRef)
+    const text = 'CYNET is an annual IT Festival organised by the IT Department and society of Jagannath International Management School, Vasant Kunj, New Delhi. The event consists of various competition series that are open to all the colleges students across the world with exciting cash prizes as well.'
     return (
         <>
             <div ref={contentRef} className={`faunaOne md:text-2xl md:leading-10
@@ -23,7 +24,7 @@ const AboutSectionContent = () => {
             }>
                 <hr className='w-1/3 mb-4 border-2' />
                 <p className='text-justify faunaOne '>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facilis placeat totam a minima nihil exercitationem eaque? Debitis dignissimos libero quia repudiandae pariatur? Ipsa repellat, eaque accusamus facilis modi corporis suscipit quia perspiciatis odit cumque nihil odio incidunt, sed placeat molestiae magni eveniet architecto voluptate obcaecati impedit voluptas error. Quisquam hic reiciendis veritatis non tempora voluptates! Tempore vero eum officia optio eaque totam suscipit sequi qui iste numquam, quaerat quod? Sequi, tenetur? Beatae iure magnam, magni officia hic natus distinctio nobis quaerat corrupti a expedita accusamus! Molestias quaerat repellat dignissimos sunt earum ab sequi error aliquam ipsum nobis, et nesciunt omnis corrupti laudantium. Dolorum illum illo ipsam debitis veritatis ut earum sint corporis autem molestias voluptatem laboriosam, commodi minima ea!
+                    {text}
                 </p>
                 <hr className='w-1/3 self-end  mt-4 border-2' />
             </div>

@@ -9,7 +9,7 @@ const AboutSection = () => {
             <div className="hero-overlay bg-opacity-55"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">
-                    <SectionHeading heading='About Us' />
+                    <SectionHeading heading='About Cynet' />
                     <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center">
                         <AboutSectionContent />
                     </div>
