@@ -1,17 +1,17 @@
 import React from 'react'
+import img from '../../public/parallax1.jpg'
 import SectionHeading from './SectionHeading'
-import plx2 from '../../public/parallax2.jpg'
-import AboutSectionContent from './AboutSectionContent'
+import SponsorCarousel from './SponsorCarousel'
 
-const AboutSection = () => {
+const SponsorSection = () => {
     return (
-        <section className="events hero min-h-[120vh] bgTransition bg-fixed cursor-default" style={{ backgroundImage: `url(${plx2.src}) ` }}>
+        <section className="events hero min-h-[120vh] bgTransition bg-fixed cursor-default" style={{ backgroundImage: `url(${img.src}) ` }}>
             <div className="hero-overlay bg-opacity-55"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">
-                    <SectionHeading heading='About Us' />
+                    <SectionHeading heading='Our Sponsors' />
                     <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center">
-                        <AboutSectionContent />
+                        {/* <SponsorCarousel /> */}
                     </div>
                 </div>
             </div>
@@ -19,4 +19,4 @@ const AboutSection = () => {
     )
 }
 
-export default AboutSection
+export default SponsorSection

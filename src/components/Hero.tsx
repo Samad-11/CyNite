@@ -5,9 +5,12 @@ import HeroContent from './HeroContent'
 
 const Hero = () => {
     return (
-        <div className="hero min-h-[107vh] bgTransition bg-fixed
+        <div className="hero min-h-screen bgTransition bg-fixed
         cursor-default
-        " style={{ backgroundImage: `url(${heroImg.src}) ` }}>
+        " style={{
+                backgroundImage: `url(${heroImg.src})`,
+
+            }}>
             <div className="hero-overlay bg-opacity-55"></div>
             <HeroContent />
         </div>

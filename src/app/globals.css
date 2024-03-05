@@ -5,7 +5,7 @@
 *,
 html,
 body {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 .cinzel {
@@ -47,27 +47,27 @@ body {
 
 .heroText1 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 1s ease-in 1 0s;
+    animation: heroTextAnimation 0s ease-in 1 0s;
 }
 
 .heroText2 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 2s ease-in 1;
+    animation: heroTextAnimation .2s ease-in 1;
 }
 
 .heroText3 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 3s ease-in 1;
+    animation: heroTextAnimation .4s ease-in 1;
 }
 
 .heroText4 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 4s ease-in 1;
+    animation: heroTextAnimation .6s ease-in 1;
 }
 
 .heroText5 {
     animation-name: heroTextAnimation;
-    animation: heroTextAnimation 5s ease-in 1;
+    animation: heroTextAnimation .8s ease-in 1;
 }
 
 .bgTransition {

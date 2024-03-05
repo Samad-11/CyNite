@@ -36,9 +36,9 @@ const RegistrationPage = () => {
 
     const [submitOk, setSubmitOk] = useState(false)
     return (
-        <div className="grid grid-cols-10 gap-3 bg-neutral">
+        <div className="grid grid-cols-10 gap-3 bg-neutral faunaOne">
             <div className="md:col-span-5 col-span-10 h-screen flex flex-col justify-center items-center p-7">
-                <h1 className='text-5xl font-extrabold absolute left-3 top-5'>CyNite</h1>
+                <h1 className='text-3xl font-extrabold absolute left-3 top-5 cinzel'>Cynet</h1>
                 <h1 className="md:text-5xl text-3xl mb-7 font-semibold tracking-wide">Registration Form</h1>
                 <form action={async (formData) => {
                     const { message, ok } = await registerParticipant(formData)
