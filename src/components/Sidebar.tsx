@@ -23,6 +23,11 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             label: "events"
         },
         {
+            href: "/gallery",
+            label: "gallery"
+
+        },
+        {
             href: "/contact",
             label: "contact us"
         },
@@ -51,11 +56,13 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             </div>
             <div className="drawer-side z-10">
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="menu p-4 w-screen min-h-full bg-accent text-base-content flex justify-center items-center
+                <div className="menu p-4 w-screen min-h-full  text-base-content flex justify-center items-center
                 bg-cover
-                bg-opacity-65
+                bg-opacity-85
+                bg-base-100
                 "
-                    style={{ backgroundImage: `url(${img.src})` }}>
+                // style={{ backgroundImage: `url(${img.src})` }}
+                >
                     {/* Sidebar content here */}
                     <ul>
                         {
