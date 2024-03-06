@@ -6,10 +6,9 @@ import { Toaster } from "react-hot-toast";
 import Provider from "@/components/Provider";
 import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
-import Cursor1 from "@/components/Cursor1";
-import ScrollYProgress from "@/components/ScrollProgress";
 
 const inter = Inter({ subsets: ["latin"] });
+
 const cinzel = Cinzel({
   weight: ['900', '800', '700', '600', '500'],
   variable: "--font-cinzel",
@@ -35,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme='luxury'>
+
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable}`}>
 
         <Provider>
