@@ -8,12 +8,12 @@ import SponsorSection from "@/components/SponsorSection";
 
 export default function Home() {
   return (
-    <main >
+    <main>
       <ScrollYProgress />
       <Hero />
       <EventSection />
       <AboutSection />
-      <SponsorSection />
+      {/* <SponsorSection /> */}
     </main>
   );
 }

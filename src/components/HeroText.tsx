@@ -7,7 +7,7 @@ const HeroText = () => {
     return (
         <div className='mb-10 mt-20'>
             <div className="flex justify-center items-center">
-                <div className="C heroText1 uppercase">
+                <div className="C heroText1 uppercase cinzel">
                     <span className='sm:text-sm text-[0.5rem] faunaOne md:tracking-[.8rem] font-black text-secondary-content'>Jims VK</span>
                     <h1 className='lg:text-[15rem] md:text-[10rem] sm:text-9xl text-6xl tracking-widest font-extrabold uppercase cinzel' style={{ lineHeight: ".9" }}>C</h1>
                 </div>
@@ -36,7 +36,7 @@ const HeroText = () => {
                     Vasant Kunj, New Delhi
                 </p>
                 <p className='font-black faunaOne sm:text-lg'>
-                    On {eventDate.toLocaleString()}
+                    On {eventDate.toDateString()}, {eventDate.toLocaleString().slice(10,)}
                 </p>
             </div>
         </div>

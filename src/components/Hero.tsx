@@ -11,7 +11,7 @@ const Hero = () => {
                 backgroundImage: `url(${heroImg.src})`,
 
             }}>
-            <div className="hero-overlay bg-opacity-55"></div>
+            <div className="hero-overlay bg-opacity-65"></div>
             <HeroContent />
         </div>
     )

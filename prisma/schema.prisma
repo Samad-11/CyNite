@@ -11,8 +11,12 @@ model participants {
   id                  String   @id @default(auto()) @map("_id") @db.ObjectId
   course              String
   name                String
-  transactionId       String
+  email               String
+  phone               String
+  transactionId       String?
   receiptPath         String?
+  eventSelect         String[]
+  members             String[]
   isTransactionVerify Boolean  @default(false)
   createdAt           DateTime @default(now())
 }

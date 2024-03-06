@@ -5,11 +5,12 @@ import HeroRegisterButton from './HeroRegisterButton'
 import HeroBounceText from './HeroBounceText'
 import HeroLogo from './HeroLogo'
 import HeroEnigmaLogo from './HeroEnigmaLogo'
+import HeroEnigmaLogo2 from './HeroEnigmaLogo2'
 
 const HeroContent = () => {
     return (
         <div className="hero-content text-center text-neutral-content 
-        max-sm:mt-[-50%]
+        max-sm:mt-[-40%]
         "
             style={{
 
@@ -20,6 +21,7 @@ const HeroContent = () => {
                 <HeroBounceText />
                 <HeroRegisterButton />
                 <Clock />
+                <HeroEnigmaLogo2 />
             </div>
             <HeroSocialLinks />
             <HeroLogo />

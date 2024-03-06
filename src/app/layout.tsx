@@ -12,14 +12,15 @@ import ScrollYProgress from "@/components/ScrollProgress";
 const inter = Inter({ subsets: ["latin"] });
 const cinzel = Cinzel({
   weight: ['900', '800', '700', '600', '500'],
+  variable: "--font-cinzel",
   subsets: ["latin"],
-  variable: "--font-cinzel"
 })
+
 
 const faunaOne = Fauna_One({
   weight: ["400"],
+  variable: "--font-faunaOne",
   subsets: ["latin-ext"],
-  variable: "--font-faunaOne"
 })
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme='luxury'>
-      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} min-h-[300vh]`}>
+      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable}`}>
 
         <Provider>
           <EdgeStoreProvider>
@@ -42,7 +43,7 @@ export default function RootLayout({
             {/* <Cursor1 /> */}
             <Header />
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </EdgeStoreProvider>
         </Provider>
       </body>

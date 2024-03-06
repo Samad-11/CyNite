@@ -13,10 +13,9 @@ const HeroLogo = () => {
         h-24
         w-24
         ">
-            <Image src={logo} alt='logo'
+            <Image priority src={logo} alt='logo'
                 fill
                 className='object-contain'
-
             />
         </div>
     )

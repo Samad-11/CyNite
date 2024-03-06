@@ -19,7 +19,7 @@ export default function ScrollYProgress() {
                 zIndex: '999',
                 top: 0,
                 width: "100%",
-                height: '3px',
+                height: '5px',
             }}
             className="
             rounded-r-lg

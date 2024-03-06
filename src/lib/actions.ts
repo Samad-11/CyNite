@@ -7,22 +7,36 @@ import { Prisma } from "@prisma/client";
 
 
 export async function registerParticipant(formData:FormData) {
-    const date = new Date();
+    // const date = new Date();
     const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const phone = formData.get("phone") as string
     const transactionId = formData.get("transactionId") as string
     const course = formData.get("course") as string
     const url = formData.get("receipt") as unknown as string
+    let eventArray = []
+    formData.get('coding') && eventArray.push('coding')
+    formData.get('treasure') && eventArray.push('treasure')
+    formData.get('innovation') && eventArray.push('innovation')
+    formData.get('gaming') && eventArray.push('gaming')
 
-    if (!url) {
-        return {message:"Receipt Image is required"}
-    }    
+    let splitNames = name.split(',')
+    const memberNames = splitNames.slice(1,)
+    // return {message:"Receipt Image is required",ok:true}
+    // if (!url) {
+    //     return {message:"Receipt Image is required"}
+    // }    
     try {
         const newParticipant = await prisma.participants.create({
             data:{
-                name,
+                name:splitNames[0],
+                email,
+                phone,
                 course,
                 transactionId,
-                receiptPath:url
+                receiptPath:url,
+                eventSelect:eventArray,
+                members:memberNames
             }
         })
         return{message:`You have been successfully registered as ${name}`,ok:true}
@@ -58,13 +72,16 @@ export async function getAllParticipants(verify = '') {
     try {
         let data : Prisma.PrismaPromise<{
             id: string;
-            course: string;
-            name: string;
-            transactionId: string;
-            isTransactionVerify: boolean;
-            createdAt: Date;
+             course: string;
+             name: string;
+             email: string;
+             phone: string;
+             transactionId: string | null;
+             receiptPath: string | null;
+             eventSelect: string[];
+             isTransactionVerify: boolean;
+             createdAt: Date;
         }[]>
-
         if (verify == 'true' || verify == 'false') {
             const isTransactionVerify = verify == 'true' ? true : false;
             data = prisma.participants.findMany({
@@ -74,8 +91,7 @@ export async function getAllParticipants(verify = '') {
             })        
             
         }else{
-            data = prisma.participants.findMany({
-            })        
+            data = prisma.participants.findMany({})   
         }
         return data
     } catch (error) {

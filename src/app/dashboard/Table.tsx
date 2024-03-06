@@ -12,6 +12,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
     const ref = useRef<HTMLTableElement>(null)
     const { edgestore } = useEdgeStore()
     let i = 0;
+
     return (
         <div className="overflow-x-auto">
             <ReactToPrint
@@ -34,6 +35,9 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         </th>
                         <th>#</th>
                         <th>Name</th>
+                        <th>Contact</th>
+                        <th>Events</th>
+                        <th>Members</th>
                         <th>Course</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
@@ -70,6 +74,38 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                             </div>
                                         </div>
                                     </div>
+                                </td>
+                                <td>
+                                    <div className="flex items-center gap-3">
+
+                                        <div>
+                                            <div className="font-bold capitalize">{participant.phone}</div>
+                                            <div className="text-sm opacity-90">{participant.email}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul className='uppercase '>
+                                        {
+                                            participant.eventSelect.map((event) => (
+                                                <li key={event} className='list-disc'>
+                                                    {event}
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul className='uppercase '>
+                                        {
+                                            participant.members.map((member) => (
+                                                <li key={member} className='list-disc'>
+                                                    {member}
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
                                 </td>
                                 <td className='uppercase'>
                                     {participant.course}
