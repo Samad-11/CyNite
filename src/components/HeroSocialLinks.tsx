@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaInstagram, FaRegEnvelope } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-
+import { FaInstagram, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa'
 const HeroSocialLinks = () => {
     return (
         <div className="social-links absolute left-1 bottom-[20%] md:top-[50%] md:left-[93%]">
@@ -23,7 +21,7 @@ const HeroSocialLinks = () => {
                         hover:scale-110
                         '
 
-                    ><FaXTwitter /></Link>
+                    ><FaLinkedinIn /></Link>
                 </li>
                 <li>
                     <Link target='_blank' href='mailto:itclub.vk@jimsd.org'
