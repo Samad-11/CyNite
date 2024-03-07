@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from '../../public/logo/jimsLogo.png'
+import logo from '../../public/logo/finalJimslogo.png'
 
 const HeroLogo = () => {
     return (
@@ -13,7 +13,7 @@ const HeroLogo = () => {
         h-24
         w-24
         ">
-            <Image priority src={logo} alt='logo'
+            <Image priority quality={100} src={logo} alt='logo'
                 fill
                 className='object-contain'
             />

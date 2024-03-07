@@ -21,13 +21,13 @@ const EventSection = () => {
                 <div className="max-w-full">
                     <SectionHeading heading='Events' />
                     <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center my-10">
-                        <EventCard eventName={'Teizar Heist'} url={teizarHeistImage.src} />
-                        <EventCard eventName={'UI Universe'} url={uiUniverseImage.src} />
-                        <EventCard eventName={'Arcade Arena'} url={arcadeArenaImage.src} />
-                        <EventCard eventName={'Quiz Technopedia'} url={quizTechnopedia.src} />
-                        <EventCard eventName={'Innovasion 5.0'} url={innovasion5Image.src} />
-                        <EventCard eventName={'Code Kalpana'} url={codeKalpanaImage.src} />
-                        <EventCard eventName={'Digidino'} url={digidinoImage.src} />
+                        <EventCard eventName={'Tezar Heist'} url={teizarHeistImage.src} caption='Treasure Hunt' />
+                        <EventCard eventName={'UI Universe'} url={uiUniverseImage.src} caption='Website Design' />
+                        <EventCard eventName={'Arcade Arena'} url={arcadeArenaImage.src} caption='Gaming' />
+                        <EventCard eventName={'Quiz Technopedia'} url={quizTechnopedia.src} caption='IT Quiz' />
+                        <EventCard eventName={'Innovasion 5.0'} url={innovasion5Image.src} caption='Ideathon Competition' />
+                        <EventCard eventName={'Code Kalpana: Ribbonathon'} url={codeKalpanaImage.src} caption='Coding Event' />
+                        <EventCard eventName={'Clipclash'} url={digidinoImage.src} caption='Reel Making' />
                     </div>
                 </div>
             </div>

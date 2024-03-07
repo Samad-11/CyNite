@@ -1,5 +1,5 @@
 import React from 'react'
-import SponsorCarouselItem from './SponsorCarouselItem'
+import SponsorCarouselItem from './TeamSectionCarouselItem'
 import { map } from 'zod'
 
 const SponsorCarousel = () => {

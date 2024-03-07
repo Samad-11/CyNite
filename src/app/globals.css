@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-html,
-body {
-    /* scroll-behavior: smooth; */
-}
 
 .cinzel {
     font-family: var(--font-cinzel);
+}
+
+body {
+    @apply bg-accent
 }
 
 .faunaOne {
@@ -73,4 +72,45 @@ body {
 .bgTransition {
     animation-name: heroTextAnimation;
     animation: heroTextAnimation 100ms 1;
+}
+
+
+.boxGradiant {
+    background: rgb(253, 29, 29);
+    background: linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(211, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    box-shadow: 0 0px 2px 2px rgba(240, 46, 170, 0.7);
+}
+
+.carouselText {
+    transform: translateX(-250px);
+}
+
+.carouselItem:hover .carouselText {
+    transform: translateX(0px);
+}
+
+/* 
+.eventDetailText {
+    transform: translateX(-300px);
+}
+
+.eventBox:hover .eventDetailText {
+    transform: translateX(0px);
+} */
+
+.eventDetailText {
+    transform: scale(0)
+}
+
+.eventBox:hover .eventDetailText {
+    transform: scale(1);
+}
+
+.eventSubPage {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+
 }

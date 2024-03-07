@@ -23,8 +23,8 @@ const faunaOne = Fauna_One({
 })
 
 export const metadata: Metadata = {
-  title: "Cynite",
-  description: "The IT fest",
+  title: "Cynet | IT fest of Jims",
+  description: "CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.",
 };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme='luxury'>
 
-      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable}`}>
+      <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
 
         <Provider>
           <EdgeStoreProvider>

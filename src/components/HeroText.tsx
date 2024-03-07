@@ -35,7 +35,7 @@ const HeroText = () => {
                 <p className='text-sm sm:text-base'>
                     Vasant Kunj, New Delhi
                 </p>
-                <p className='font-black faunaOne sm:text-lg'>
+                <p className='font-black faunaOne sm:text-lg uppercase'>
                     On {eventDate.toDateString()}, {eventDate.toLocaleString().slice(10,)}
                 </p>
             </div>
