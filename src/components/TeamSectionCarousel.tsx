@@ -39,7 +39,7 @@ const members = [
         image: secretaryImage.src
     },
     {
-        name: 'Vinay Gupta',
+        name: 'Vinay Kumar',
         designation: "Developer-Director",
         image: directorDeveloper.src
     },
