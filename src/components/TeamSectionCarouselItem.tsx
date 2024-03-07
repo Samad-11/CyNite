@@ -20,6 +20,7 @@ const TeamSectionCarouselItem = ({ image, name, desig }: { image: string, name: 
             '>
                 <Image src={image} alt='teamImage' fill
                     className='object-cover rounded-sm'
+                    quality={100}
                 />
             </div>
 
