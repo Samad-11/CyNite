@@ -7,11 +7,11 @@ const SponsorCarousel = () => {
     return (
         <div className="carousel rounded-box w-[90%] justify-center  gap-3 carousel-center">
 
+            {/* <SponsorCarouselItem />
             <SponsorCarouselItem />
             <SponsorCarouselItem />
             <SponsorCarouselItem />
-            <SponsorCarouselItem />
-            <SponsorCarouselItem />
+            <SponsorCarouselItem /> */}
 
         </div>
     )

@@ -1,12 +1,9 @@
-'use client'
-import hero750 from '../../public/hero750.jpg'
 import HeroContent from './HeroContent'
-import useWindowDimensions from '@/lib/useWindow'
 
 
 const Hero = () => {
-    const { height, width } = useWindowDimensions()
-    let w = width as unknown as number
+    // const { height, width } = useWindowDimensions()
+    // let w = width as unknown as number
 
 
     return (
