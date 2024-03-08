@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Provider from "@/components/Provider";
 // import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme='luxury'>
+      <Head>
+        <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0610/5769/5932/files/opengraph-image.jpg?v=1709900684" />
+      </Head>
 
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
         <Provider>
