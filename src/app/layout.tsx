@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     siteName: "Cynet",
     description: "CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.",
     images: '../og-image.jpeg',
+    type: "website",
+    title: "CYNET | IT FEST",
+    url: "https://cynet.jimsd.org"
   },
 };
 
