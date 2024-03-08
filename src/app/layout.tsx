@@ -26,6 +26,21 @@ const faunaOne = Fauna_One({
 export const metadata: Metadata = {
   title: "CYNET | IT fest of Jims",
   description: "CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.",
+  openGraph: {
+    title: 'Cynet | IT Fest',
+    description: 'CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.',
+    url: 'https://cynet.jimsd.org',
+    siteName: 'Cynet',
+    images: [
+      {
+        url: 'https://cdn.shopify.com/s/files/1/0610/5769/5932/files/opengraph-image.jpg?v=1709900684',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +52,7 @@ export default function RootLayout({
     <html lang="en" data-theme='luxury'>
       <Head>
         <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0610/5769/5932/files/opengraph-image.jpg?v=1709900684" />
+        <meta name="google-site-verification" content="kmjKUK-e60FmQqI-2hV501bpuB93G-Fho_45seBnfUE" />
       </Head>
 
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
