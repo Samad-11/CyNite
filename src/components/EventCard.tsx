@@ -12,7 +12,7 @@ const EventCard = ({ eventName = 'coding', url, caption }: { eventName: string, 
     return (
         <div
 
-            // href={`/event/${eventName.toLowerCase()}`}
+            // href={`/event/${eventName.toLowerCase().replace(' ', "_")}`}
             ref={cardRef} className="eventCard  md:h-44 h-32 md:w-80 w-64 bg-cover flex items-center justify-center font-black text-primary tracking-wider uppercase 
         rounded-full border-[5px] border-neutral-content
         p-4

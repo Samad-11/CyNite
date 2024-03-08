@@ -25,8 +25,8 @@ const EventSection = () => {
                         <EventCard eventName={'UI Universe'} url={uiUniverseImage.src} caption='Website Design' />
                         <EventCard eventName={'Arcade Arena'} url={arcadeArenaImage.src} caption='Gaming' />
                         <EventCard eventName={'Quiz Technopedia'} url={quizTechnopedia.src} caption='IT Quiz' />
-                        <EventCard eventName={'innovision  5.0'} url={innovasion5Image.src} caption='Ideathon Competition' />
-                        <EventCard eventName={'Code Kalpana: Ribbonathon'} url={codeKalpanaImage.src} caption='Coding Event' />
+                        <EventCard eventName={'innovision 5.0'} url={innovasion5Image.src} caption='Ideathon Competition' />
+                        <EventCard eventName={'Code Kalpana:Ribbonathon'} url={codeKalpanaImage.src} caption='Coding Event' />
                         <EventCard eventName={'Clipclash'} url={digidinoImage.src} caption='Reel Making' />
                     </div>
                 </div>

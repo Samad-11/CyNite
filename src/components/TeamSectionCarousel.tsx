@@ -9,7 +9,6 @@ import directorContent from '../../public/team/directorContent.jpg'
 import directorSocialMedia from '../../public/team/directorSocialMedia.jpg'
 import directorEventManagement from '../../public/team/directorEventManagement.jpg'
 import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpg'
-import directorDigitalMarketing from '../../public/team/directorDigitalMarketing.jpg'
 import treasurerImage from '../../public/team/treasurer.jpeg'
 import vicePresident1Image from '../../public/team/vicePresident1.png'
 import vicePresident2Image from '../../public/team/vicePresident2.jpg'
@@ -68,12 +67,6 @@ const members = [
         designation: "Social Media-Director",
         image: directorSocialMedia.src
     },
-    {
-        name: 'Krushnansh Gupta',
-        designation: "Digital Marketing-Director",
-        image: directorDigitalMarketing.src
-    },
-
     {
         name: 'Sahil Gupta',
         designation: "Stills And Motion-Director",

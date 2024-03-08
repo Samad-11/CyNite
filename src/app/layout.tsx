@@ -23,7 +23,7 @@ const faunaOne = Fauna_One({
 })
 
 export const metadata: Metadata = {
-  title: "Cynet | IT fest of Jims",
+  title: "CYNET | IT fest of Jims",
   description: "CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.",
 };
 

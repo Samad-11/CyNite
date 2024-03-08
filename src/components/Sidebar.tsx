@@ -2,6 +2,9 @@
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
 import img from '../../public/prallax3.gif'
+import { IoHome } from 'react-icons/io5'
+import { LuGalleryHorizontalEnd, LuMessagesSquare } from 'react-icons/lu'
+import { BsPatchQuestion } from 'react-icons/bs'
 
 const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
     const [isSideOpen, setIsSideOpen] = useState(false)
@@ -13,27 +16,22 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
         {
             href: "/",
             label: "home",
-        },
-        {
-            href: "/about",
-            label: "about"
-        },
-        {
-            href: "/events",
-            label: "events"
+            icon: <IoHome />
         },
         {
             href: "/gallery",
-            label: "gallery"
-
+            label: "gallery",
+            icon: <LuGalleryHorizontalEnd />
         },
         {
             href: "/contact",
-            label: "contact us"
+            label: "contact us",
+            icon: <LuMessagesSquare />
         },
         {
             href: "/faq",
-            label: "faq"
+            label: "faq",
+            icon: <BsPatchQuestion />
         }
     ]
     return (
@@ -67,17 +65,22 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
                     <ul>
                         {
                             links.map((link) => (
-                                <li key={link.href} className='flex justify-center items-center my-8' onClick={() => {
+                                <li key={link.href} className='flex justify-center items-start my-8' onClick={() => {
                                     toggleRef.current?.click()
                                 }}>
-                                    <Link href={link.href} className='cinzel  hover:bg-inherit font-extrabold text-3xl  sm:text-5xl link link-hover cursor-none uppercase'>{link.label}</Link>
+
+                                    <Link href={link.href} className='cinzel  hover:bg-inherit font-extrabold text-2xl  sm:text-5xl link link-hover cursor-none uppercase flex items-center justify-center gap-7'>
+                                        <i className=' pb-2 text-3xl md:text-5xl md:pb-3'>
+                                            {link.icon}
+                                        </i>
+                                        {link.label}</Link>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
