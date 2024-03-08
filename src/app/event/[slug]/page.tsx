@@ -15,6 +15,7 @@ import { redirect } from 'next/navigation'
 
 const page = ({ params }: { params: { slug: string } }) => {
     const eventName = params.slug
+
     let event = {
         name: 'teizar heist',
         imageSrc: teizarHeist.src,
@@ -109,7 +110,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                             <FaRegClock className='text-2xl lg:text-3xl opacity-25' />
                                         </div>
                                         <div className="col-span-8 ">
-                                            <p className='font-bold text-base lg:text-lg mb-2'>{event.timing} <span className='font-semibold opacity-25'>Onward</span></p>
+                                            <p className='font-bold text-base lg:text-lg mb-2'>{event.timing} <span className='font-semibold opacity-25'>Onwards</span></p>
                                             <span className='font-semibold opacity-25'>15th March 2024</span>
                                         </div>
                                     </div>
@@ -133,9 +134,9 @@ const page = ({ params }: { params: { slug: string } }) => {
                                         <div className="self-center col-span-2">
                                             <FaUser className='text-2xl lg:text-3xl opacity-25' />
                                         </div>
-                                        <div className="col-span-8">
-                                            <p className='font-bold  lg:text-[0.55rem]  mb-2'><span className='font-bold'>Teacher</span>: {event.teacherCoordinators.toUpperCase()}</p>
-                                            <p className='font-bold  lg:text-[.50rem]  mb-2 capitalize opacity-55'><span className='font-bold'>Student</span>: {event.studentCoordinators}</p>
+                                        <div className="col-span-8 text-sm">
+                                            <p className='  mb-2'><span className='font-bold'>Teacher</span>: {event.teacherCoordinators.toUpperCase()}</p>
+                                            <p className='mb-2 capitalize opacity-55'><span className='font-bold'>Student</span>: {event.studentCoordinators}</p>
 
                                         </div>
                                     </div>

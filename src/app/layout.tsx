@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "react-hot-toast";
 import Provider from "@/components/Provider";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,11 +36,9 @@ export default function RootLayout({
     <html lang="en" data-theme='luxury'>
 
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
-
         <Provider>
           <EdgeStoreProvider>
             <Toaster />
-            {/* <Cursor1 /> */}
             <Header />
             {children}
             {/* <Footer /> */}

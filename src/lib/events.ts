@@ -177,7 +177,7 @@ export const events = [
                 "--Solution",
                 "The judges' decision is final."
             ],
-         teacherCoordinators:"DR. PREETI SHARMA & NEHA CHABRA",
+         teacherCoordinators:"DR. PRITI SHARMA & NEHA CHABRA",
         studentCoordinators:"PRASANNA (IT CLUB), TUSHAR ARORA (IT CLUB), LAKSHYA (IT CLUB), MEHAK ARORA, GURNOOR,SURAJ KUSHWAHA",
         
         timing: '10:00 Am'
