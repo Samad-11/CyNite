@@ -52,7 +52,7 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
                     }
                 </label>
             </div>
-            <div className="drawer-side z-10">
+            <div className="drawer-side z-[40]">
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
                 <div className="menu p-4 w-screen min-h-full  text-base-content flex justify-center items-center
                 bg-cover

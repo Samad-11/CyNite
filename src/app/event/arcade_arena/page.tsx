@@ -3,36 +3,31 @@ import img from '../../../../public/event/eventPlaceholder.jpg'
 import Image from 'next/image'
 import { FaRegClock, FaRegCompass, FaUser } from 'react-icons/fa'
 import Link from 'next/link'
-import teizarHeist from '../../../../public/event/treasure.jpg'
 
 
 import CommingSoornPage from '@/components/CommingSoornPage'
 
-import gamePoster from '../../../../public/event/arcadeArenaPoster.png'
-import { events } from '@/lib/events'
 import { redirect } from 'next/navigation'
+import { events } from '@/lib/events'
 
 
 const page = ({ params }: { params: { slug: string } }) => {
-    const eventName = params.slug
-    let event = {
-        name: 'teizar heist',
-        imageSrc: teizarHeist.src,
-        posterSrc: gamePoster.src,
-        caption: "Game on, World off",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos, excepturi explicabo tempora voluptas quas distinctio. A earum ab quisquam veniam quis nihil aliquam. Unde obcaecati sed dolorum est exercitationem hic repellendus optio, blanditiis animi nihil sequi dolores quod, ducimus libero ut velit veniam nostrum.",
-        rules: ["one", "two"],
-        teacherCoordinators: "hello",
-        studentCoordinators: "hello",
-        timing: '10:00 Am'
-    }
 
-    for (let i = 0; i < events.length; i++) {
-        if (eventName == encodeURIComponent(((events[i].name).toLowerCase().replace(" ", "_")))) {
-            event = events[i]
-            break
-        }
-    }
+    const eventName = params.slug
+
+    const event = events[2]
+    // let event = {
+    //     name: 'arcade arena',
+    //     imageSrc: game.src,
+    //     posterSrc:gamePoster.src,
+    //     caption: "Game on, World off",
+    //     description: "Step into a world where adrenaline meets pixels, where every click, every move, and every strategy matters! Dive into the heart-pounding action of gaming-related events and tournaments that will leave you on the edge of your seat, craving for more!In gaming there will be multiple games which are going to be played by the participants",
+    //     rules: ["Valorant","Tekken","Stumble guys","Bgmi"],
+    //      teacherCoordinators:"DR. RAHUL V ANAND & DR. ABHISHEK",
+    //     studentCoordinators:"Harshit Kapur (BCA 4M),Parth Gaba (BCA 6M),Parth Bhatnagar (BCA 6M),Deepesh Sharma (BCA 4E),Ronit (BCA 6M),Hardik Solanki (BCA 4M),Rachit Kalra (BCA 4E),Ayush Mehta (BCA 4E),Sagar Bisht (IT CLUB)",
+
+    //     timing: '10:00 Am'
+    // }
 
     // if (commingSoon) {
     //     redirect('../../not-found.tsx')
@@ -51,7 +46,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                 left-[50%]
                 translate-x-[-50%]
                 -translate-y-[20%]
-                max-lg:-translate-y-[18%]
+                max-lg:-translate-y-[25%]
                 lg:w-[78%] w-full
                 min-h-full z-20 
                 bg-[#a05c9c]
@@ -59,7 +54,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                 pb-10 rounded
                 ">
                     <div className="h-52 lg:h-80 w-full relative">
-                        <div className="bg-neutral-content h-full z-10  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
+                        <div className="bg-neutral-content h-full z-[1]  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
                         <Image src={event.imageSrc} alt='bg' fill className='object-cover mix-blend-overlay' />
                         {/* <h1 className='absolute 
                         top-[50%]  left-[50%] translate-x-[-50%] translate-y-[-50%]
@@ -83,7 +78,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 <p className="faunaOne pl-5 max-lg:text-sm ">{event.description}</p>
                             </div>
                             <div className="rules my-5">
-                                <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Rules</h1>
+                                <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Games</h1>
                                 <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
                                     {
                                         event.rules.map((rule) => (
@@ -126,16 +121,16 @@ const page = ({ params }: { params: { slug: string } }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='w-[90%] bg-accent shadow-md shadow-accent brightness-150  rounded-box p-4
+                                <div className='w-[90%] bg-accent shadow-md shadow-accent brightness-150 rounded-box p-4
                                 flex flex-col justify-around'>
-                                    <h1 className=' tracking-wider font-black text-lg lg:text-2xl mb-3'>Coordinators</h1>
+                                    <h1 className=' tracking-wider font-black text-lg lg:text-2xl mb-3'>Co-ordinators</h1>
                                     <div className='grid grid-cols-10 gap-3'>
                                         <div className="self-center col-span-2">
                                             <FaUser className='text-2xl lg:text-3xl opacity-25' />
                                         </div>
                                         <div className="col-span-8">
-                                            <p className='font-bold  lg:text-[0.55rem]  mb-2'><span className='font-bold'>Teacher</span>: {event.teacherCoordinators.toUpperCase()}</p>
-                                            <p className='font-bold  lg:text-[.50rem]  mb-2 capitalize opacity-55'><span className='font-bold'>Student</span>: {event.studentCoordinators}</p>
+                                            <p className='text-xs  mb-2'><span className='font-bold'>Teacher</span>: {event.teacherCoordinators.toUpperCase()}</p>
+                                            <p className='text-xs mb-2 capitalize opacity-55'><span className='font-bold'>Student</span>: {event.studentCoordinators}</p>
 
                                         </div>
                                     </div>
