@@ -11,6 +11,7 @@ import CommingSoornPage from '@/components/CommingSoornPage'
 import gamePoster from '../../../../public/event/arcadeArenaPoster.png'
 import { events } from '@/lib/events'
 import { commingSoon } from '@/lib/commingSoon'
+import { redirect } from 'next/navigation'
 
 
 const page = ({ params }: { params: { slug: string } }) => {
@@ -26,8 +27,6 @@ const page = ({ params }: { params: { slug: string } }) => {
         timing: '10:00 Am'
     }
 
-    console.log(encodeURIComponent(((events[5].name).toLowerCase().replace(" ", "_"))));
-    console.log('====================================');
     for (let i = 0; i < events.length; i++) {
         if (eventName == encodeURIComponent(((events[i].name).toLowerCase().replace(" ", "_")))) {
             event = events[i]
@@ -36,7 +35,7 @@ const page = ({ params }: { params: { slug: string } }) => {
     }
 
     if (commingSoon) {
-        return <CommingSoornPage />
+        redirect('../../not-found.tsx')
     }
     return (
         <>

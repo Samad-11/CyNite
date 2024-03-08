@@ -12,7 +12,7 @@ export const events = [
         imageSrc: teizarHeist.src,
         caption: "Find fortune, forge legends",
         description: "खोज-ए-खास In treasure hunt participants are given some riddles which they need to solve and find the treasure. The participants should have good thinking capability and they should be quick enough to figure out the clues given in the form of the riddles.",
-        rules: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos, excepturi explicabo tempora voluptas quas distinctio. A earum ab quisquam veniam quis nihil aliquam. Unde obcaecati sed dolorum est exercitationem hic repellendus optio, blanditiis animi nihil sequi dolores quod, ducimus libero ut velit veniam nostrum.',
+        rules: '',
         timing: '10:00 Am'
     },
     {
@@ -48,7 +48,7 @@ export const events = [
         timing: '10:00 Am'
     },
     {
-        name: 'Code Kalpana: Ribbonathon',
+        name: 'Code Kalpana',
         imageSrc: codeKalpana.src,
         caption: "Decipher, Code, Conquer!",
         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos, excepturi explicabo tempora voluptas quas distinctio. A earum ab quisquam veniam quis nihil aliquam. Unde obcaecati sed dolorum est exercitationem hic repellendus optio, blanditiis animi nihil sequi dolores quod, ducimus libero ut velit veniam nostrum.",
