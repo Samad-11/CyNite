@@ -39,8 +39,9 @@ export const metadata: Metadata = {
     images: '../og-image.jpeg',
     type: "website",
     title: "CYNET | IT FEST",
-    url: "https://cynet.jimsd.org"
+    url: "https://cynet.jimsd.org",
   },
+  verification: { google: 'kX8ZIUq1cUGLuxBV3cf9lXOy5gKkT5ihjHXPZa-y2tE' }
 };
 
 export default function RootLayout({
