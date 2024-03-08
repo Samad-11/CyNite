@@ -68,7 +68,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             </div>
                             <div className="rules my-5">
                                 <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Rules</h1>
-                                <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
+                                <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                     {
                                         game.rules.map((rule) => (
                                             <li key={rule}>{rule}</li>
@@ -80,7 +80,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 (game.teamRoaster[0] != "".replace(' ', "")) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Team And Roster</h1>
-                                    <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
                                             game.teamRoaster.map((roaster) => (
                                                 <li key={roaster}>{roaster}</li>
@@ -95,7 +95,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                     <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>PUNISHMENTS FOR VIOLATING RULES</h1>
                                     <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
                                         disqualified immediately</p>
-                                    <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
                                             game.teamRoaster.map((roaster) => (
                                                 <li key={roaster}>{roaster}</li>
@@ -110,7 +110,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                     <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Points System</h1>
                                     <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
                                         disqualified immediately</p>
-                                    <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
                                             game.pointSystem.map((point) => (
                                                 <li key={point}>{point}</li>

@@ -26,6 +26,13 @@ body {
     @apply cursor-none
 } */
 
+html,
+* {
+    scroll-behavior: smooth;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
 @keyframes heroTextAnimation {
     from {
         opacity: 0;

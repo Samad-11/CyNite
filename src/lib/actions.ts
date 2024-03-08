@@ -125,3 +125,4 @@ export async function toggleVerificationStatus(formData:FormData) {
 export async function revalidate() {
     revalidatePath("/")
 }
+

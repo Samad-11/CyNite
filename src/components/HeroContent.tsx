@@ -35,7 +35,7 @@ const HeroContent = () => {
                 <HeroEnigmaLogo2 />
             </div>
             <HeroSocialLinks />
-            <HeroLogo />
+            {/* <HeroLogo /> */}
         </div>
     )
 }

@@ -85,7 +85,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             </div>
                             <div className="rules my-5">
                                 <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Rules</h1>
-                                <ul className="faunaOne pl-5 list-disc max-lg:text-sm pr-1">
+                                <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                     {
                                         event.rules.map((rule) => (
                                             <li key={rule}>{rule}</li>
