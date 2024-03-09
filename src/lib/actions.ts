@@ -181,7 +181,7 @@ export async function registerParticipant(formData: FormData) {
                 transactionId: transId,
                 mates,
                 college,
-                enrollNo,
+                enrollNoY: enrollNo,
                 receiptPath: receiptUrl,
             }
         })

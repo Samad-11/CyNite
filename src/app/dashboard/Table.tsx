@@ -89,7 +89,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
 
                                     <div>
                                         <div className="font-bold capitalize">{participant.college}</div>
-                                        <div className="text-sm opacity-90 capitalize">{participant?.enrollNo}
+                                        <div className="text-sm opacity-90 capitalize">{participant?.enrollNoY}
                                         </div>
                                     </div>
                                 </td>
