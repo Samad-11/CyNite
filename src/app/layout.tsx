@@ -55,8 +55,8 @@ export default function RootLayout({
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
         <Provider>
           <EdgeStoreProvider>
-            <Toaster />
             <Header />
+            <Toaster />
             {children}
             {/* <Footer /> */}
           </EdgeStoreProvider>

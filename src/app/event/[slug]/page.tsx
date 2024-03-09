@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { FaRegClock, FaRegCompass, FaUser } from 'react-icons/fa'
 import Link from 'next/link'
 import teizarHeist from '../../../../public/event/treasure.jpg'
+import teizarHeistPoster from '../../../../public/event/quizTechnopediaPoster.jpeg'
 
 
 import CommingSoornPage from '@/components/CommingSoornPage'
@@ -15,16 +16,28 @@ import { redirect } from 'next/navigation'
 
 const page = ({ params }: { params: { slug: string } }) => {
     const eventName = params.slug
-
     let event = {
-        name: 'teizar heist',
+        name: 'tezar heist',
         imageSrc: teizarHeist.src,
-        posterSrc: gamePoster.src,
-        caption: "Game on, World off",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos, excepturi explicabo tempora voluptas quas distinctio. A earum ab quisquam veniam quis nihil aliquam. Unde obcaecati sed dolorum est exercitationem hic repellendus optio, blanditiis animi nihil sequi dolores quod, ducimus libero ut velit veniam nostrum.",
-        rules: ["one", "two"],
-        teacherCoordinators: "hello",
-        studentCoordinators: "hello",
+        posterSrc: teizarHeistPoster.src,
+        caption: "Find fortune, forge legends",
+        description: "Tezar Heist is our annual IT Fest CYNET's most loved event. In this Teams are armed with clues, questions, and tasks to race against the clock to be the first to complete challenges. It’s a game of smart time management, team spirit, good thinking capability, and quick decision-making with bumper prize money as a reward.",
+        rules: [
+            "-> 2 players per team is allowed",
+            '-> Registration fee Rs 200/- per team will be charged',
+            "-> Registration opens till 14 March 2024 4pm.On the spot event registration till fixed time",
+            '-> There will be 3 rounds in total.',
+            '-> Rules for each round will be shared before the round starts.',
+            '-> Players have to keep the clues with them until the game finish.',
+            '-> Each qualified team should play the whole game.',
+            '-> Players cannot quit the game in between the rounds.',
+            '-> Any misbehaviour or any kind of property damage will lead to direct disqualification and mandatory disciplinary actions will be taken.',
+            '-> Decision taken by the coordinators will be final and binding.',
+
+        ],
+        teacherCoordinators: " DR. HARSHA RATNANI & MS. MINAL MAHESHWARI",
+        studentCoordinators: " DHIRAJ KUMAR YADAV, AKSHITA KADYAN, RISHANT SAINI (IT CLUB), ANSHIKA (IT CLUB), ANSH MAKKAR, ARNAV GEHLOT, PARIDHI GUPTA",
+
         timing: '10:00 Am'
     }
 
@@ -75,7 +88,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                     <div className="grid grid-cols-10  px-8 py-5 text-neutral-content">
                         <div className="col-span-10 lg:col-span-7 border-r-4 border-x-neutral-content">
                             <div className="registerbtn lg:hidden flex justify-center w-full mb-10">
-                                <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
+                                <Link href={`/new`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
                             </div>
                             <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{event.name}</h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
@@ -94,12 +107,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </ul>
                             </div>
                             <div className="registerbtn max-lg:hidden flex justify-center w-full mb-10">
-                                <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
+                                <Link href={`/new`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
                             </div>
                         </div>
                         <div className="col-span-10 lg:col-span-3 pl-3">
                             <div className="registerbtn flex justify-center w-full mb-10">
-                                <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
+                                <Link href={`/new`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register </Link>
                             </div>
                             <div className="flex flex-col gap-7 items-center justify-center w-full">
                                 <div className='w-[90%] bg-accent shadow-md shadow-accent brightness-150 h-36 rounded-box p-4

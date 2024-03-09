@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import AboutSection from "@/components/AboutSection";
 import SponsorSection from "@/components/SponsorSection";
 import TeamSection from "@/components/TeamSection";
+import Footer2 from "@/components/Footer2";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutSection />
       {/* <SponsorSection /> */}
       <TeamSection />
+      {/* <Footer2 /> */}
 
     </main>
   );

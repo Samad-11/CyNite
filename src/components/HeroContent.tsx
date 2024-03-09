@@ -19,7 +19,7 @@ const HeroContent = () => {
                 <HeroText />
                 <HeroEnigmaLogo />
                 {/*  */}
-                <div className='tracking-wide my-4'>
+                {/* <div className='tracking-wide my-4'>
                     <h1 className='cinzel text-2xl md:text-4xl font-black'>
 
                         Registration opens on
@@ -27,10 +27,10 @@ const HeroContent = () => {
                     <p className='faunaOne text-lg md:text-3xl font-black'>
                         Saturday 9th March,2024
                     </p>
-                </div>
+                </div> */}
                 {/*  */}
-                {/* <HeroBounceText /> */}
-                {/* <HeroRegisterButton /> */}
+                <HeroBounceText />
+                <HeroRegisterButton />
                 <Clock />
                 <HeroEnigmaLogo2 />
             </div>

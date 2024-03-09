@@ -13,6 +13,7 @@ import treasurerImage from '../../public/team/treasurer.jpeg'
 import vicePresident1Image from '../../public/team/vicePresident1.png'
 import vicePresident2Image from '../../public/team/vicePresident2.jpg'
 import myImage from '../../public/team/abdusSamad.png'
+import assistantDirectorContentImage from '../../public/team/assistantDirectorContent.jpeg'
 
 
 
@@ -61,6 +62,11 @@ const members = [
         name: 'Tisha',
         designation: "Treasurer",
         image: treasurerImage.src
+    },
+    {
+        name: 'Shibani Badola',
+        designation: "Content-Assistant Director",
+        image: assistantDirectorContentImage.src
     },
     {
         name: 'Harshit Sharma',

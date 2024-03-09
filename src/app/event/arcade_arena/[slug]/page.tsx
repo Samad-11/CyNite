@@ -57,29 +57,41 @@ const page = ({ params }: { params: { slug: string } }) => {
                     </div>
                     <div className="grid grid-cols-10  px-8 py-5 text-neutral-content">
                         <div className="col-span-10 lg:col-span-7 border-r-4 border-x-neutral-content">
-                            <div className="registerbtn lg:hidden flex justify-center w-full mb-10">
+                            <Link href={`/registration}`} className="registerbtn lg:hidden flex justify-center w-full mb-10">
                                 <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
-                            </div>
+                            </Link>
                             <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{game.name}</h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
                             <div className="description my-5">
-                                {/* <h1 className='text-3xl font-extrabold my-3 faunaOne '></h1> */}
-                                {/* <p className="faunaOne pl-5 max-lg:text-sm ">{game.description}</p> */}
+                                {
+                                    game.Game_Details
+                                }
                             </div>
-                            <div className="rules my-5">
-                                <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Rules</h1>
-                                <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
-                                    {
-                                        game.rules.map((rule) => (
-                                            <li key={rule}>{rule}</li>
-                                        ))
-                                    }
-                                </ul>
+                            <div className="description my-5">
+                                <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Eligibility</h1>
+                                {
+                                    game.Eligibility
+                                }
                             </div>
+
                             {
-                                (game.teamRoaster[0] != "".replace(' ', "")) &&
+                                game.Account_rule[0] != null &&
+
+                                <div className="acRule rules my-5">
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Account Rules</h1>
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
+                                        {
+                                            game.Account_rule.map((rule) => (
+                                                <li key={rule}>{rule}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                (game.teamRoaster[0] != null) &&
                                 <div className="rules my-5">
-                                    <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Team And Roster</h1>
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Team And Roster</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
                                             game.teamRoaster.map((roaster) => (
@@ -90,9 +102,48 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.punishment[0] != "".replace(' ', "")) &&
+                                (game.match_rules[0] != null) &&
                                 <div className="rules my-5">
-                                    <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>PUNISHMENTS FOR VIOLATING RULES</h1>
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Match Rules</h1>
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
+                                        {
+                                            game.match_rules.map((roaster) => (
+                                                <li key={roaster}>{roaster}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                (game.during_Match_rules[0] != null) &&
+                                <div className="rules my-5">
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>During Match Rules</h1>
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
+                                        {
+                                            game.during_Match_rules.map((roaster) => (
+                                                <li key={roaster}>{roaster}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                (game.after_match_rules[0] != null) &&
+                                <div className="rules my-5">
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>After Match Rules</h1>
+                                    <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
+                                        {
+                                            game.after_match_rules.map((roaster) => (
+                                                <li key={roaster}>{roaster}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                (game.punishment[0] != null) &&
+                                <div className="rules my-5">
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>PUNISHMENTS FOR VIOLATING RULES</h1>
                                     <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
                                         disqualified immediately</p>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -105,9 +156,9 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.pointSystem[0] != "".replace(' ', "")) &&
+                                (game.pointSystem[0] != null) &&
                                 <div className="rules my-5">
-                                    <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Points System</h1>
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Points System</h1>
                                     <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
                                         disqualified immediately</p>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -120,14 +171,14 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
 
-                            <div className="registerbtn max-lg:hidden flex justify-center w-full mb-10">
+                            <Link href={`/registration}`} className="registerbtn max-lg:hidden flex justify-center w-full mb-10">
                                 <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
-                            </div>
+                            </Link>
                         </div>
                         <div className="col-span-10 lg:col-span-3 pl-3">
-                            <div className="registerbtn flex justify-center w-full mb-10">
+                            <Link href={`/registration}`} className="registerbtn flex justify-center w-full mb-10">
                                 <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
-                            </div>
+                            </Link>
                             <div className="flex flex-col gap-7 items-center justify-center w-full">
                                 <div className='w-[90%] bg-accent shadow-md shadow-accent brightness-150 h-36 rounded-box p-4
                                 flex flex-col justify-around'>

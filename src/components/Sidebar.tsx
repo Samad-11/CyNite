@@ -19,17 +19,17 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             icon: <IoHome />
         },
         {
-            href: "/gallery",
+            href: "",
             label: "gallery",
             icon: <LuGalleryHorizontalEnd />
         },
         {
-            href: "/contact",
+            href: "",
             label: "contact us",
             icon: <LuMessagesSquare />
         },
         {
-            href: "/faq",
+            href: "",
             label: "faq",
             icon: <BsPatchQuestion />
         }

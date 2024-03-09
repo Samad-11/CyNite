@@ -36,9 +36,9 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Contact</th>
-                        <th>Events</th>
-                        <th>Members</th>
-                        <th>Course</th>
+                        <th>College</th>
+                        <th>Event</th>
+                        <th>Mate</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
                         <th></th>
@@ -75,9 +75,9 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                         </div>
                                     </div>
                                 </td>
+
                                 <td>
                                     <div className="flex items-center gap-3">
-
                                         <div>
                                             <div className="font-bold capitalize">{participant.phone}</div>
                                             <div className="text-sm opacity-90">{participant.email}
@@ -86,29 +86,32 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                     </div>
                                 </td>
                                 <td>
-                                    <ul className='uppercase '>
-                                        {
-                                            participant.eventSelect.map((event) => (
-                                                <li key={event} className='list-disc'>
-                                                    {event}
-                                                </li>
-                                            ))
-                                        }
-                                    </ul>
+
+                                    <div>
+                                        <div className="font-bold capitalize">{participant.college}</div>
+                                        <div className="text-sm opacity-90 capitalize">{participant?.enrollNo}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="flex items-center gap-3">
+                                        <div>
+                                            <div className="font-bold capitalize">{participant.event.replace('_', ' ')}</div>
+                                            <div className="text-sm opacity-90 capitalize">{participant?.subEvent?.replace('_', ' ')}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>
                                     <ul className='uppercase '>
                                         {
-                                            participant.members.map((member) => (
-                                                <li key={member} className='list-disc'>
-                                                    {member}
+                                            participant.mates.map((mate) => (
+                                                <li key={mate} className='list-disc'>
+                                                    {mate}
                                                 </li>
                                             ))
                                         }
                                     </ul>
-                                </td>
-                                <td className='uppercase'>
-                                    {participant.course}
                                 </td>
                                 <td>{participant.transactionId}</td>
                                 <td>
@@ -170,12 +173,18 @@ const Table = ({ participants }: { participants: participants[] }) => {
                 {/* foot */}
                 <tfoot>
                     <tr>
-                        <th>Verified</th>
+                        <th>
+                            <label>
+                                Verified
+                            </label>
+                        </th>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Course</th>
+                        <th>Contact</th>
+                        <th>Event</th>
+                        <th>Mate</th>
                         <th>Transaction Id</th>
-                        <th>Receipt</th>
+                        <th className=''>Receipt</th>
                         <th></th>
                     </tr>
                 </tfoot>
