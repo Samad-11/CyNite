@@ -80,7 +80,7 @@ export const games = [
             "8th - 12th - 1 point.",
             "13th - 16th - 0 point."
         ],
-        imageSrc: valorantImage.src,
+        imageSrc: bgmiImage.src,
         timing: '11:00 Am'
     },
     {
@@ -123,7 +123,7 @@ export const games = [
             "* Once all the zones are completed the winners of each zone are going to battle in the final zone."
         ],
         pointSystem: [''],
-        imageSrc: valorantImage.src,
+        imageSrc: tekkenImage.src,
         timing: '11:00 Am'
     },
     {
