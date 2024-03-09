@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroBounceText = () => {
     return (
-        <div className='flex justify-center items-center'>
+        <Link href={'#events'} className='flex justify-center items-center'>
             <h1 className='flex justify-center items-center gap-3 animate-bounce  w-fit'>
                 <p className="mb-5 md:text-2xl text-sm font-semibold  faunaOne  tracking-wider">HURRY UP !
                 </p>
@@ -13,7 +13,7 @@ const HeroBounceText = () => {
                     </svg>
                 </p>
             </h1>
-        </div>
+        </Link>
     )
 }
 

@@ -15,7 +15,7 @@ import quizTechnopedia from '../../public/event/quiz.jpg'
 const EventSection = () => {
 
     return (
-        <section className="events hero min-h-screen  bgTransition bg-fixed" style={{ backgroundImage: `url(${plx1.src}) ` }}>
+        <section id='events' className="events hero min-h-screen  bgTransition bg-fixed" style={{ backgroundImage: `url(${plx1.src}) ` }}>
             <div className="hero-overlay bg-opacity-55"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">

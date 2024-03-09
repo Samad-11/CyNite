@@ -136,10 +136,6 @@ export async function registerParticipant(formData: FormData) {
     formData.has('mate5') ? mates.push(formData.get('mate5') as string) : null;
 
 
-    console.log('====================================');
-    console.log();
-    console.log(formData);
-    console.log('====================================');
 
     try {
         let participant: participants[];
@@ -186,7 +182,7 @@ export async function registerParticipant(formData: FormData) {
             }
         })
         console.log('done ');
-        console.log(newParticipant);
+        // console.log(newParticipant);
 
         return { message: `You have been successfully registered as ${name}`, ok: true }
     } catch (error) {

@@ -35,37 +35,61 @@ const Form = () => {
             name: "tezar_heist",
             fee: 200,
             player: [1, 2],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "ui_universe",
             fee: 0,
             player: [1],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "quiz_technopedia",
             fee: 0,
             player: [1, 2],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "innovision_5",
             fee: 0,
             player: [1, 2, 3],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "code_kalpana",
             fee: 0,
             player: [1, 2, 3, 4],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "clipclash",
             fee: 0,
             player: [1],
-            subOption: []
+            subOption: [{
+                name: '',
+                fee: 0,
+                player: [1]
+            }]
         },
         {
             name: "arcade_arena",
@@ -107,9 +131,15 @@ const Form = () => {
         name: "",
         fee: 0,
         player: [1],
-        subOption: [{}]
+        subOption: [{
+            name: '',
+            fee: 0,
+            player: [1]
+        }]
     })
-
+    console.log('====================================');
+    console.log(typeof selectedEventDetail.subOption[0]);
+    console.log('====================================');
     const onEventChangeHandler = (e: any) => {
         const event = ((e.target as HTMLInputElement).value)
         for (let i = 0; i < eventDetails.length; i++) {
@@ -166,21 +196,21 @@ const Form = () => {
             {/* event select */}
             <select required onChange={onEventChangeHandler} name='event'
                 defaultValue="" className="select select-bordered border-[5px] w-full  bg-transparent my-5
-            max-md:text-xs
+            max-md:text-xs 
             ">
-                <option disabled value={""}>Select Event</option>
-                <option value={'tezar_heist'}>Tezar Heist</option>
-                <option value={'ui_universe'}>UI Universe</option>
-                <option value={"arcade_arena"}>Arcade Arena</option>
-                <option value={'quiz_technopedia'}>Quiz Technopedia</option>
-                <option value={'innovision_5'}>Innovision 5.0</option>
-                <option value={'code_kalpana'}>Code Kalpana</option>
-                <option value={'clipclash'}>Clipclash</option>
+                <option className='text-primary-content font-black' disabled value={""}>Select Event</option>
+                <option className='text-primary-content' value={'tezar_heist'}>Tezar Heist</option>
+                <option className='text-primary-content' value={'ui_universe'}>UI Universe</option>
+                <option className='text-primary-content' value={"arcade_arena"}>Arcade Arena</option>
+                <option className='text-primary-content' value={'quiz_technopedia'}>Quiz Technopedia</option>
+                <option className='text-primary-content' value={'innovision_5'}>Innovision 5.0</option>
+                <option className='text-primary-content' value={'code_kalpana'}>Code Kalpana</option>
+                <option className='text-primary-content' value={'clipclash'}>Clipclash</option>
             </select>
 
             {/* subOptions */}
             {
-                selectedEventDetail.subOption[0] != null &&
+                (selectedEventDetail.subOption[0].name != null && selectedEventDetail.subOption[0].name != "") &&
                 <select required name='game' onChange={onGameChangeHandler}
 
                     defaultValue={""}
@@ -206,7 +236,7 @@ const Form = () => {
             {/* phone no. */}
             <label className="input input-bordered border-[5px]  flex items-center gap-2 bg-transparent my-5 max-md:text-xs overflow-x-hidden">
                 Phone No.
-                <input required type="text" name='phone' className="grow" placeholder="Enter your mail id" />
+                <input required type="tel" name='phone' className="grow" placeholder="Enter phone number" />
             </label>
 
             {/* name */}
@@ -232,7 +262,7 @@ const Form = () => {
                     if (selectedEventDetail.player.length > mate) {
                         return (
                             <label key={mate} className="input input-bordered border-[5px]  flex items-center gap-2 bg-transparent my-5 max-md:text-xs overflow-x-hidden">
-                                Team mate
+                                Team mate {mate}
                                 <input type="text" name={`mate${mate}`} className="grow" placeholder="Enter your team mate's name" />
                             </label>
                         )

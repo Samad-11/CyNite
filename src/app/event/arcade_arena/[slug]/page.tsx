@@ -75,7 +75,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             </div>
 
                             {
-                                game.Account_rule[0] != null &&
+                                (game.Account_rule[0] != '' && game.Account_rule[0] != null) &&
 
                                 <div className="acRule rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Account Rules</h1>
@@ -89,7 +89,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.teamRoaster[0] != null) &&
+                                (game.teamRoaster[0] != '' && game.teamRoaster[0] != null) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Team And Roster</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -102,7 +102,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.match_rules[0] != null) &&
+                                (game.match_rules[0] != '' && game.match_rules[0] != null) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Match Rules</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -115,7 +115,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.during_Match_rules[0] != null) &&
+                                (game.during_Match_rules[0] != '' && game.during_Match_rules[0] != null) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>During Match Rules</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -128,7 +128,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.after_match_rules[0] != null) &&
+                                (game.after_match_rules[0] != '' && game.after_match_rules[0] != null) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>After Match Rules</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
@@ -141,14 +141,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.punishment[0] != null) &&
+                                (game.punishment[0] != '' && game.punishment != null) &&
                                 <div className="rules my-5">
-                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>PUNISHMENTS FOR VIOLATING RULES</h1>
-                                    <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
-                                        disqualified immediately</p>
+                                    <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Violations</h1>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
-                                            game.teamRoaster.map((roaster) => (
+                                            game.punishment.map((roaster) => (
                                                 <li key={roaster}>{roaster}</li>
                                             ))
                                         }
@@ -156,11 +154,9 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             }
                             {
-                                (game.pointSystem[0] != null) &&
+                                (game.pointSystem[0] != '' && game.pointSystem[0] != null) &&
                                 <div className="rules my-5">
                                     <h1 className='text-lg lg:text-2xl  font-extrabold my-3 cinzel '>Points System</h1>
-                                    <p className='faunaOne text-sm'>If any player found to be violating the rules and indulging in the below mentioned things will be
-                                        disqualified immediately</p>
                                     <ul className="faunaOne pl-5 list max-lg:text-sm pr-1">
                                         {
                                             game.pointSystem.map((point) => (
@@ -210,7 +206,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                     </div>
                 </div>
                 <div className='mt-[3rem]'>.</div>
-            </section>
+            </section >
         </>
     )
 }

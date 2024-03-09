@@ -21,7 +21,7 @@ const page = ({ params }: { params: { slug: string } }) => {
         imageSrc: teizarHeist.src,
         posterSrc: teizarHeistPoster.src,
         caption: "Find fortune, forge legends",
-        description: "Tezar Heist is our annual IT Fest CYNET's most loved event. In this Teams are armed with clues, questions, and tasks to race against the clock to be the first to complete challenges. It’s a game of smart time management, team spirit, good thinking capability, and quick decision-making with bumper prize money as a reward.",
+        description: ["Tezar Heist is our annual IT Fest CYNET's most loved event. In this Teams are armed with clues, questions, and tasks to race against the clock to be the first to complete challenges. It’s a game of smart time management, team spirit, good thinking capability, and quick decision-making with bumper prize money as a reward."],
         rules: [
             "-> 2 players per team is allowed",
             '-> Registration fee Rs 200/- per team will be charged',
@@ -94,7 +94,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <hr className='border-[3px] border-neutral-content rounded-full' />
                             <div className="description my-5">
                                 {/* <h1 className='text-3xl font-extrabold my-3 faunaOne '></h1> */}
-                                <p className="faunaOne pl-5 max-lg:text-sm ">{event.description}</p>
+                                {
+                                    event.description.map((desc) => (
+                                        <p key={desc} className="faunaOne pl-5 max-lg:text-sm mb-4">{desc}</p>
+
+                                    ))
+                                }
                             </div>
                             <div className="rules my-5">
                                 <h1 className='text-lg lg:text-3xl font-extrabold my-3 faunaOne '>Rules</h1>

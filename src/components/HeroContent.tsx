@@ -30,7 +30,7 @@ const HeroContent = () => {
                 </div> */}
                 {/*  */}
                 <HeroBounceText />
-                <HeroRegisterButton />
+                {/* <HeroRegisterButton /> */}
                 <Clock />
                 <HeroEnigmaLogo2 />
             </div>

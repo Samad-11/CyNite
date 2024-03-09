@@ -7,12 +7,9 @@ import Link from 'next/link'
 
 import CommingSoornPage from '@/components/CommingSoornPage'
 
-import { redirect } from 'next/navigation'
 import { events } from '@/lib/events'
-import EventCard from '@/components/EventCard'
 import { games } from '@/lib/games'
 import GameCard from './GameCard'
-import { commingSoon } from '@/lib/commingSoon'
 
 const page = ({ params }: { params: { slug: string } }) => {
 
@@ -61,7 +58,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{event.name}</h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
                             <div className="description mt-5">
-                                <p className="faunaOne pl-5 max-lg:text-sm ">{event.description}</p>
+                                {
+                                    event.description.map((desc) => (
+                                        <p key={desc} className="faunaOne pl-5 max-lg:text-sm mb-4">{desc}</p>
+
+                                    ))
+                                }
                             </div>
                             <div className="rules my-6">
                                 <h1 className='text-lg lg:text-3xl font-extrabold mt-3 faunaOne '>Game</h1>

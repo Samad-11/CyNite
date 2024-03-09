@@ -26,7 +26,7 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
 
     }
     const data = await getAllParticipants(searchParams.verified);
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className='p-10 faunaOne'>
