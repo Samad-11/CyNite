@@ -119,8 +119,9 @@ export const games = [
             "* Once all the zones are completed the winners of each zone are going to battle in the final zone."
         ],
         punishment: [
-            "* Once a zone is over and the winner is decided they must provide their contact details so that they can be called at the time of final showdown.",
-            "* Once all the zones are completed the winners of each zone are going to battle in the final zone."
+            "* Stalling",
+            "* Creating commotion and not listening to the OC.",
+            "* Sabotaging other player(s"
         ],
         pointSystem: [''],
         imageSrc: tekkenImage.src,
