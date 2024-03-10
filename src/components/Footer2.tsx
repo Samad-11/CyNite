@@ -20,18 +20,18 @@ const Footer2 = () => {
                     <p className='font-bold'>Copyright © {date.getFullYear()} - All right reserved</p>
                 </aside>
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end z-10">
-                    <Link href='' title='instagram' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Instagram'>
+                    <Link href='https://www.instagram.com/enigma.jimsvk?igsh=MWxyYzg0bWw5ODZ2eQ%3D%3D&utm_source=qr' target='_blank' title='instagram' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Instagram'>
                         <FaInstagram />
                     </Link>
 
-                    <Link href='' title='linkedin' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='LinkedIn'>
+                    <Link href='https://www.linkedin.com/in/enigma-jims-vk-281a19234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='_blank' title='linkedin' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='LinkedIn'>
                         <FaLinkedinIn />
                     </Link>
-                    <Link href='' title='mail' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Gmail'>
+                    <Link href='mailto:itclub.vk@jimsd.org' target='_blank' title='mail' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Gmail'>
                         <BsEnvelopeAt />
                     </Link>
                 </nav>
-                <div className="grid-flow-row col-span-full bg-black/65 py-1 px-2 cinzel font-bold tracking-wide text-center">Website Created By Developer Team of Enigma</div>
+                <Link href={'https://www.linkedin.com/in/vinay-kumar-421920227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'} className="link grid-flow-row col-span-full bg-black/65 py-1 px-2 cinzel font-bold tracking-wide text-center">website developed by Enigma IT club</Link>
             </footer>
         </>
     )

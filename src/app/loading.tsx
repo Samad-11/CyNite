@@ -2,8 +2,9 @@ import React from 'react'
 
 const loading = () => {
     return (
-        <section className='h-screen w-screen'>
-            <span className="loading loading-infinity loading-lg"></span>
+        <section className='h-screen flex flex-col items-center justify-center'>
+            <span className="loading loading-infinity md:w-52 w-20"></span>
+            <h1 className='cinzel text-2xl font-black'>Fetching Your Page</h1>
         </section>
     )
 }

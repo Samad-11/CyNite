@@ -18,21 +18,21 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             label: "home",
             icon: <IoHome />
         },
+        // {
+        //     href: "contact",
+        //     label: "gallery",
+        //     icon: <LuGalleryHorizontalEnd />
+        // },
         {
-            href: "",
-            label: "gallery",
-            icon: <LuGalleryHorizontalEnd />
-        },
-        {
-            href: "",
+            href: "contact",
             label: "contact us",
             icon: <LuMessagesSquare />
         },
-        {
-            href: "",
-            label: "faq",
-            icon: <BsPatchQuestion />
-        }
+        // {
+        //     href: "",
+        //     label: "faq",
+        //     icon: <BsPatchQuestion />
+        // }
     ]
     return (
         <div className="drawer drawer-end">

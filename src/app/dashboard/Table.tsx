@@ -7,11 +7,13 @@ import ReactToPrint from 'react-to-print'
 import Image from 'next/image'
 import DeleteButton from './DeleteButton'
 import { useEdgeStore } from '@/lib/edgestore'
+import { redirect, useRouter } from 'next/navigation'
 
 const Table = ({ participants }: { participants: participants[] }) => {
     const ref = useRef<HTMLTableElement>(null)
     const { edgestore } = useEdgeStore()
     let i = 0;
+    const router = useRouter()
 
     return (
         <div className="overflow-x-auto">
@@ -34,6 +36,9 @@ const Table = ({ participants }: { participants: participants[] }) => {
                             </label>
                         </th>
                         <th>#</th>
+                        <th><button type='button' onClick={() => {
+                            router.replace('')
+                        }}>redirect</button></th>
                         <th>Name</th>
                         <th>Contact</th>
                         <th>College</th>
@@ -157,14 +162,34 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                     }
                                 </td>
                                 <td>
-                                    <form action={deleteParticipant}>
-                                        <input type="hidden" name="id" value={participant.id} />
-                                        {
-                                            participant.receiptPath &&
-                                            <input type='hidden' name='receiptPath' value={participant.receiptPath} />
-                                        }
-                                        <DeleteButton />
-                                    </form>
+                                    <button
+                                        className="btn"
+                                        onClick={() => {
+                                            if (document) {
+                                                (document.getElementById(participant.id) as HTMLFormElement).showModal();
+                                            }
+                                        }}
+                                    >open</button>
+                                    <dialog id={participant.id} className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-lg">Alert</h3>
+                                            <p className="py-4">Do you really want to remove <span className='font-bold'> {participant.name}</span> from list</p>
+                                            <div className="modal-action">
+                                                <form action={deleteParticipant} method='dialog'>
+                                                    <input type="hidden" name="id" value={participant.id} />
+                                                    {
+                                                        participant.receiptPath &&
+                                                        <input type='hidden' name='receiptPath' value={participant.receiptPath} />
+                                                    }
+                                                    <DeleteButton />
+                                                </form>
+                                                <form method='dialog' className='flex  gap-2'>
+
+                                                    <button className="btn">Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                 </td>
                             </tr>
                         ))
