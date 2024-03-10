@@ -37,7 +37,7 @@ const Registration = () => {
                     </div>
                 </div>
             </div>
-            <Footer2 />
+            {/* <Footer2 /> */}
         </>
     )
 }
