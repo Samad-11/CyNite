@@ -23,7 +23,7 @@ const page = ({ params }: { params: { slug: string } }) => {
     }
     return (
         <>
-            <section className='min-h-[200vh] bg-accent'>
+            <section className='max-md:min-h-[330vh] min-h-[300vh] bg-accent'>
                 <div className="w-full h-[25rem] relative">
                     <div className="bg-neutral-content h-full z-10 bg-opacity-15 backdrop-brightness-50 w-full absolute"></div>
                     <Image src={game.imageSrc} alt='bg' fill className='object-cover mix-blend-overlay' />

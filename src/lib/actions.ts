@@ -135,8 +135,17 @@ export async function registerParticipant(formData: FormData) {
     formData.has('mate4') ? mates.push(formData.get('mate4') as string) : null;
     formData.has('mate5') ? mates.push(formData.get('mate5') as string) : null;
 
-
-
+    const paidEvents = ['tezar_heist', 'arcade_arena']
+    for (let i = 0; i < paidEvents.length; i++) {
+        if (paidEvents[i] == event) {
+            if ((transId == null || transId == '') || (receiptUrl == null || receiptUrl == '') || (amount == '0' || amount == '')) {
+                return { message: "Please Complete your payment", ok: false }
+            }
+        }
+    }
+    if ((name == '') || (mail == '') || (phone == '') || (college == '') || (enrollNo == '')) {
+        return { message: "Fill all the required fields", ok: false }
+    }
     try {
         let participant: participants[];
         if (subEvent) {
@@ -181,12 +190,10 @@ export async function registerParticipant(formData: FormData) {
                 receiptPath: receiptUrl,
             }
         })
-        console.log('done ');
-        // console.log(newParticipant);
+
 
         return { message: `You have been successfully registered as ${name}`, ok: true }
     } catch (error) {
-        console.log(error);
         return { message: "error", ok: false }
     }
 

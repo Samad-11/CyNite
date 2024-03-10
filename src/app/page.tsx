@@ -17,8 +17,7 @@ export default function Home() {
       <AboutSection />
       {/* <SponsorSection /> */}
       <TeamSection />
-      {/* <Footer2 /> */}
-
+      <Footer2 />
     </main>
   );
 }

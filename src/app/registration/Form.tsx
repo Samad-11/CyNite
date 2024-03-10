@@ -184,12 +184,12 @@ const Form = () => {
         <form ref={formRef} action={async (FormData) => {
             setIsFormSubmitting(true)
             const { message, ok } = await registerParticipant(FormData)
+            ok ? formRef.current?.reset() : setOk(false);
             ok ? toast.success(message) : toast.error(message)
-            ok && setOk(true)
-            setReceiptUrl('');
-            setFee(0);
+            ok ? setOk(true) : setOk(false)
+            ok ? setFee(0) : '';
+            ok ? setReceiptUrl('') : setOk(false);
             setIsFormSubmitting(false)
-            formRef.current?.reset();
             setProg(0)
         }} className=' max-md:w-screen max-md:px-5'>
 
@@ -236,7 +236,7 @@ const Form = () => {
             {/* phone no. */}
             <label className="input input-bordered border-[5px]  flex items-center gap-2 bg-transparent my-5 max-md:text-xs overflow-x-hidden">
                 Phone No.
-                <input required type="tel" name='phone' className="grow" placeholder="Enter phone number" />
+                <input required type="tel" name='phone' className="grow" pattern='[0-9]' title='Number Only' placeholder="Enter phone number" />
             </label>
 
             {/* name */}
@@ -299,7 +299,9 @@ const Form = () => {
                             <span className="label-text">Attach screenshot of payment receipt.</span>
                         </div>
 
-                        <input ref={fileInputRef} accept="image/*" name='file' required type="file" className="file-input file-input-bordered w-full my-5 bg-transparent border-[5px] "
+                        <input
+                            required
+                            ref={fileInputRef} accept="image/*" name='file' type="file" className="file-input file-input-bordered w-full my-5 bg-transparent border-[5px] "
                             onChange={async (e) => {
                                 if (e.target.files?.[0]) {
                                     const file = e.target.files[0];

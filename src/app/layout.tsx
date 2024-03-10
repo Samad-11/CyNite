@@ -7,6 +7,7 @@ import Provider from "@/components/Provider";
 // import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import Head from "next/head";
+import Footer2 from "@/components/Footer2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,6 +59,7 @@ export default function RootLayout({
             <Header />
             <Toaster />
             {children}
+            {/* <Footer2 /> */}
             {/* <Footer /> */}
           </EdgeStoreProvider>
         </Provider>
