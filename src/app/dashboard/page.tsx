@@ -7,11 +7,10 @@ import { redirect } from 'next/navigation';
 import authOptions from '../api/auth/options';
 import { prisma } from '../../../server';
 
-const DashboardPage = async ({ searchParams }: { searchParams: { verified: string } }) => {
+const DashboardPage = async ({ searchParams }: { searchParams: { verified: string, event: string } }) => {
     const session = await getServerSession(authOptions)
     if (!session?.user?.name) {
         redirect("/api/auth/signin")
-
     } else {
         if (session.user) {
             const admin = await prisma.admin.findUnique({
@@ -25,7 +24,7 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
         }
 
     }
-    const data = await getAllParticipants(searchParams.verified);
+    const data = await getAllParticipants(searchParams.verified, searchParams.event);
     // console.log(data);
 
     return (

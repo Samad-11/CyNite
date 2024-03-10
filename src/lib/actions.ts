@@ -71,7 +71,7 @@ export async function deleteParticipant(formData: FormData) {
     }
 }
 
-export async function getAllParticipants(verify = '') {
+export async function getAllParticipants(verify = '', event = '') {
     try {
         if (verify == 'true' || verify == 'false') {
             const isTransactionVerify = verify == 'true' ? true : false;
@@ -81,6 +81,13 @@ export async function getAllParticipants(verify = '') {
                 }
             })
             return data;
+        } else if (event != '') {
+            const data = await prisma.participants.findMany({
+                where: {
+                    event
+                }
+            })
+            return data
         } else {
             const data = await prisma.participants.findMany()
             return data;
