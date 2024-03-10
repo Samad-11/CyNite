@@ -36,9 +36,6 @@ const Table = ({ participants }: { participants: participants[] }) => {
                             </label>
                         </th>
                         <th>#</th>
-                        <th><button type='button' onClick={() => {
-                            router.replace('')
-                        }}>redirect</button></th>
                         <th>Name</th>
                         <th>Contact</th>
                         <th>College</th>
@@ -169,7 +166,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                                 (document.getElementById(participant.id) as HTMLFormElement).showModal();
                                             }
                                         }}
-                                    >open</button>
+                                    >Delete</button>
                                     <dialog id={participant.id} className="modal">
                                         <div className="modal-box">
                                             <h3 className="font-bold text-lg">Alert</h3>
@@ -185,7 +182,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                                 </form>
                                                 <form method='dialog' className='flex  gap-2'>
 
-                                                    <button className="btn">Delete</button>
+                                                    <button className="btn">Close</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -206,6 +203,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Contact</th>
+                        <th>College</th>
                         <th>Event</th>
                         <th>Mate</th>
                         <th>Transaction Id</th>
