@@ -31,9 +31,11 @@ const Footer2 = () => {
                         <BsEnvelopeAt />
                     </Link>
                 </nav>
+                <div className="grid-flow-row col-span-full bg-black/65 py-1 px-2 cinzel font-bold tracking-wide text-center">Website Created By Developer Team of Enigma</div>
             </footer>
         </>
     )
 }
+
 
 export default Footer2

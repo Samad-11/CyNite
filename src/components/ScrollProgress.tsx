@@ -18,7 +18,7 @@ export default function ScrollYProgress() {
                 position: 'fixed',
                 zIndex: '999',
                 top: 0,
-                width: "100%",
+                width: "100vw",
                 height: '5px',
             }}
             className="
