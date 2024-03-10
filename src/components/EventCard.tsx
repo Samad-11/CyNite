@@ -19,7 +19,6 @@ const EventCard = ({ eventName = 'coding', url, caption }: { eventName: string, 
         cursor-pointer
         eventBox
         
-        
         "
             style={{
                 backgroundImage: `url(${url})`,
@@ -31,9 +30,9 @@ const EventCard = ({ eventName = 'coding', url, caption }: { eventName: string, 
             }}>
             <div className="hero-overlay rounded-full absolute bg-opacity-40"></div>
             <div className=' w-80  '>
-                <p className='md:text-2xl text-lg' >{eventName}</p>
                 <p className='transition-all
         duration-700 bg-accent faunaOne eventDetailText text-accent-content rounded-full text-xs w-fit mx-auto p-2'>{caption}</p>
+                <p className='absolute -bottom-2 cinzel font-bold right-0 bg-neutral-content text-neutral py-2 px-3 rounded-full border-2 border-accent' >{eventName}</p>
             </div>
         </Link>
     )

@@ -1,10 +1,8 @@
 import React from 'react'
-import img from '../../../../public/event/eventPlaceholder.jpg'
 import Image from 'next/image'
 import { FaRegClock, FaRegCompass, FaUser } from 'react-icons/fa'
 import Link from 'next/link'
 import teizarHeist from '../../../../public/event/treasure.jpg'
-import teizarHeistPoster from '../../../../public/event/quizTechnopediaPoster.jpeg'
 
 import { events } from '@/lib/events'
 import { Metadata, ResolvingMetadata } from 'next'
@@ -30,7 +28,6 @@ const page = ({ params }: { params: { slug: string } }) => {
     let event = {
         name: 'tezar heist',
         imageSrc: teizarHeist.src,
-        posterSrc: teizarHeistPoster.src,
         caption: "Find fortune, forge legends",
         description: ["Tezar Heist is our annual IT Fest CYNET's most loved event. In this Teams are armed with clues, questions, and tasks to race against the clock to be the first to complete challenges. It’s a game of smart time management, team spirit, good thinking capability, and quick decision-making with bumper prize money as a reward."],
         rules: [
@@ -87,12 +84,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                         <div className="h-52 lg:h-80 w-full relative">
                             <div className="bg-neutral-content h-full z-10  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
                             <Image src={event.imageSrc} alt='bg' fill className='object-cover mix-blend-overlay' />
-                            {/* <h1 className='absolute 
+                            <h1 className='absolute 
                         top-[50%]  left-[50%] translate-x-[-50%] translate-y-[-50%]
-                        text-6xl font-black text-accent-content capitalize
-                        opacity-25 pl-2 w-full
+                        text-4xl font-black text-accent-content capitalize
+                        opacity-55 pl-2 w-full
                         z-20
-                        '>{game.caption}</h1> */}
+                        '>{event.caption}</h1>
                             {/* <div className="h-full w-60 mx-auto relative ">
                             <Image src={game.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
                         </div> */}

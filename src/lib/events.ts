@@ -1,23 +1,16 @@
 import game from '../../public/event/game.jpg'
-import gamePoster from '../../public/event/arcadeArenaPoster.png'
 import teizarHeist from '../../public/event/treasure.jpg'
-import teizarHeistPoster from '../../public/event/tezarHeistPoster.jpeg'
 import codeKalpana from '../../public/event/code.jpg'
-import codeKalpanaPoster from '../../public/event/codeKalpanaPoster.jpeg'
 import digidino from '../../public/event/digital_marketing.jpg'
-import digidinoPoster from '../../public/event/clipclashPoster.jpg'
 import innovasion from '../../public/event/innovasion.jpg'
-import innovasionPoster from '../../public/event/innovision5Poster.png'
 import quiz from '../../public/event/quiz.jpg'
-import quizPoster from '../../public/event/quizTechnopediaPoster.jpeg'
 import ui from '../../public/event/ui.jpg'
-import uiPoster from '../../public/event/uiUniversePoster.jpeg'
 
 export const events = [
     {
         name: 'tezar heist',
         imageSrc: teizarHeist.src,
-        posterSrc:teizarHeistPoster.src,
+        
         caption: "Find fortune, forge legends",
         description: ["Tezar Heist is our annual IT Fest CYNET's most loved event. In this Teams are armed with clues, questions, and tasks to race against the clock to be the first to complete challenges. It’s a game of smart time management, team spirit, good thinking capability, and quick decision-making with bumper prize money as a reward."],
 
@@ -39,7 +32,7 @@ export const events = [
     {
         name: 'ui universe',
         imageSrc: ui.src,
-        posterSrc:uiPoster.src,
+        
         caption: "Designing Dreams, pixels by pixels",
         description: ["Are you a talented designer with a passion for creating stunning websites? Are you ready to put your skills to the test in a thrilling design competition? Join us for an exhilarating event where you'll have the opportunity to showcase your creativity, talent, and expertise in website design!"],
         rules: [
@@ -54,7 +47,7 @@ export const events = [
     {
         name: 'arcade arena',
         imageSrc: game.src,
-        posterSrc:gamePoster.src,
+        
         caption: "Game on, World off",
         description: [
             "Get ready to unleash your gaming prowess at ArcadeArena, the electrifying hub of CYNET24! Step into a world where adrenaline meets pixels, where every click, every move, and every strategy matters!",
@@ -70,7 +63,7 @@ export const events = [
         name: 'quiz technopedia',
         imageSrc: quiz.src,
 
-        posterSrc:quizPoster.src,
+        
         caption: "Test your tech savvy!",
         description: ["Think you know IT inside out? Prove it in our high-octane IT Quiz Showdown! Test your tech knowledge against the best and brightest in a series of rapid-fire rounds covering everything from coding to cybersecurity. Grab your team or go solo – victory awaits the sharpest minds. Join us for an adrenaline-fueled battle for tech supremacy!"],
         rules: [
@@ -87,7 +80,7 @@ export const events = [
     {
         name: 'innovision 5.0',
         imageSrc: innovasion.src,
-        posterSrc:innovasionPoster.src,
+        
         caption: "Inspire, invent, ignite",
         description: ['"Empower, Innovate, Transform: Envisioning a Sustainable Future with Innovision 5.0" Innovision 5.0 - Ideathon: Where Your Vision Sparks a Revolution. Dive into a realm of innovation, pitch your groundbreaking ideas, and emerge victorious in a celebration of creativity and foresight.'],
         rules: [
@@ -105,7 +98,7 @@ export const events = [
     {
         name: 'Code Kalpana',
         imageSrc: codeKalpana.src,
-        posterSrc:codeKalpanaPoster.src,
+        
         caption: "Decipher, Code, Conquer!",
         description: ["Code Kalpana:Ribbonathon is the event in which participants coding knowledge and their coordination qualities are examined."],
         rules: [
@@ -125,7 +118,7 @@ export const events = [
     {
         name: 'clipclash',
         imageSrc: digidino.src,
-        posterSrc:digidinoPoster.src,
+        
         caption: "Digital Mastery Unleashed",
         description: ["ClipClash brings together creators in a thrilling contest of creativity and skill. Participants face off to produce captivating clips on the spot, pushing their creative boundaries and showcasing their talent. It is a fast-paced event where spontaneity is a key and every moment is an opportunity to shine."],
         rules: [

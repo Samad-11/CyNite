@@ -24,7 +24,7 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
         //     icon: <LuGalleryHorizontalEnd />
         // },
         {
-            href: "contact",
+            href: "/contact",
             label: "contact us",
             icon: <LuMessagesSquare />
         },
