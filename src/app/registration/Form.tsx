@@ -237,7 +237,7 @@ const Form = () => {
             {/* phone no. */}
             <label className="input input-bordered border-[5px]  flex items-center gap-2 bg-transparent my-5 max-md:text-xs overflow-x-hidden">
                 Phone No.
-                <input required type="tel" name='phone' className="grow" pattern='[0-9]' title='Number Only' placeholder="Enter phone number" />
+                <input required type="text" name='phone' className="grow" title='Number Only' placeholder="Enter phone number" />
             </label>
 
             {/* name */}
