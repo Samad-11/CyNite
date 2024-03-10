@@ -7,9 +7,24 @@ import teizarHeist from '../../../../public/event/treasure.jpg'
 import teizarHeistPoster from '../../../../public/event/quizTechnopediaPoster.jpeg'
 
 import { events } from '@/lib/events'
+import { Metadata, ResolvingMetadata } from 'next'
 
 
 
+export async function generateMetadata(
+    { params }: { params: { slug: string } },
+) {
+    const event = params.slug
+    return {
+        title: event.toUpperCase(),
+        description: `${event} is most thrilled event of the CYNET`
+    }
+}
+
+// export const metadata: Metadata = {
+//     title: 'CYNET EVENT',
+//     description: "Here's our IT department, the engine driving our digital journey. With expertise in every byte, we're the force behind seamless operations, innovation, and technological advancement."
+// }
 const page = ({ params }: { params: { slug: string } }) => {
     const eventName = params.slug
     let event = {
@@ -77,10 +92,10 @@ const page = ({ params }: { params: { slug: string } }) => {
                         text-6xl font-black text-accent-content capitalize
                         opacity-25 pl-2 w-full
                         z-20
-                    '>{event.caption}</h1> */}
-                            <div className="h-full w-60 mx-auto relative ">
-                                <Image src={event.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
-                            </div>
+                        '>{game.caption}</h1> */}
+                            {/* <div className="h-full w-60 mx-auto relative ">
+                            <Image src={game.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
+                        </div> */}
                         </div>
                         <div className="grid grid-cols-10  px-8 py-5 text-neutral-content">
                             <div className="col-span-10 lg:col-span-7 border-r-4 border-x-neutral-content">

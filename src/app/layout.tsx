@@ -6,8 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Provider from "@/components/Provider";
 // import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
-import Head from "next/head";
-import Footer2 from "@/components/Footer2";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +24,10 @@ const faunaOne = Fauna_One({
 })
 
 export const metadata: Metadata = {
-  title: "CYNET | IT fest of Jims",
+  title: {
+    template: "%s | CYNET",
+    default: "CYNET | IT fest of Jims",
+  },
   description: "CYNET is an annual IT Festival organised by the IT Department and society of JIMS Jagannath International Management School, Vasant Kunj, New Delhi.",
   metadataBase: new URL('https://cynet.jimsd.org'),
   alternates: {

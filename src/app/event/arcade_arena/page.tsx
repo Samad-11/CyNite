@@ -10,7 +10,13 @@ import CommingSoornPage from '@/components/CommingSoornPage'
 import { events } from '@/lib/events'
 import { games } from '@/lib/games'
 import GameCard from './GameCard'
+import { Metadata } from 'next'
 
+
+export const metadata: Metadata = {
+    title: "Arcade Arena",
+    description: "Join now our gaming community and compete"
+}
 const page = ({ params }: { params: { slug: string } }) => {
 
     const eventName = params.slug
@@ -38,17 +44,17 @@ const page = ({ params }: { params: { slug: string } }) => {
                 pb-10 rounded
                 ">
                     <div className="h-52 lg:h-80 w-full relative">
-                        <div className="bg-neutral-content h-full z-[1]  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
+                        <div className="bg-neutral-content h-full z-10  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
                         <Image src={event.imageSrc} alt='bg' fill className='object-cover mix-blend-overlay' />
                         {/* <h1 className='absolute 
                         top-[50%]  left-[50%] translate-x-[-50%] translate-y-[-50%]
                         text-6xl font-black text-accent-content capitalize
                         opacity-25 pl-2 w-full
                         z-20
-                        '>{event.caption}</h1> */}
-                        <div className="h-full w-60 mx-auto relative ">
-                            <Image src={event.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
-                        </div>
+                        '>{game.caption}</h1> */}
+                        {/* <div className="h-full w-60 mx-auto relative ">
+                            <Image src={game.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
+                        </div> */}
                     </div>
                     <div className="grid grid-cols-10  px-8 py-5 text-neutral-content">
                         <div className="col-span-10 lg:col-span-7 border-r-4 border-x-neutral-content">

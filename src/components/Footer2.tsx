@@ -20,14 +20,14 @@ const Footer2 = () => {
                     <p className='font-bold'>Copyright © {date.getFullYear()} - All right reserved</p>
                 </aside>
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end z-10">
-                    <Link href='' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Instagram'>
+                    <Link href='' title='instagram' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Instagram'>
                         <FaInstagram />
                     </Link>
 
-                    <Link href='' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='LinkedIn'>
+                    <Link href='' title='linkedin' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='LinkedIn'>
                         <FaLinkedinIn />
                     </Link>
-                    <Link href='' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Gmail'>
+                    <Link href='' title='mail' className='tooltip tooltip-left text-2xl rounded-full text-accent p-2  bg-accent-content' data-tip='Gmail'>
                         <BsEnvelopeAt />
                     </Link>
                 </nav>

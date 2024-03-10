@@ -20,8 +20,8 @@ const Header = () => {
     return (
         <>
             <Sidebar isDashboard={isDashboard} />
-            <Link href={'/'} className='z-50  absolute md:w-36 md:h-32 w-24 h-24'>
-                <Image src={jimsLogo} alt='jims Logo' fill />
+            <Link href={'/'} className='z-50  absolute '>
+                <Image src={jimsLogo} alt='jims Logo' width={100} />
             </Link>
 
             <div className={`dropdown dropdown-left fixed right-5 top-5 z-50 ${!isDashboard && "hidden"}`} >

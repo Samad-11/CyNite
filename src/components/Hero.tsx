@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="hero min-h-screen bgTransition bg-fixed
         cursor-default
         .hero
-        md:bg-[url('/heroImg.jpg')]
+        md:bg-[url('/heroImg.avif')]
         bg-[url('/hero750.jpg')]
         " style={{
                 // backgroundImage: `url(${(w > 750) ? hero750.src : heroImg.src})`,

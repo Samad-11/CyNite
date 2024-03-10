@@ -6,7 +6,13 @@ import Image from 'next/image'
 import { FaLongArrowAltDown } from 'react-icons/fa'
 import Link from 'next/link'
 import Footer2 from '@/components/Footer2'
+import { Metadata } from 'next'
 
+
+export const metadata: Metadata = {
+    title: 'Registration',
+    description: "Register here to participate in CYNET"
+}
 const Registration = () => {
     return (
         <>

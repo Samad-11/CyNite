@@ -7,6 +7,18 @@ import { redirect } from 'next/navigation'
 import { games } from '@/lib/games'
 
 
+
+
+export async function generateMetadata(
+    { params }: { params: { slug: string } },
+) {
+    const event = params.slug
+    return {
+        title: event.toUpperCase(),
+        description: `${event} | Play and compete`
+    }
+}
+
 const page = ({ params }: { params: { slug: string } }) => {
     const gameName = params.slug
 

@@ -7,7 +7,7 @@ const HeroSocialLinks = () => {
             <ul className='flex flex-col md:gap-4 gap-2'>
 
                 <li className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-accent flex justify-center items-center'>
-                    <Link target='_blank' href='https://www.instagram.com/enigma.jimsvk?igsh=MWxyYzg0bWw5ODZ2eQ%3D%3D&utm_source=qr'
+                    <Link title='instagram' target='_blank' href='https://www.instagram.com/enigma.jimsvk?igsh=MWxyYzg0bWw5ODZ2eQ%3D%3D&utm_source=qr'
                         className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-accent  flex justify-center items-center
                         hover:text-primary
                         hover:scale-110
@@ -15,7 +15,7 @@ const HeroSocialLinks = () => {
                     ><FaInstagram /></Link>
                 </li>
                 <li className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-accent flex justify-center items-center'>
-                    <Link target='_blank' href='https://www.linkedin.com/in/enigma-jims-vk-281a19234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+                    <Link title='linkedin' target='_blank' href='https://www.linkedin.com/in/enigma-jims-vk-281a19234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
                         className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-accent flex justify-center items-center
                         hover:text-primary
                         hover:scale-110
@@ -24,7 +24,7 @@ const HeroSocialLinks = () => {
                     ><FaLinkedinIn /></Link>
                 </li>
                 <li>
-                    <Link target='_blank' href='mailto:itclub.vk@jimsd.org'
+                    <Link title='mail' target='_blank' href='mailto:itclub.vk@jimsd.org'
                         className='w-7 h-7 md:w-10 md:h-10 rounded-full bg-accent flex justify-center items-center
                         hover:text-primary
                         hover:scale-110
