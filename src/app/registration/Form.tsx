@@ -179,6 +179,7 @@ const Form = () => {
     const formRef = useRef<HTMLFormElement>(null)
     const [ok, setOk] = useState(false)
     const [isFormSubmitting, setIsFormSubmitting] = useState(false)
+    const [isFileUploading, setIsFileUploading] = useState(false)
 
     return (
         <form ref={formRef} action={async (FormData) => {
@@ -294,14 +295,15 @@ const Form = () => {
                         <h1 className="px-3 max-sm:w-full text-center"><span className='md:text-lg text-base font-bold'>Pay ₹{fee} using UPI</span>/-</h1>
                     </div>
                     {/* file */}
-                    <label className="form-control w-full max-w-xs">
+                    <label className="form-control w-full max-sm:w-ful">
                         <div className="label -mb-4">
                             <span className="label-text">Attach screenshot of payment receipt.</span>
                         </div>
 
                         <input
                             required
-                            ref={fileInputRef} accept="image/*" name='file' type="file" className="file-input file-input-bordered w-full my-5 bg-transparent border-[5px] "
+                            disabled={isFileUploading}
+                            ref={fileInputRef} accept="image/*" name='file' type="file" className="file-input file-input-bordered w-full  my-5 bg-transparent border-[5px] "
                             onChange={async (e) => {
                                 if (e.target.files?.[0]) {
                                     const file = e.target.files[0];
@@ -309,10 +311,12 @@ const Form = () => {
                                         e.target.value = ''
                                         toast.error("File size should be less than 1MB")
                                     } else {
+                                        setIsFileUploading(true)
                                         const data = await uploadImage(e.target.files?.[0])
                                         if (data) {
                                             setReceiptUrl(data);
                                         }
+                                        setIsFileUploading(false)
                                         console.log(data);
                                     }
                                 }
@@ -332,7 +336,7 @@ const Form = () => {
                     </label>
                 </>
             }
-            <FormSubmitButton />
+            <FormSubmitButton isFileUploading={isFileUploading} />
             <h3 className={` mt-4 p-3 text-sm bg-secondary rounded-full text-primary px-5 ${!ok && 'hidden'}`}>If Transaction Id is incorrect your registration will be withdraw</h3>
         </form >
     )
