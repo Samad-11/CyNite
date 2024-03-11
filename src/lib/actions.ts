@@ -223,20 +223,20 @@ export async function registerParticipant(formData: FormData) {
             }
         })
 
-        const mailOptions = {
-            from: "abdussamadjims@gmail.com",
-            to: ["samadmalik04@gmail.com"
-            ],
-            subject: `NEW REGISTRATION ${event}`,
-            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
-            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
-            display:flex;justify-content:center;flex-direction:column;align-items:center
-            ">
-              <h1>New Registration</h1>
-              <h2>${name} from ${college}  Register in ${event} ${subEvent && `-${subEvent}`}</h2>
-            </main>`
-        }
-        const info = await transporter.sendMail(mailOptions)
+        // const mailOptions = {
+        //     from: "abdussamadjims@gmail.com",
+        //     to: ["samadmalik04@gmail.com"
+        //     ],
+        //     subject: `NEW REGISTRATION ${event}`,
+        //     // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
+        //     html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
+        //     display:flex;justify-content:center;flex-direction:column;align-items:center
+        //     ">
+        //       <h1>New Registration</h1>
+        //       <h2>${name} from ${college}  Register in ${event} ${subEvent && `-${subEvent}`}</h2>
+        //     </main>`
+        // }
+        // const info = await transporter.sendMail(mailOptions)
         return { message: `You have been successfully registered as ${name}`, ok: true }
     } catch (error) {
         return { message: "error", ok: false }
