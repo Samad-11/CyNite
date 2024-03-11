@@ -35,7 +35,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                 left-[50%]
                 translate-x-[-50%]
                 -translate-y-[20%]
-                max-lg:-translate-y-[25%]
+                max-lg:-translate-y-[20%]
                 lg:w-[78%] w-full
                 min-h-full z-20 
                 bg-[#a05c9c]
@@ -45,12 +45,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                     <div className="h-52 lg:h-80 w-full relative">
                         <div className="bg-neutral-content h-full z-10  w-full bg-opacity-0 backdrop-brightness-75 absolute"></div>
                         <Image src={event.imageSrc} alt='bg' fill className='object-cover mix-blend-overlay' />
-                        <h1 className='absolute 
+                        {/* <h1 className='absolute 
                         top-[50%]  left-[50%] translate-x-[-50%] translate-y-[-50%]
                         text-6xl font-black text-accent-content capitalize
                         opacity-25 pl-2 w-full
                         z-20
-                        '>{event.caption}</h1>
+                        '>{event.caption}</h1> */}
                         {/* <div className="h-full w-60 mx-auto relative ">
                             <Image src={game.posterSrc} alt='poster' fill className='object-contain  shadow-lg shadow-base-300 ' />
                         </div> */}
@@ -71,7 +71,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 }
                             </div>
                             <div className="rules my-6">
-                                <h1 className='text-lg lg:text-3xl font-extrabold mt-3 faunaOne '>Game</h1>
+                                <h1 className='text-lg lg:text-3xl font-extrabold mt-3 cinzel text-center '>Select Game</h1>
                                 <div className='flex flex-wrap gap-2 items-center justify-center my-7'>
                                     {
                                         games.map((game) => (

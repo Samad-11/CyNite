@@ -7,6 +7,8 @@ import AboutSection from "@/components/AboutSection";
 import SponsorSection from "@/components/SponsorSection";
 import TeamSection from "@/components/TeamSection";
 import Footer2 from "@/components/Footer2";
+import Image from "next/image";
+import CoordinatorSection from "@/components/CoordinatorSection";
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <EventSection />
       <AboutSection />
       {/* <SponsorSection /> */}
+      <CoordinatorSection />
       <TeamSection />
       <Footer2 />
     </main>

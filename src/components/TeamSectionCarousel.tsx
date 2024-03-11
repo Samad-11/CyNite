@@ -6,7 +6,7 @@ import directorDeveloper from '../../public/team/directorDeveloper.jpeg'
 import directorContent from '../../public/team/directorContent.jpg'
 import directorSocialMedia from '../../public/team/directorSocialMedia.jpg'
 import directorEventManagement from '../../public/team/directorEventManagement.jpg'
-// import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpg'
+import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpeg'
 import treasurerImage from '../../public/team/treasurer.jpeg'
 import vicePresident1Image from '../../public/team/vicePresident1.png'
 import vicePresident2Image from '../../public/team/vicePresident2.jpg'
@@ -24,16 +24,16 @@ import vk2EventDirector from '../../public/team/vk2/vk2Event Manager Director.jp
 
 
 const members = [
-    {
-        name: 'Varun Gupta',
-        designation: "President",
-        image: presidentImage.src
-    },
-    {
-        name: 'Amrita Kumari',
-        designation: "Vice-President",
-        image: vicePresident1Image.src
-    },
+    // {
+    //     name: 'Varun Gupta',
+    //     designation: "President",
+    //     image: presidentImage.src
+    // },
+    // {
+    //     name: 'Amrita Kumari',
+    //     designation: "Vice-President",
+    //     image: vicePresident1Image.src
+    // },
     {
         name: 'SOUMAY SANPUI',
         designation: "Vice-President",
@@ -65,6 +65,11 @@ const members = [
         image: directorContent.src
     },
     {
+        name: 'Harpal Singh',
+        designation: "Stills And Motion-Director",
+        image: directorStillsAndMotions.src
+    },
+    {
         name: 'Tisha',
         designation: "Treasurer",
         image: treasurerImage.src
@@ -79,41 +84,37 @@ const members = [
         designation: "Social Media-Director",
         image: directorSocialMedia.src
     },
+
     // {
-    //     name: 'Sahil Gupta',
-    //     designation: "Stills And Motion-Director",
-    //     image: directorStillsAndMotions.src
+    //     name: 'Naman Arora',
+    //     designation: "President (VK-2)",
+    //     image: vk2President.src
     // },
-    {
-        name: 'Naman Arora',
-        designation: "President (VK-2)",
-        image: vk2President.src
-    },
-    {
-        name: 'Priyanshu Maheshwari',
-        designation: "Vice-President (VK-2)",
-        image: vk2VicePresident.src
-    },
-    {
-        name: 'Gouransh Harjai',
-        designation: "Secretary (VK-2)",
-        image: vk2Secretory.src
-    },
-    {
-        name: 'Megha Kaushik',
-        designation: "Director-Content (VK-2)",
-        image: vk2ContentDirector.src
-    },
-    {
-        name: 'Vanshika Vats',
-        designation: "Director-Social Media (VK-2)",
-        image: vk2SocialDirector.src
-    },
-    {
-        name: 'Sahil Bhalla',
-        designation: "Director-Event Management (VK-2)",
-        image: vk2EventDirector.src
-    },
+    // {
+    //     name: 'Priyanshu Maheshwari',
+    //     designation: "Vice-President (VK-2)",
+    //     image: vk2VicePresident.src
+    // },
+    // {
+    //     name: 'Gouransh Harjai',
+    //     designation: "Secretary (VK-2)",
+    //     image: vk2Secretory.src
+    // },
+    // {
+    //     name: 'Megha Kaushik',
+    //     designation: "Director-Content (VK-2)",
+    //     image: vk2ContentDirector.src
+    // },
+    // {
+    //     name: 'Vanshika Vats',
+    //     designation: "Director-Social Media (VK-2)",
+    //     image: vk2SocialDirector.src
+    // },
+    // {
+    //     name: 'Sahil Bhalla',
+    //     designation: "Director-Event Management (VK-2)",
+    //     image: vk2EventDirector.src
+    // },
 ]
 
 

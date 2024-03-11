@@ -1,0 +1,30 @@
+import akashManCon from '../../../public/team/Akash(Manager-Content).jpg
+import amritavice from '../../../public/team/Amrita Kumari (Vice President).jpg
+import anishaRawatDir from '../../../public/team/AnishaRawat(directorcontent).jpg
+import anshikajointsec from '../../../public/team/Anshika khanna (joint secretary).jpg
+import arshDigitalMan from '../../../public/team/Arsh (Digital Marketing Manager).jpg
+import ashishSocialMan from '../../../public/team/Ashish Thakur(Manager - Social Media Team).jpg
+import avijotStillMan from '../../../public/team/Avijot Singh Anand(Stills & Motions Manager).jpg
+import bhavyaEventMan from '../../../public/team/Bhavya Munjal (Manager Event Management).jpg
+import divyantTreasurerMan from '../../../public/team/Divyant Mayank(Manager Treasurer) Vk.jpg
+import diyaContentMan from '../../../public/team/Diya Saroya (Manager Content).jpg
+import harpalStillDir from '../../../public/team/Harpal Singh(still and motion director).jpg
+import harshitEventMan from '../../../public/team/Harshit Verma (Event Manager)vk1.jpg
+import jaskiratPublicManager from '../../../public/team/Jaskirat Singh (public relations team - manager).jpg
+import lakshayDigitalManager from '../../../public/team/Lakshay Juneja (Manager Digital Marketing).jpg
+import maanyaContentManager from '../../../public/team/Maanya Pathak ( manager_content).jpg
+import namanSocialMediaAsDir from '../../../public/team/NAMAN BAGHEL - social media team assistant director.jpg
+import prassnaSocialManager from '../../../public/team/Prassnna Kr. Pradhan (Manager Social Media).jpg
+import priyanshiStillManager from '../../../public/team/Priyanshi Sharma - stills and motion team manager.jpg
+import rachelSocialManager from '../../../public/team/Rachel Arora (Social Media Manager).jpg
+import rishantDeveloperManager from '../../../public/team/Rishant(Manager-Developer).jpg
+import rohanEventDir from '../../../public/team/Rohan Arora(Director Event Management).jpg
+import sagarEventAssDir from '../../../public/team/Sagar Bisht (Assistant Director Event Management).jpg
+import sahilSkillsAssDir from '../../../public/team/Sahil Gupta(Assistant Director Stills and Motion).jpg
+import shahzarStillsMan from '../../../public/team/Shahzar Iqbal (Stills and Motion - MANAGER).jpg
+import shivamDeveloperManager from '../../../public/team/Shivam Gupta(Manager-DeveloperTeam).jpg
+import shivamDeveloperAssDir from '../../../public/team/Shivam Kumar(Assistant Director Developer).jpg
+import simarPublicManager from '../../../public/team/Simarpreet kaur - Public Relation Team Manager.jpg
+import tusharDigitalAssDir from '../../../public/team/Tushar Arora (Assistant Director Digital Marketing).jpg
+import ujjwalEventManager from '../../../public/team/Ujjwal Ahuja (MANAGER EVENT MANAGEMENT).jpg
+import prasoonDir from '../../../public/team/Prasoon Tripathi(Secretary).jpg

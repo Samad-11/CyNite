@@ -18,11 +18,11 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             label: "home",
             icon: <IoHome />
         },
-        // {
-        //     href: "contact",
-        //     label: "gallery",
-        //     icon: <LuGalleryHorizontalEnd />
-        // },
+        {
+            href: "/gallery",
+            label: "gallery",
+            icon: <LuGalleryHorizontalEnd />
+        },
         {
             href: "/contact",
             label: "contact us",

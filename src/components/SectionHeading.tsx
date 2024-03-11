@@ -1,7 +1,7 @@
 'use client'
 import { useInView, motion } from 'framer-motion'
 import { useRef } from 'react'
-const SectionHeading = ({ heading = "Heading" }: { heading: string }) => {
+const SectionHeading = ({ heading = "Heading" }: { heading: string, }) => {
     const headingRef = useRef<HTMLDivElement>(null)
     const isInView = useInView(headingRef)
     return (
@@ -13,7 +13,7 @@ const SectionHeading = ({ heading = "Heading" }: { heading: string }) => {
                     opacity: isInView ? 1 : 0,
                     transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}
-                className="cinzel md:text-8xl text-4xl mb-8 font-extrabold tracking-wider">{heading}</motion.h1>
+                className={` cinzel md:text-8xl text-4xl mb-8 font-extrabold tracking-wider `}>{heading}</motion.h1>
         </div>
     )
 }
