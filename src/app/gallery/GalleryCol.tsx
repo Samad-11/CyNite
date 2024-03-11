@@ -9,7 +9,7 @@ const GalleryCol = ({ imageArray }: { imageArray: { image: StaticImageData, name
             {
                 imageArray.map((image) => (
                     <div key={null} className='imgDiv relative overflow-hidden'>
-                        <Image src={image.image} alt='' className='w-full hover:scale-95' />
+                        <Image src={image.image} blurDataURL={image.image.blurDataURL} alt={`${image.name} Image`} className='w-full hover:scale-95' />
                         {/* <h1 className='absolute top-0 cinzel bg-neutral-content rounded-full max-md:text-xs py-[.15rem] px-1 md:py-1 md:px-2 border-b-2 border-b-black  border-r-2 border-r-black font-bold text-black'>{image.desig}</h1> */}
                         <h1 className='absolute bg-accent/60 p-1 px-2 rounded-full text-sm md:text-lg imgText left-3 font-extrabold transition-duration-1000'>{image.name}</h1>
                     </div>

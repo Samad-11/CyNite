@@ -43,6 +43,7 @@ import simarPublicManager from '../../../public/team/Simarpreet kaur - Public Re
 import tusharDigitalAssDir from '../../../public/team/Tushar Arora (Assistant Director Digital Marketing).jpg'
 import ujjwalEventManager from '../../../public/team/Ujjwal Ahuja (MANAGER EVENT MANAGEMENT).jpg'
 import prasoonDir from '../../../public/team/Prasoon Tripathi(Secretary).jpg'
+import pawanKuman from '../../../public/team/Pawan Kumar Thakur (Social Media Manager).jpeg'
 
 
 
@@ -52,6 +53,10 @@ import vk2Secretory from '../../../public/team/vk2/vk2Secretory.jpg'
 import vk2ContentDirector from '../../../public/team/vk2/vk2Content Director.jpg'
 import vk2SocialDirector from '../../../public/team/vk2/vk2Social Media Director.jpg'
 import vk2EventDirector from '../../../public/team/vk2/vk2Event Manager Director.jpg'
+import vk2DeveloperDirector from '../../../public/team/vk2/vk2Developer Director.jpg'
+import vk2DeveloperManager from '../../../public/team/vk2/vk2Developer manager.jpg'
+import vk2StillDirector from "../../../public/team/vk2/Mehak Chandra - Stills and Motion Director.jpg";
+
 
 
 const Gallery = () => {
@@ -62,62 +67,88 @@ const Gallery = () => {
 
     const col1 = [
         { image: img1, name: 'Varun Gupta', desig: 'President' },
-        { image: vk2President, name: 'Naman Arora', desig: 'President-VK2' },
-        { image: akashManCon, name: 'Akash', desig: 'Manager Content ' },
+        { image: img5, name: 'Vinay Kumar', desig: 'Director Developer ' },
+
+        { image: rohanEventDir, name: 'Rohan Arora', desig: 'Director Event Management' },
         { image: anishaRawatDir, name: 'Anisha Rawat', desig: 'Director Content ' },
-        { image: anshikajointsec, name: 'Anshika khanna', desig: 'Joint Secretary' },
+        { image: akashManCon, name: 'Akash', desig: 'Manager Content ' },
+
         { image: arshDigitalMan, name: 'Arsh', desig: 'Manager Digital Marketing' },
         { image: ashishSocialMan, name: 'Ashish Thakur', desig: 'Manager Social Media Team' },
         { image: avijotStillMan, name: 'Avijot Singh Anand', desig: 'Manager Stills & Motions' },
         { image: sagarEventAssDir, name: 'Sagar Bisht', desig: 'Assistant Director Event Management ' },
-        { image: sahilSkillsAssDir, name: 'Sahil Gupta', desig: 'Assistant Director Stills & Motions' }
+        { image: sahilSkillsAssDir, name: 'Sahil Gupta', desig: 'Assistant Director Stills & Motions' },
+        { image: tusharDigitalAssDir, name: 'Tushar Arora', desig: 'Assistant Director Digital Marketing' },
+        { image: lakshayDigitalManager, name: 'Lakshay Juneja', desig: 'Manager Digital Marketing ' },
+
+
 
 
     ]
     const col2 = [
         { image: amritavice, name: 'Amrita Kumari', desig: 'Vice President' },
-        { image: vk2VicePresident, name: 'Priyanshu Maheshwari', desig: 'Vice President' },
-        { image: img5, name: 'Vinay Kumar', desig: 'Director Developer ' },
         { image: img6, name: 'Abdus Samad', desig: 'Manager Developer' },
+        { image: vk2VicePresident, name: 'Priyanshu Maheshwari', desig: 'Vice President' },
+        { image: vk2President, name: 'Naman Arora', desig: 'President-VK2' },
 
 
-        { image: vk2ContentDirector, name: 'Megha kaushik', desig: 'Manager Event Management ' },
-        { image: vk2SocialDirector, name: 'Vanshika Vats', desig: 'Manager Event Management ' },
 
-        { image: divyantTreasurerMan, name: 'Divyant Mayank', desig: 'Manager Treasurer' },
-        { image: diyaContentMan, name: 'Diya Saroya', desig: 'Manager Content ' },
-        { image: harshitEventMan, name: 'Harshit Verma', desig: 'Manager Event Management ' },
+        { image: shivamDeveloperAssDir, name: 'Shivam Kumar', desig: 'Assistant Director Developer ' },
+
+        { image: img11, name: 'Shibani Badola', desig: 'Manager Content' },
+        { image: simarPublicManager, name: 'Simarpreet kaur', desig: 'Manager Public Relation ' },
+
+        { image: rachelSocialManager, name: 'Rachel Arora', desig: 'Manager Social Media ' },
+
+        { image: namanSocialMediaAsDir, name: 'Naman Bhagel', desig: 'Assistant Director Social Media ' },
+        { image: priyanshiStillManager, name: 'Priyanshi Sharma', desig: 'Manager Stills & Motions' },
+
         { image: jaskiratPublicManager, name: 'Jaskirat Singh', desig: 'Manager Public Relations ' },
+
 
 
 
     ]
     const col3 = [
-        { image: img3, name: 'Sommay Sanpui', desig: 'Vice President' },
-        { image: bhavyaEventMan, name: 'Bhavya Munjal', desig: 'Manager Event Management ' },
         { image: harpalStillDir, name: 'Harpal Singh', desig: 'Director Stills & Motions' },
+        { image: img3, name: 'soumay sanpui', desig: 'Vice President' },
+        { image: bhavyaEventMan, name: 'Bhavya Munjal', desig: 'Manager Event Management ' },
         { image: vk2EventDirector, name: 'Sahil Bhalla', desig: 'Manager Developer' },
         { image: vk2Secretory, name: 'Gauransh Harjal', desig: 'Manager Developer' },
+        { image: divyantTreasurerMan, name: 'Divyant Mayank', desig: 'Manager Treasurer' },
+
+
+        { image: vk2ContentDirector, name: 'Megha kaushik', desig: 'Manager Event Management ' },
 
         { image: maanyaContentManager, name: 'Maanya Pathak', desig: 'Manager Content ' },
-        { image: namanSocialMediaAsDir, name: 'Naman Bhagel', desig: 'Assistant Director Social Media ' },
         { image: prassnaSocialManager, name: 'Prassnna Kr. Pradhan', desig: 'Manager Social Media ' },
-        { image: priyanshiStillManager, name: 'Priyanshi Sharma', desig: 'Manager Stills & Motions' },
-        { image: rachelSocialManager, name: 'Rachel Arora', desig: 'Manager Social Media ' },
+        { image: diyaContentMan, name: 'Diya Saroya', desig: 'Manager Content ' },
+
+
+        { image: vk2DeveloperDirector, name: 'Kanha Yadav', desig: 'Manager Social Media ' },
+
+
+
 
     ]
 
     const col4 = [
-        { image: prasoonDir, name: 'Prasoon Tripathi', desig: 'Secretary' },
         { image: shahzarStillsMan, name: 'Shahzar Iqbal', desig: 'Manager Stills & Motions' },
         { image: shivamDeveloperManager, name: 'Shivam Gupta', desig: 'Manager Developer ' },
-        { image: shivamDeveloperAssDir, name: 'Shivam Kumar', desig: 'Assistant Director Developer ' },
-        { image: ujjwalEventManager, name: 'Ujjwal Ahuja', desig: 'Manager Event Manager' },
-        { image: rohanEventDir, name: 'Rohan Arora', desig: 'Director Event Management' },
-        { image: simarPublicManager, name: 'Simarpreet kaur', desig: 'Manager Public Relation ' },
+        { image: prasoonDir, name: 'Prasoon Tripathi', desig: 'Secretary' },
+        { image: anshikajointsec, name: 'Anshika khanna', desig: 'Joint Secretary' },
         { image: rishantDeveloperManager, name: 'Rishant', desig: 'Manager Developer ' },
-        { image: tusharDigitalAssDir, name: 'Tushar Arora', desig: 'Assistant Director Digital Marketing' },
-        { image: lakshayDigitalManager, name: 'Lakshay Juneja', desig: 'Manager Digital Marketing ' },
+        { image: ujjwalEventManager, name: 'Ujjwal Ahuja', desig: 'Manager Event Manager' },
+        { image: harshitEventMan, name: 'Harshit Verma', desig: 'Manager Event Management ' },
+        { image: vk2SocialDirector, name: 'Vanshika Vats', desig: 'Manager Event Management ' },
+
+        { image: pawanKuman, name: 'Pawan Kumar Thakur', desig: 'Manager Social Media ' },
+        { image: vk2StillDirector, name: 'Mehak Chandra', desig: 'Manager Social Media ' },
+
+        { image: vk2DeveloperManager, name: 'Himanshu Anand', desig: 'Manager Content ' },
+
+
+
 
 
 
