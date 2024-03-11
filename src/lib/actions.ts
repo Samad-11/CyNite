@@ -78,6 +78,9 @@ export async function getAllParticipants(verify = '', event = '', last24hours = 
             const data = prisma.participants.findMany({
                 where: {
                     isTransactionVerify
+                },
+                orderBy: {
+                    id: "desc"
                 }
             })
             return data;
@@ -85,6 +88,9 @@ export async function getAllParticipants(verify = '', event = '', last24hours = 
             const data = await prisma.participants.findMany({
                 where: {
                     event
+                },
+                orderBy: {
+                    id: "desc"
                 }
             })
             return data
@@ -96,11 +102,18 @@ export async function getAllParticipants(verify = '', event = '', last24hours = 
                     createdAt: {
                         gt: d
                     }
+                },
+                orderBy: {
+                    id: "desc"
                 }
             })
             return data
         } else {
-            const data = await prisma.participants.findMany()
+            const data = await prisma.participants.findMany({
+                orderBy: {
+                    id: 'desc'
+                }
+            })
             return data;
         }
     } catch (error) {
