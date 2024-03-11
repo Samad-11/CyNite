@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 import authOptions from '../api/auth/options';
 import { prisma } from '../../../server';
 
-const DashboardPage = async ({ searchParams }: { searchParams: { verified: string, event: string } }) => {
+const DashboardPage = async ({ searchParams }: { searchParams: { verified: string, event: string, last24hours: string } }) => {
     const session = await getServerSession(authOptions)
     if (!session?.user?.name) {
         redirect("/api/auth/signin")
@@ -24,7 +24,7 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
         }
 
     }
-    const data = await getAllParticipants(searchParams.verified, searchParams.event);
+    const data = await getAllParticipants(searchParams.verified, searchParams.event, searchParams.last24hours);
     const verify = searchParams.verified ? searchParams.verified : '';
     const event = searchParams.event ? searchParams.event : '';
 

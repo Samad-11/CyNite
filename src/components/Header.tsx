@@ -32,6 +32,7 @@ const Header = () => {
                     <li>
                         <Link href={'/dashboard'}>All</Link>
                     </li>
+                    <li><Link href={'?last24hours=true'}>Last 24 Hours</Link></li>
                     <li>Filter by verification
                         <ul>
                             <li><Link href={'?verified=true'}>Verified</Link></li>

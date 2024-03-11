@@ -71,7 +71,7 @@ export async function deleteParticipant(formData: FormData) {
     }
 }
 
-export async function getAllParticipants(verify = '', event = '') {
+export async function getAllParticipants(verify = '', event = '', last24hours = '') {
     try {
         if (verify == 'true' || verify == 'false') {
             const isTransactionVerify = verify == 'true' ? true : false;
@@ -85,6 +85,17 @@ export async function getAllParticipants(verify = '', event = '') {
             const data = await prisma.participants.findMany({
                 where: {
                     event
+                }
+            })
+            return data
+        } else if (last24hours == 'true') {
+            const a = new Date()
+            const d = new Date(a.getTime() - 86400000)
+            const data = await prisma.participants.findMany({
+                where: {
+                    createdAt: {
+                        gt: d
+                    }
                 }
             })
             return data

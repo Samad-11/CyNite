@@ -13,6 +13,17 @@ const Table = ({ participants }: { participants: participants[] }) => {
     const { edgestore } = useEdgeStore()
     let i = 0;
 
+    function convertUTCDateToLocalDate(date: Date) {
+        var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+
+        var offset = date.getTimezoneOffset() / 60;
+        var hours = date.getHours();
+
+        newDate.setHours(hours - offset);
+
+        return newDate;
+    }
+
     return (
         <div className="overflow-x-auto">
             <ReactToPrint
@@ -85,6 +96,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                                 <div className="font-bold capitalize">{participant.phone}</div>
                                                 <div className="text-sm opacity-90">{participant.email}
                                                 </div>
+                                                <div className="text-sm opacity-90">At {participant.createdAt.toString().slice(0, 24)}</div>
                                             </div>
                                         </div>
                                     </td>

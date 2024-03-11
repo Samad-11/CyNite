@@ -16,6 +16,7 @@ const GalleryPage = () => {
             <main className='min-h-screen bg-base-100 '>
                 <div className="header border-b-[3px] border-b-neutral-content w-fit mx-auto">
                     <h1 className='pt-28 pb-5 text-center text-2xl md:text-4xl cinzel font-black'>Team <span className='font-light'> Gallery</span> </h1>
+
                 </div>
                 <Gallery />
             </main >
