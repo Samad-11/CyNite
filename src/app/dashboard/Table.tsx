@@ -53,7 +53,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Mate</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
-                        <th></th>
+                        {/* <th></th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -171,7 +171,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                             </>
                                         }
                                     </td>
-                                    <td>
+                                    {/* <td>
                                         <button
                                             className="btn"
                                             onClick={() => {
@@ -200,7 +200,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                                 </div>
                                             </div>
                                         </dialog>
-                                    </td>
+                                    </td> */}
                                 </tr>
                             )
                         }
@@ -223,7 +223,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Mate</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
-                        <th></th>
+                        {/* <th></th> */}
                     </tr>
                 </tfoot>
 
