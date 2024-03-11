@@ -1,6 +1,4 @@
-import img1 from '../../../public/team/president.jpg'
-import img2 from '../../../public/team/vicePresident1.png'
-import img3 from '../../../public/team/vicePresident2.jpg'
+
 import Image, { StaticImageData } from 'next/image'
 const GalleryCol = ({ imageArray }: { imageArray: { image: StaticImageData, name: string, desig: string }[] }) => {
     return (

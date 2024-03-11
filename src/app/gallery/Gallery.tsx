@@ -1,15 +1,9 @@
-import img1 from '../../../public/team/president.jpg'
-import img2 from '../../../public/team/vicePresident1.png'
+
 import img3 from '../../../public/team/vicePresident2.jpg'
-import img4 from '../../../public/team/secretary.jpg'
+import img1 from '../../../public/team/president.jpg'
+import img11 from '../../../public/team/assistantDirectorContent.jpeg'
 import img5 from '../../../public/team/directorDeveloper.jpeg'
 import img6 from '../../../public/team/abdusSamad.png'
-import img7 from '../../../public/team/directorEventManagement.jpg'
-import img8 from '../../../public/team/directorContent.jpg'
-import img9 from '../../../public/parallax1.jpg'
-import img10 from '../../../public/team/directorStillsAndMotions.jpeg'
-import img11 from '../../../public/team/assistantDirectorContent.jpeg'
-import img12 from '../../../public/team/treasurer.jpeg'
 import GalleryCol from './GalleryCol'
 
 
@@ -42,7 +36,7 @@ import shivamDeveloperAssDir from '../../../public/team/Shivam Kumar(Assistant D
 import simarPublicManager from '../../../public/team/Simarpreet kaur - Public Relation Team Manager.jpg'
 import tusharDigitalAssDir from '../../../public/team/Tushar Arora (Assistant Director Digital Marketing).jpg'
 import ujjwalEventManager from '../../../public/team/Ujjwal Ahuja (MANAGER EVENT MANAGEMENT).jpg'
-import prasoonDir from '../../../public/team/Prasoon Tripathi(Secretary).jpg'
+import prasoonDir from '../../../public/team/secretary.jpg'
 import pawanKuman from '../../../public/team/Pawan Kumar Thakur (Social Media Manager).jpeg'
 
 

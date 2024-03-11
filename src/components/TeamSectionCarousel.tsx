@@ -1,26 +1,15 @@
 import React from 'react'
-import TeamSectionCarouselItem from './TeamSectionCarouselItem'
-import presidentImage from '../../public/team/president.jpg'
+import TeamSectionCarouselItem from './TeamSectionCarouselItem';
 import secretaryImage from '../../public/team/secretary.jpg'
 import directorDeveloper from '../../public/team/directorDeveloper.jpeg'
-import directorContent from '../../public/team/directorContent.jpg'
+import directorContent from '../../public/team/AnishaRawat(directorcontent).jpg'
 import directorSocialMedia from '../../public/team/directorSocialMedia.jpg'
 import directorEventManagement from '../../public/team/directorEventManagement.jpg'
 import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpeg'
 import treasurerImage from '../../public/team/treasurer.jpeg'
-import vicePresident1Image from '../../public/team/vicePresident1.png'
 import vicePresident2Image from '../../public/team/vicePresident2.jpg'
 import myImage from '../../public/team/abdusSamad.png'
 import assistantDirectorContentImage from '../../public/team/assistantDirectorContent.jpeg'
-
-import vk2President from '../../public/team/vk2/vk2President.jpg'
-import vk2VicePresident from '../../public/team/vk2/vk2Vice President.jpg'
-import vk2Secretory from '../../public/team/vk2/vk2Secretory.jpg'
-import vk2ContentDirector from '../../public/team/vk2/vk2Content Director.jpg'
-import vk2SocialDirector from '../../public/team/vk2/vk2Social Media Director.jpg'
-import vk2EventDirector from '../../public/team/vk2/vk2Event Manager Director.jpg'
-
-
 
 
 const members = [
@@ -84,37 +73,6 @@ const members = [
         designation: "Social Media-Director",
         image: directorSocialMedia.src
     },
-
-    // {
-    //     name: 'Naman Arora',
-    //     designation: "President (VK-2)",
-    //     image: vk2President.src
-    // },
-    // {
-    //     name: 'Priyanshu Maheshwari',
-    //     designation: "Vice-President (VK-2)",
-    //     image: vk2VicePresident.src
-    // },
-    // {
-    //     name: 'Gouransh Harjai',
-    //     designation: "Secretary (VK-2)",
-    //     image: vk2Secretory.src
-    // },
-    // {
-    //     name: 'Megha Kaushik',
-    //     designation: "Director-Content (VK-2)",
-    //     image: vk2ContentDirector.src
-    // },
-    // {
-    //     name: 'Vanshika Vats',
-    //     designation: "Director-Social Media (VK-2)",
-    //     image: vk2SocialDirector.src
-    // },
-    // {
-    //     name: 'Sahil Bhalla',
-    //     designation: "Director-Event Management (VK-2)",
-    //     image: vk2EventDirector.src
-    // },
 ]
 
 
