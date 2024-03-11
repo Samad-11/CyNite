@@ -1,6 +1,4 @@
 import React from 'react'
-import SponsorCarouselItem from './TeamSectionCarouselItem'
-import { map } from 'zod'
 import TeamSectionCarouselItem from './TeamSectionCarouselItem'
 import presidentImage from '../../public/team/president.jpg'
 import secretaryImage from '../../public/team/secretary.jpg'
@@ -8,7 +6,7 @@ import directorDeveloper from '../../public/team/directorDeveloper.jpeg'
 import directorContent from '../../public/team/directorContent.jpg'
 import directorSocialMedia from '../../public/team/directorSocialMedia.jpg'
 import directorEventManagement from '../../public/team/directorEventManagement.jpg'
-import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpg'
+// import directorStillsAndMotions from '../../public/team/directorStillsAndMotions.jpg'
 import treasurerImage from '../../public/team/treasurer.jpeg'
 import vicePresident1Image from '../../public/team/vicePresident1.png'
 import vicePresident2Image from '../../public/team/vicePresident2.jpg'
@@ -81,11 +79,11 @@ const members = [
         designation: "Social Media-Director",
         image: directorSocialMedia.src
     },
-    {
-        name: 'Sahil Gupta',
-        designation: "Stills And Motion-Director",
-        image: directorStillsAndMotions.src
-    },
+    // {
+    //     name: 'Sahil Gupta',
+    //     designation: "Stills And Motion-Director",
+    //     image: directorStillsAndMotions.src
+    // },
     {
         name: 'Naman Arora',
         designation: "President (VK-2)",
