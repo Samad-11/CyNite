@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import img from '../../public/team/abdusSamad.png'
 
 const TeamSectionCarouselItem = ({ image, name, desig }: { image: string, name: string, desig: string }) => {
     return (
@@ -18,7 +17,7 @@ const TeamSectionCarouselItem = ({ image, name, desig }: { image: string, name: 
             rounded-md
             cursor-pointer
             '>
-                <Image src={image} alt='teamImage' fill
+                <Image src={image} alt={name} fill
                     className='object-cover rounded-sm'
                     quality={100}
                 />
