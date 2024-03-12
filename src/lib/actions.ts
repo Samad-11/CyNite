@@ -243,3 +243,53 @@ export async function registerParticipant(formData: FormData) {
     }
 
 }
+
+export async function test() {
+    try {
+
+        await new Promise((resolve, reject) => {
+            transporter.verify((error, success) => {
+                if (error) {
+                    console.log(error)
+                    reject(error)
+                } else {
+                    console.log("server is ready");
+                    resolve(success)
+
+                }
+            })
+
+        })
+
+
+        const mailOptions = {
+            from: "abdussamadjims@gmail.com",
+            to: ["samadmalik04@gmail.com"
+            ],
+            subject: `NEW REGISTRATION`,
+            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
+            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
+            display:flex;justify-content:center;flex-direction:column;align-items:center
+            ">
+              <h1>New Registration</h1>
+            </main>`
+        }
+
+        await new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    console.log(error);
+                    reject(error)
+                } else {
+                    console.log(info);
+                    resolve(info)
+                }
+            })
+        })
+
+
+    } catch (error) {
+        console.log(error);
+
+    }
+}
