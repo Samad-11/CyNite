@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { prisma } from "../../server";
-import { Prisma, participants } from "@prisma/client";
+import { participants } from "@prisma/client";
 import { transporter } from "./transporter";
 
 
@@ -139,8 +139,39 @@ export async function toggleVerificationStatus(formData: FormData) {
                 isTransactionVerify: isVerify
             }
         })
+        const mailOptions = {
+            from: process.env.GMAIL_USER,
+            to: [updateParticipant.email
+            ],
+            subject: `Cynet Registration verified`.toLocaleUpperCase(),
+            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
+            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
+            display:flex;justify-content:center;flex-direction:column;align-items:center
+            ">
+              <h1>Your registration for event ${updateParticipant.event} ${updateParticipant.subEvent ? updateParticipant.subEvent : ""} is verified successfully</h1>
+              <div>
+              <img src='https://cynet.jimsd.org/logo/enigmaLogo.png' alt='Enigma Logo'  />
+              </div>
+              <h3>Thank you for registering the event at CYNET 2024. We're excited to welcome you to the Biggest IT Fest at JIMS, Vasant Kunj. Get ready to dive into the digital cosmos and showcase your skills in the METAVERSE! For any further assistance, feel free to reach out.
+              </h3>
+              <h2>Date : March ${updateParticipant.subEvent ? (updateParticipant.subEvent == 'bgmi' || updateParticipant.subEvent == 'valorant' ? '14th; 11:00 AM ,ONLINE ' : '15TH MARCH ,10:00 AM') : '15th ,10:00AM'}</h2>
+            </main>`
+        }
+        if (isVerify) {
+            await new Promise((resolve, reject) => {
+                transporter.sendMail(mailOptions, (err, info) => {
+                    if (err) {
+                        console.log(err);
+                        reject(err)
+                    } else {
+                        resolve(info)
+                    }
+                })
+            })
+        }
         revalidatePath("/")
     } catch (error) {
+        console.log(error);
 
     }
 }
@@ -223,83 +254,33 @@ export async function registerParticipant(formData: FormData) {
             }
         })
 
-        const mailOptions = {
-            from: "abdussamadjims@gmail.com",
-            to: ["samadmalik04@gmail.com"
-            ],
-            subject: `NEW REGISTRATION ${event}`,
-            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
-            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
-            display:flex;justify-content:center;flex-direction:column;align-items:center
-            ">
-              <h1>New Registration</h1>
-              <h2>${name} from ${college}  Register in ${event} ${subEvent && `-${subEvent}`}</h2>
-            </main>`
-        }
+        // const mailOptions = {
+        //     from: process.env.GMAIL_USER,
+        //     to: ["samadmalik04@gmail.com"
+        //     ],
+        //     subject: `NEW REGISTRATION ${event}`,
+        //     // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
+        //     html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
+        //     display:flex;justify-content:center;flex-direction:column;align-items:center
+        //     ">
+        //       <h1>New Registration</h1>
+        //       <h2>${name} from ${college}  Register in ${event} ${subEvent && `-${subEvent}`}</h2>
+        //     </main>`
+        // }
 
-        await new Promise((resolve, reject) => {
-            transporter.sendMail(mailOptions, (err, info) => {
-                if (err) {
-                    console.log(err);
-                    reject(err)
-                } else {
-                    resolve(info)
-                }
-            })
-        })
+        // await new Promise((resolve, reject) => {
+        //     transporter.sendMail(mailOptions, (err, info) => {
+        //         if (err) {
+        //             console.log(err);
+        //             reject(err)
+        //         } else {
+        //             resolve(info)
+        //         }
+        //     })
+        // })
         return { message: `You have been successfully registered as ${name}`, ok: true }
     } catch (error) {
         return { message: "error", ok: false }
     }
 
-}
-
-export async function test() {
-    try {
-
-        await new Promise((resolve, reject) => {
-            transporter.verify((error, success) => {
-                if (error) {
-                    console.log(error)
-                    reject(error)
-                } else {
-                    console.log("server is ready");
-                    resolve(success)
-
-                }
-            })
-
-        })
-
-
-        const mailOptions = {
-            from: "abdussamadjims@gmail.com",
-            to: ["samadmalik04@gmail.com"
-            ],
-            subject: `NEW REGISTRATION`,
-            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
-            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
-            display:flex;justify-content:center;flex-direction:column;align-items:center
-            ">
-              <h1>New Registration</h1>
-            </main>`
-        }
-
-        await new Promise((resolve, reject) => {
-            transporter.sendMail(mailOptions, (error, info) => {
-                if (error) {
-                    console.log(error);
-                    reject(error)
-                } else {
-                    console.log(info);
-                    resolve(info)
-                }
-            })
-        })
-
-
-    } catch (error) {
-        console.log(error);
-
-    }
 }
