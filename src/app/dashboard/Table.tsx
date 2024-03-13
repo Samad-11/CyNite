@@ -69,8 +69,8 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                             <label>
                                                 <form action={toggleVerificationStatus} id='form' className='flex max-md:flex-col gap-2 items-center justify-start'>
                                                     <input type="checkbox" className="checkbox" defaultChecked={participant.isTransactionVerify} name='isVerify' />
-                                                    <input type="hidden" name="participant" value={participant.id} />
-                                                    <UpdateButton />
+                                                    {/* <input type="hidden" name="participant" value={participant.id} />
+                                                    <UpdateButton /> */}
                                                 </form>
                                             </label>
                                         </label>
