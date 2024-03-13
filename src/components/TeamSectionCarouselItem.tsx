@@ -19,7 +19,8 @@ const TeamSectionCarouselItem = ({ image, name, desig }: { image: string, name: 
             '>
                 <Image src={image} alt={name} fill
                     className='object-cover rounded-sm'
-                    quality={100}
+                    quality={name == 'Abdus Samad' ? 100 : undefined}
+                    priority={name == 'Abdus Samad'}
                 />
             </div>
 
