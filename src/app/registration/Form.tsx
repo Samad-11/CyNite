@@ -162,7 +162,6 @@ const Form = () => {
         for (let i = 0; i < eventDetails[6].subOption.length; i++) {
             if (game == eventDetails[6].subOption[i].name) {
                 setSelectedGameDetail(eventDetails[6].subOption[i])
-
                 break
             }
         }
@@ -180,6 +179,7 @@ const Form = () => {
     const [ok, setOk] = useState(false)
     const [isFormSubmitting, setIsFormSubmitting] = useState(false)
     const [isFileUploading, setIsFileUploading] = useState(false)
+    const [isConfirm, setIsConfirm] = useState(false)
 
     return (
         <form ref={formRef} action={async (FormData) => {
@@ -216,14 +216,28 @@ const Form = () => {
 
                     defaultValue={""}
                     className=" select select-bordered border-[5px] w-full  bg-transparent 
-                max-md:text-xs">
+                max-md:text-xs mb-3">
                     <option disabled value={""}>Select Game</option>
                     <option value={'bgmi'}>BGMI</option>
                     <option value={'tekken_7'}>Tekken 7</option>
                     <option value={"stumble_guys"}>Stumble Guys</option>
                     <option value={'valorant'}>Valorant</option>
                 </select>
+
             }
+
+            {
+                (selectedEventDetail.name != null && selectedEventDetail.name != "") &&
+                <label className="input input-bordered border-[5px]  flex items-center gap-2 bg-transparent mt-2 mb-5 max-md:text-xs overflow-x-hidden">
+                    Timing
+                    <input readOnly disabled type="email" className="grow" value={
+                        selectedEventDetail.name != 'arcade_arena' ? "15th March, 10:00AM" :
+                            (selectedGameDetail.name == 'bgmi' || selectedGameDetail.name == 'valorant') ? "14th March, 11:00AM, Online" : "14-15th March "
+                    } placeholder="" />
+                </label>
+            }
+
+
 
             {/* totla fee */}
             {/* <h1 className="my-5">Amount to be paid ₹<span className='md:text-lg text-base font-bold'>{fee}</span>/- Only</h1> */}
@@ -336,7 +350,15 @@ const Form = () => {
                     </label>
                 </>
             }
-            <FormSubmitButton isFileUploading={isFileUploading} />
+            <label className="input input-bordered border-[5px]  flex items-center justify-around gap-2 bg-transparent my-5 max-md:text-xs overflow-x-hidden">
+                All the Details above are correct?
+                <input required type="checkbox"
+                    onChange={() => {
+                        setIsConfirm(!isConfirm)
+                    }}
+                    className=" checkbox" placeholder="" />
+            </label>
+            <FormSubmitButton isConfirm={isConfirm} isFileUploading={isFileUploading} />
             <h3 className={` mt-4 p-3 text-sm bg-secondary rounded-full text-primary px-5 ${!ok && 'hidden'}`}>If Transaction Id is incorrect your registration will be withdraw</h3>
         </form >
     )

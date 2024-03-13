@@ -28,9 +28,9 @@ const Registration = () => {
                         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center">
                                 <p className='cinzel text-2xl md:text-5xl font-black text-base-200 text-center'>Register now for the greatest IT Fest of the Season</p>
                             </div>
-                        </div>
-                        <div>
-                            <Link href={'#formSection'} className='flex md:hidden justify-center items-center animate-bounce text-2xl font-bold cinzel'>Below <FaLongArrowAltDown /></Link>
+                            <div className='absolute bottom-[15%] left-[35%]'>
+                                <Link href={'#formSection'} className='flex md:hidden justify-center items-center animate-bounce text-2xl font-bold cinzel'>Below <FaLongArrowAltDown /></Link>
+                            </div>
                         </div>
                     </div>
                     <div id='formSection' className="right col-span-full lg:col-span-5 hero md:min-h-full min-h-screen "
