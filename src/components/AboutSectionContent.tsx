@@ -1,6 +1,6 @@
 'use client'
 import { useInView } from 'framer-motion';
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 
 const AboutSectionContent = () => {
     const contentRef = useRef(null);
