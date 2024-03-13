@@ -13,16 +13,16 @@ const Table = ({ participants }: { participants: participants[] }) => {
     const { edgestore } = useEdgeStore()
     let i = 0;
 
-    function convertUTCDateToLocalDate(date: Date) {
-        var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+    // function convertUTCDateToLocalDate(date: Date) {
+    //     var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
 
-        var offset = date.getTimezoneOffset() / 60;
-        var hours = date.getHours();
+    //     var offset = date.getTimezoneOffset() / 60;
+    //     var hours = date.getHours();
 
-        newDate.setHours(hours - offset);
+    //     newDate.setHours(hours - offset);
 
-        return newDate;
-    }
+    //     return newDate;
+    // }
 
     return (
         <div className="overflow-x-auto">

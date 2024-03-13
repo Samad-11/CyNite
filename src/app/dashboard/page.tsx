@@ -26,8 +26,9 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
     }
     const data = await getAllTest(searchParams.verified, searchParams.event, searchParams.last24hours);
 
-    const verify = searchParams.verified ? searchParams.verified : '';
+    const verify = searchParams.verified ? (searchParams.verified == 'true') ? "Verified" : "Unverified" : '';
     const event = searchParams.event ? searchParams.event : '';
+    const last24hours = searchParams.last24hours ? searchParams.last24hours : '';
     return (
         <div className='p-10 faunaOne'>
             <header className='mb-5'>
@@ -35,8 +36,26 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
             </header>
             <h1 className='text-center md:text-5xl text-2xl mb-3 '>Participants</h1>
             <h1 className='text-center md:text-3xl text-sm mb-3 capitalize'>
-                {(event || verify) ? (event) ? (event == 'innovision_5') ? "Innovision 5.0" : event.replace("_", " ") : (verify == 'true') ? 'Verified' : 'Unverified' : "All"}
+
+                {
+                    (last24hours) ? "Last 24 Hours" :
+                        (verify || event) ?
+                            (verify && event) ?
+                                event.replace("_", " ") + " " + verify :
+                                (verify) ? verify :
+                                    (event) ? (event == 'innovision_5') ? "Innovision 5.0" : event.replace("_", " ") : "All"
+
+                            : "All"
+                }
                 &nbsp;#{data?.length}
+                {/* {
+
+                    
+
+
+                    last24hours ? "Last 24 Hours" :
+                        (event || verify) ? (event) ? (event == 'innovision_5') ? "Innovision 5.0" : event.replace("_", " ") : (verify == 'true') ? 'Verified' : 'Unverified' : "All"}
+                &nbsp;#{data?.length} */}
             </h1>
             <Suspense fallback={<h1>Loading...</h1>}>
                 <Table participants={data as participants[]} />
