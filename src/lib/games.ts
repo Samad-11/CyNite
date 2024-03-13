@@ -125,7 +125,7 @@ export const games = [
         ],
         pointSystem: [''],
         imageSrc: tekkenImage.src,
-        timing: '11:00 Am'
+        timing: '10:00 Am'
     },
     {
         name: 'valorant',
@@ -166,7 +166,7 @@ export const games = [
         ],
         pointSystem: [''], // violation
         imageSrc: valorantImage.src,
-        timing: '10:00 Am'
+        timing: '11:00 Am'
     }
 ]
 

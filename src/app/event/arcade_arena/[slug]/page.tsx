@@ -198,7 +198,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                                         <div className="col-span-8 ">
                                             <p className='font-bold text-base lg:text-lg mb-2'>{game.timing} <span className='font-semibold opacity-25'>Onward</span></p>
                                             <span className='font-semibold opacity-25'>
-                                                {game.name == 'bgmi' || game.name == 'valorant' ? '15th March 2024, Online' :
+                                                {(game.name == 'BGMI' || game.name == 'valorant') ? '14th March 2024, Online' :
                                                     '15th March 2024'
                                                 }
 
