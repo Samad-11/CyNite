@@ -14,17 +14,15 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <main className="">
-      <Suspense fallback={<h1>Loading</h1>}>
 
-        <ScrollYProgress />
-        <Hero />
-        <EventSection />
-        <AboutSection />
-        {/* <SponsorSection /> */}
-        <CoordinatorSection />
-        <TeamSection />
-        <Footer2 />
-      </Suspense>
+      <ScrollYProgress />
+      <Hero />
+      <EventSection />
+      <AboutSection />
+      <SponsorSection />
+      <CoordinatorSection />
+      <TeamSection />
+      <Footer2 />
     </main>
   );
 }

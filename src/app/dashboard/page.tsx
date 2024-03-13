@@ -57,9 +57,7 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
                         (event || verify) ? (event) ? (event == 'innovision_5') ? "Innovision 5.0" : event.replace("_", " ") : (verify == 'true') ? 'Verified' : 'Unverified' : "All"}
                 &nbsp;#{data?.length} */}
             </h1>
-            <Suspense fallback={<h1>Loading...</h1>}>
-                <Table participants={data as participants[]} />
-            </Suspense>
+            <Table participants={data as participants[]} />
         </div>
     )
 }

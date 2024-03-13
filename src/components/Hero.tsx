@@ -12,10 +12,8 @@ const Hero = () => {
         .hero
         md:bg-[url('/heroImg.avif')]
         bg-[url('/hero750.jpg')]
-        " style={{
-                // backgroundImage: `url(${(w > 750) ? hero750.src : heroImg.src})`,
-
-            }}>
+        bg-cover
+        ">
             <div className="hero-overlay bg-opacity-65"></div>
             <HeroContent />
         </div>

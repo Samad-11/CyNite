@@ -3,7 +3,7 @@ import varun from '../../public/team/president.jpg'
 import vk2President from '../../public/team/vk2/vk2President.jpg'
 import amrita from '../../public/team/Amrita Kumari (Vice President).jpg'
 import vk2Vice from '../../public/team/vk2/vk2Vice President.jpg';
-import img from '../../public/parallax1.jpg'
+import img from '../../public/parallax2.jpg'
 
 import SectionHeading from './SectionHeading'
 

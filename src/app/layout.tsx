@@ -63,9 +63,7 @@ export default function RootLayout({
               <Header />
             </Suspense>
             <Toaster />
-            <Suspense fallback={<h1>Loading...</h1>}>
-              {children}
-            </Suspense >
+            {children}
             {/* <Footer2 /> */}
             {/* <Footer /> */}
           </EdgeStoreProvider>
