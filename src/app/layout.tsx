@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Provider from "@/components/Provider";
 // import Footer from "@/components/Footer";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import { Suspense } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -58,9 +59,13 @@ export default function RootLayout({
       <body className={`${inter.className} ${cinzel.variable} ${faunaOne.variable} bg-accent`}>
         <Provider>
           <EdgeStoreProvider>
-            <Header />
+            <Suspense fallback={<h1>Loading...</h1>}>
+              <Header />
+            </Suspense>
             <Toaster />
-            {children}
+            <Suspense fallback={<h1>Loading...</h1>}>
+              {children}
+            </Suspense >
             {/* <Footer2 /> */}
             {/* <Footer /> */}
           </EdgeStoreProvider>

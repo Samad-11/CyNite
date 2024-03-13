@@ -4,7 +4,6 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "../../server";
 import { participants } from "@prisma/client";
 import { transporter } from "./transporter";
-import { Elsie_Swash_Caps } from "next/font/google";
 
 
 
@@ -303,11 +302,13 @@ export async function getAllTest(verify = '', event = '', last24hours = '') {
         return data
     }
     if (verify && event) {
-        console.log('both');
         const isTransactionVerify = verify == 'true' ? true : false
         const data = await prisma.participants.findMany({
             where: {
                 event, isTransactionVerify
+            },
+            orderBy: {
+                id: "desc"
             }
         })
         return data;
@@ -316,6 +317,9 @@ export async function getAllTest(verify = '', event = '', last24hours = '') {
         const data = await prisma.participants.findMany({
             where: {
                 isTransactionVerify
+            },
+            orderBy: {
+                id: "desc"
             }
         })
         return data;
@@ -323,11 +327,18 @@ export async function getAllTest(verify = '', event = '', last24hours = '') {
         const data = await prisma.participants.findMany({
             where: {
                 event
+            },
+            orderBy: {
+                id: "desc"
             }
         })
         return data;
     } else {
-        const data = await prisma.participants.findMany({})
+        const data = await prisma.participants.findMany({
+            orderBy: {
+                id: "desc"
+            }
+        })
         return data;
     }
 }

@@ -2,15 +2,13 @@
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import React, { SyntheticEvent, useEffect, useState } from 'react'
+import React, { Suspense, SyntheticEvent, useEffect, useState } from 'react'
 import Sidebar from './Sidebar';
 import Image from 'next/image';
 import jimsLogo from '../../public/logo/finalJimslogo.png'
 
 const Header = () => {
     const pathname = usePathname();
-
-
     const [isDashboard, setisDashboard] = useState(false)
     useEffect(() => {
         pathname.includes('dashboard') ? setisDashboard(true) : setisDashboard(false)
@@ -36,7 +34,8 @@ const Header = () => {
 
 
     return (
-        <>
+        <Suspense fallback={<h1>Loading...</h1>}>
+
             <Sidebar isDashboard={isDashboard} />
             <Link href={'/'} className='z-50  absolute '>
                 <Image src={jimsLogo} alt='jims Logo' width={100} />
@@ -103,8 +102,8 @@ const Header = () => {
                     </li>
                 </ul>
             </div >
+        </Suspense>
 
-        </>
     )
 }
 

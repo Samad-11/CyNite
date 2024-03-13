@@ -3,9 +3,6 @@ import Image from 'next/image'
 import { FaRegClock, FaRegCompass, FaUser } from 'react-icons/fa'
 import Link from 'next/link'
 
-
-import CommingSoornPage from '@/components/CommingSoornPage'
-
 import { events } from '@/lib/events'
 import { games } from '@/lib/games'
 import GameCard from './GameCard'

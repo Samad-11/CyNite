@@ -1,7 +1,6 @@
 'use client'
 import React, { useRef } from 'react'
-import placeholder from '../../public/event/eventPlaceholder.jpg'
-import { useInView, motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import Link from 'next/link';
 const GameCard = ({ name, imageSrc }: { name: string, imageSrc: string }) => {
     const cardRef = useRef(null);

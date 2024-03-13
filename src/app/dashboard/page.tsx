@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Table from './Table'
 import { getAllParticipants, getAllTest } from '@/lib/actions'
 import { participants } from '@prisma/client';
@@ -38,7 +38,9 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
                 {(event || verify) ? (event) ? (event == 'innovision_5') ? "Innovision 5.0" : event.replace("_", " ") : (verify == 'true') ? 'Verified' : 'Unverified' : "All"}
                 &nbsp;#{data?.length}
             </h1>
-            <Table participants={data as participants[]} />
+            <Suspense fallback={<h1>Loading...</h1>}>
+                <Table participants={data as participants[]} />
+            </Suspense>
         </div>
     )
 }
