@@ -148,7 +148,7 @@ export async function toggleVerificationStatus(formData: FormData) {
             html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
             display:flex;justify-content:center;flex-direction:column;align-items:center
             ">
-              <h1>Your registration for event ${updateParticipant.event} ${updateParticipant.subEvent ? updateParticipant.subEvent : ""} is verified successfully</h1>
+              <h1>Your registration for event ${(updateParticipant.event.replace("_", " ")).toUpperCase()} ${updateParticipant.subEvent ? updateParticipant.subEvent.replace("_", " ").toUpperCase() : ""} is verified successfully</h1>
               <div>
               <img src='https://cynet.jimsd.org/logo/enigmaLogo.png' alt='Enigma Logo'  />
               </div>
