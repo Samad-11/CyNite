@@ -10,7 +10,7 @@ import Image from 'next/image'
 const SponsorSection = () => {
     return (
         <section className="events hero min-h-[120vh] bgTransition bg-fixed cursor-default" style={{ backgroundImage: `url(${img.src}) ` }}>
-            <div className="hero-overlay bg-opacity-55"></div>
+            <div className="hero-overlay bg-opacity-80"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">
                     <SectionHeading heading='Our Sponsors' />
