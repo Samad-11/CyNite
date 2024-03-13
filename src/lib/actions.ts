@@ -150,7 +150,7 @@ export async function toggleVerificationStatus(formData: FormData) {
             ">
               <h1>Your registration for event ${(updateParticipant.event.replace("_", " ")).toUpperCase()} ${updateParticipant.subEvent ? updateParticipant.subEvent.replace("_", " ").toUpperCase() : ""} is verified successfully</h1>
               <div>
-              <img src='https://cynet.jimsd.org/logo/mailPhoto.jpeg' alt='Enigma Logo'  />
+              <img src='https://cynet.jimsd.org/mailPhoto.jpeg' alt='Cynet Logo'  />
               </div>
               <h3>Thank you for registering the event at CYNET 2024. We're excited to welcome you to the Biggest IT Fest at JIMS, Vasant Kunj. Get ready to dive into the digital cosmos and showcase your skills in the METAVERSE! For any further assistance, feel free to reach out.
               </h3>
