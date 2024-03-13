@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from './Table'
-import { getAllParticipants } from '@/lib/actions'
+import { getAllParticipants, getAllTest } from '@/lib/actions'
 import { participants } from '@prisma/client';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
@@ -24,10 +24,10 @@ const DashboardPage = async ({ searchParams }: { searchParams: { verified: strin
         }
 
     }
-    const data = await getAllParticipants(searchParams.verified, searchParams.event, searchParams.last24hours);
+    const data = await getAllTest(searchParams.verified, searchParams.event, searchParams.last24hours);
+
     const verify = searchParams.verified ? searchParams.verified : '';
     const event = searchParams.event ? searchParams.event : '';
-
     return (
         <div className='p-10 faunaOne'>
             <header className='mb-5'>

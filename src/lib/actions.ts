@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "../../server";
 import { participants } from "@prisma/client";
 import { transporter } from "./transporter";
+import { Elsie_Swash_Caps } from "next/font/google";
 
 
 
@@ -283,4 +284,50 @@ export async function registerParticipant(formData: FormData) {
         return { message: "error", ok: false }
     }
 
+}
+
+export async function getAllTest(verify = '', event = '', last24hours = '') {
+    if (last24hours == 'true') {
+        const a = new Date()
+        const d = new Date(a.getTime() - 86400000)
+        const data = await prisma.participants.findMany({
+            where: {
+                createdAt: {
+                    gt: d
+                }
+            },
+            orderBy: {
+                id: "desc"
+            }
+        })
+        return data
+    }
+    if (verify && event) {
+        console.log('both');
+        const isTransactionVerify = verify == 'true' ? true : false
+        const data = await prisma.participants.findMany({
+            where: {
+                event, isTransactionVerify
+            }
+        })
+        return data;
+    } else if (verify) {
+        const isTransactionVerify = verify == 'true' ? true : false
+        const data = await prisma.participants.findMany({
+            where: {
+                isTransactionVerify
+            }
+        })
+        return data;
+    } else if (event) {
+        const data = await prisma.participants.findMany({
+            where: {
+                event
+            }
+        })
+        return data;
+    } else {
+        const data = await prisma.participants.findMany({})
+        return data;
+    }
 }

@@ -81,7 +81,7 @@ export const games = [
             "13th - 16th - 0 point."
         ],
         imageSrc: bgmiImage.src,
-        timing: '11:00 Am'
+        timing: '10:00 Am'
     },
     {
         name: 'tekken 7',
@@ -166,7 +166,7 @@ export const games = [
         ],
         pointSystem: [''], // violation
         imageSrc: valorantImage.src,
-        timing: '11:00 Am'
+        timing: '10:00 Am'
     }
 ]
 
