@@ -53,7 +53,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Mate</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
-                        {/* <th></th> */}
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,8 +69,8 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                             <label>
                                                 <form action={toggleVerificationStatus} id='form' className='flex max-md:flex-col gap-2 items-center justify-start'>
                                                     <input type="checkbox" className="checkbox" defaultChecked={participant.isTransactionVerify} name='isVerify' />
-                                                    {/* <input type="hidden" name="participant" value={participant.id} />
-                                                    <UpdateButton /> */}
+                                                    <input type="hidden" name="participant" value={participant.id} />
+                                                    <UpdateButton />
                                                 </form>
                                             </label>
                                         </label>
@@ -171,16 +171,16 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                             </>
                                         }
                                     </td>
-                                    {/* <td>
+                                    <td>
                                         <button
                                             className="btn"
                                             onClick={() => {
                                                 if (document) {
-                                                    (document.getElementById(participant.id) as HTMLFormElement).showModal();
+                                                    (document.getElementById(participant.id + 'delete') as HTMLFormElement).showModal();
                                                 }
                                             }}
                                         >Delete</button>
-                                        <dialog id={participant.id} className="modal">
+                                        <dialog id={participant.id + 'delete'} className="modal">
                                             <div className="modal-box">
                                                 <h3 className="font-bold text-lg">Alert</h3>
                                                 <p className="py-4">Do you really want to remove <span className='font-bold'> {participant.name}</span> from list</p>
@@ -200,7 +200,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                                                 </div>
                                             </div>
                                         </dialog>
-                                    </td> */}
+                                    </td>
                                 </tr>
                             )
                         }
@@ -223,7 +223,7 @@ const Table = ({ participants }: { participants: participants[] }) => {
                         <th>Mate</th>
                         <th>Transaction Id</th>
                         <th className=''>Receipt</th>
-                        {/* <th></th> */}
+                        <th></th>
                     </tr>
                 </tfoot>
 
