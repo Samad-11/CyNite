@@ -188,7 +188,6 @@ export async function toggleVerificationStatus(formData: FormData) {
               <h2 style="text-align:center">Date : March 15th, 2024</h2>
             </main>`
         }
-        // <img src='https://cynet.jimsd.org/lucky7.jpeg' alt='Lucky 7'  />
 
 
         if (isVerify) {
@@ -203,7 +202,6 @@ export async function toggleVerificationStatus(formData: FormData) {
                 })
             })
         }
-
         revalidatePath("/")
     } catch (error) {
         console.log(error);
