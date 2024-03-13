@@ -5,6 +5,7 @@ import img from '../../public/prallax3.gif'
 import { IoHome } from 'react-icons/io5'
 import { LuGalleryHorizontalEnd, LuMessagesSquare } from 'react-icons/lu'
 import { BsPatchQuestion } from 'react-icons/bs'
+import { MdAppRegistration } from 'react-icons/md'
 
 const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
     const [isSideOpen, setIsSideOpen] = useState(false)
@@ -17,6 +18,11 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
             href: "/",
             label: "home",
             icon: <IoHome />
+        },
+        {
+            href: "/registration",
+            label: "registration",
+            icon: <MdAppRegistration size={55} />
         },
         {
             href: "/gallery",
