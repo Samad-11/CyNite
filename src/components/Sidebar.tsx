@@ -22,7 +22,7 @@ const Sidebar = ({ isDashboard }: { isDashboard: boolean }) => {
         {
             href: "/registration",
             label: "registration",
-            icon: <MdAppRegistration size={55} />
+            icon: <MdAppRegistration />
         },
         {
             href: "/gallery",
