@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "../../server";
 import { participants } from "@prisma/client";
 import { transporter } from "./transporter";
+import { transporter2 } from './transporter2'
 
 
 
@@ -170,38 +171,38 @@ export async function toggleVerificationStatus(formData: FormData) {
             })
         }
 
-        const mailOptions2 = {
-            from: process.env.GMAIL_USER,
-            to: [updateParticipant.email
-            ],
-            subject: `Coming to Cynet?`.toLocaleUpperCase(),
-            // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
-            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
-            display:flex;justify-content:center;flex-direction:column;align-items:center
-            ">
-              <h1>Don't miss out the chance of playing our most exciting game where you can win big amount </h1>
-              <div>
-              <img src='https://cynet.jimsd.org/lucky7.jpeg' alt='LUCKY 7'  />
-              </div>
-              <h3 style="text-align:center">LUCKY 7 stall at JIMS VK
-              </h3>
-              <h2 style="text-align:center">Date : March 15th, 2024</h2>
-            </main>`
-        }
+        // const mailOptions2 = {
+        //     from: process.env.GMAIL_USER_LUCKY,
+        //     to: [updateParticipant.email
+        //     ],
+        //     subject: `Coming to Cynet?`.toLocaleUpperCase(),
+        //     // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
+        //     html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
+        //     display:flex;justify-content:center;flex-direction:column;align-items:center
+        //     ">
+        //       <h1>Don't miss out the chance of playing our most exciting game where you can win big amount </h1>
+        //       <div>
+        //       <img src='https://cynet.jimsd.org/lucky7.jpeg' alt='LUCKY 7'  />
+        //       </div>
+        //       <h3 style="text-align:center">LUCKY 7 stall at JIMS VK
+        //       </h3>
+        //       <h2 style="text-align:center">Date : March 15th, 2024</h2>
+        //     </main>`
+        // }
 
 
-        if (isVerify) {
-            await new Promise((resolve, reject) => {
-                transporter.sendMail(mailOptions2, (err, info) => {
-                    if (err) {
-                        console.log(err);
-                        reject(err)
-                    } else {
-                        resolve(info)
-                    }
-                })
-            })
-        }
+        // if (isVerify) {
+        //     await new Promise((resolve, reject) => {
+        //         transporter2.sendMail(mailOptions2, (err, info) => {
+        //             if (err) {
+        //                 console.log(err);
+        //                 reject(err)
+        //             } else {
+        //                 resolve(info)
+        //             }
+        //         })
+        //     })
+        // }
         revalidatePath("/")
     } catch (error) {
         console.log(error);
