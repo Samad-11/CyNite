@@ -175,19 +175,52 @@ export async function toggleVerificationStatus(formData: FormData) {
             from: process.env.GMAIL_USER_LUCKY,
             to: [updateParticipant.email
             ],
-            subject: `Coming to Cynet?`.toLocaleUpperCase(),
+            subject: `${updateParticipant.name} Are You Coming to Cynet?`.toLocaleUpperCase(),
             // text: `${name} registered in ${event} ${subEvent ? `-${subEvent}` : ''}`,
-            html: `<main style="background:black;height:100vh;width:100vw;overflow:hidden;color:white;
-            display:flex;justify-content:center;flex-direction:column;align-items:center
-            ">
-              <h1>Don't miss out the chance of playing our most exciting game where you can win big amount </h1>
-              <div>
-              <img src='https://cynet.jimsd.org/lucky7.jpeg' alt='LUCKY 7'  />
-              </div>
-              <h3 style="text-align:center">LUCKY 7 stall at JIMS VK
-              </h3>
-              <h2 style="text-align:center">Date : March 15th, 2024</h2>
-            </main>`
+            html: `<div>
+            <h1 style="text-align: left;">Don't miss out the chance of playing our most exciting game where you can win big.
+              <br>
+            </h1>
+            <table style="height: 347px; width: 103.247%; border-collapse: collapse; float: left;">
+              <tbody>
+                <tr style="height: 17px;">
+                  <td style="width: 33.3333%; height: 17px;">
+                    <br>
+                  </td>
+                  <td style="width: 33.3333%; height: 17px;">
+                    <br>
+                  </td>
+                  <td style="width: 33.3333%; height: 17px;">
+                    <br>
+                  </td>
+                </tr>
+                <tr style="height: 313px;">
+                  <td style="width: 33.3333%; height: 313px;">
+                    <br>
+                  </td>
+                  <td style="width: 33.3333%; height: 313px;">
+                    <h1>
+                      <img src="https://cynet.jimsd.org/lucky7.jpeg" alt="Lucky 7" width="320" >
+                    </h1>
+                  </td>
+                  <td style="width: 33.3333%; height: 313px;">
+                    <br>
+                  </td>
+                </tr>
+                <tr style="height: 17px;">
+                  <td style="width: 33.3333%; height: 17px;">
+                    <br>
+                  </td>
+                  <td style="width: 33.3333%; height: 17px;">
+                    <h3>LUCKY 7 stall at JIMS VK</h3>
+                    <h2>Date : March 15th, 2024</h2>
+                  </td>
+                  <td style="width: 33.3333%; height: 17px;">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          `
         }
 
 
