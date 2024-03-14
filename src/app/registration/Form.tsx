@@ -220,10 +220,15 @@ const Form = () => {
                     className=" select select-bordered border-[5px] w-full  bg-transparent 
                 max-md:text-xs mb-3">
                     <option disabled value={""}>Select Game</option>
-                    <option hidden={dateNow > uptoDate} value={'bgmi'}>BGMI</option>
+                    {
+                        dateNow < uptoDate &&
+                        <>
+                            <option value={'bgmi'}>BGMI</option>
+                            <option hidden={dateNow > uptoDate} value={'valorant'}>Valorant</option>
+                        </>
+                    }
                     <option value={'tekken_7'}>Tekken 7</option>
                     <option value={"stumble_guys"}>Stumble Guys</option>
-                    <option hidden={dateNow > uptoDate} value={'valorant'}>Valorant</option>
                 </select>
 
             }
