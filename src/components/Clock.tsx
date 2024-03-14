@@ -2,9 +2,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Countdown from './Countdown';
+import { log } from 'console';
 
 const Clock = () => {
     const dateNow = new Date();
+    console.log('====================================');
+    console.log(dateNow);
+
     const eventDate = new Date('March 15,2024, 10:00:00');
 
 
