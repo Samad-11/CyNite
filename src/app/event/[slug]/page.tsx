@@ -99,7 +99,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 <div className="registerbtn lg:hidden flex justify-center w-full mb-10">
                                     <Link href={`/registration`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
                                 </div>
-                                <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{event.name}</h1>
+                                <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{event.name}
+                                    <br />
+                                    {
+                                        (event.name.toLowerCase() == 'quiz technopedia' ? <span className='text-red-700'> Registration Closed</span> : '')
+                                    }
+                                </h1>
                                 <hr className='border-[3px] border-neutral-content rounded-full' />
                                 <div className="description my-5">
                                     {/* <h1 className='text-3xl font-extrabold my-3 faunaOne '></h1> */}

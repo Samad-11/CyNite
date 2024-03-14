@@ -205,7 +205,7 @@ const Form = () => {
                 <option className='text-primary-content' value={'tezar_heist'}>Tezar Heist</option>
                 <option className='text-primary-content' value={'ui_universe'}>UI Universe</option>
                 <option className='text-primary-content' value={"arcade_arena"}>Arcade Arena</option>
-                <option className='text-primary-content' value={'quiz_technopedia'}>Quiz Technopedia</option>
+                {/* <option className='text-primary-content' value={'quiz_technopedia'}>Quiz Technopedia</option> */}
                 <option className='text-primary-content' value={'innovision_5'}>Innovision 5.0</option>
                 <option className='text-primary-content' value={'code_kalpana'}>Code Kalpana</option>
                 <option className='text-primary-content' value={'clipclash'}>Clipclash</option>
