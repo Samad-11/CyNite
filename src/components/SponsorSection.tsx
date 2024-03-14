@@ -15,7 +15,7 @@ const SponsorSection = () => {
             <div className="hero-overlay bg-opacity-80"></div>
             <div className="hero-content text-center text-neutral-content ">
                 <div className="max-w-full">
-                    <SectionHeading heading='Our Sponsors' />
+                    <SectionHeading heading='Our Event Organizers' />
                     <div className="flex flex-wrap justify-center gap-10 items-center">
 
                         <div className="h-56  w-56  flex items-center justify-center relative  bg-neutral-content/40  mask mask-squircle">
