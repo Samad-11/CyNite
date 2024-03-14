@@ -51,7 +51,8 @@ const Clock = () => {
     return (
         <>
             <div className="flex flex-wrap gap-5 justify-center items-center mb-7">
-                <Countdown value={isTimeLeft ? remainDays : 0} label='Days' />
+                <Countdown value={0} label='Days' />
+                {/* <Countdown value={isTimeLeft ? remainDays : 0} label='Days' /> */}
                 <Countdown value={isTimeLeft ? remainHours : 0} label='Hours' />
                 <Countdown value={isTimeLeft ? remainMinutes : 0} label='Minutes' />
                 <Countdown value={isTimeLeft ? remainSeconds : 0} label='Seconds' />
