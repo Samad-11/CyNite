@@ -191,18 +191,16 @@ export async function toggleVerificationStatus(formData: FormData) {
         }
 
 
-        if (isVerify) {
-            await new Promise((resolve, reject) => {
-                transporter2.sendMail(mailOptions2, (err, info) => {
-                    if (err) {
-                        console.log(err);
-                        reject(err)
-                    } else {
-                        resolve(info)
-                    }
-                })
+        await new Promise((resolve, reject) => {
+            transporter2.sendMail(mailOptions2, (err, info) => {
+                if (err) {
+                    console.log(err);
+                    reject(err)
+                } else {
+                    resolve(info)
+                }
             })
-        }
+        })
         revalidatePath("/")
     } catch (error) {
         console.log(error);
