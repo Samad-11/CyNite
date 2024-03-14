@@ -5,6 +5,8 @@ import SponsorCarousel from './SponsorCarousel'
 import s1 from '../../public/sponsor/landmark2.png'
 import s2 from '../../public/sponsor/fresca2.png'
 import s3 from '../../public/sponsor/sweep.png'
+import s4 from '../../public/sponsor/dp.png'
+import s5 from '../../public/sponsor/chunav.png'
 import Image from 'next/image'
 
 const SponsorSection = () => {
@@ -25,6 +27,12 @@ const SponsorSection = () => {
                         </div>
                         <div className="h-56  w-56 flex items-center justify-center  bg-neutral-content/40  mask mask-squircle relative ">
                             <Image src={s3} alt='Sweep' fill className={'object-contain '} />
+                        </div>
+                        <div className="h-56  w-56 flex items-center justify-center  bg-neutral-content/40  mask mask-squircle relative ">
+                            <Image src={s4} alt='Sweep' fill className={'object-contain '} />
+                        </div>
+                        <div className="h-56  w-56 flex items-center justify-center  bg-neutral-content/40  mask mask-squircle relative ">
+                            <Image src={s5} alt='Sweep' fill className={'object-contain '} />
                         </div>
                     </div>
                     {/* <div className="flex gap-8 gap-x-16 flex-wrap justify-center items-center">

@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import qr from "../../../public/qr/qr3.jpeg"
+import qr from "../../../public/qr/testQR2.jpeg"
 import Image from 'next/image'
 import { registerParticipant } from '@/lib/actions'
 import toast from 'react-hot-toast'
