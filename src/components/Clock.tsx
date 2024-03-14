@@ -4,18 +4,16 @@ import React, { useEffect, useState } from 'react'
 import Countdown from './Countdown';
 
 const Clock = () => {
-
-
-
     const dateNow = new Date();
-    const eventDate = new Date('March 15,2024, 10:00:00')
+    const eventDate = new Date('March 15,2024, 10:00:00');
+
     const [isTimeLeft, setIsTimeLeft] = useState(true)
     //remain days
     // const remainDays = eventDate.getDate() - dateNow.getDate();
 
-    const [remainDays, setRemainDays] = useState<number>(eventDate.getDate() - dateNow.getDate() - 1)
+    const [remainDays, setRemainDays] = useState<number>(eventDate.getDate() - dateNow.getDate())
     //remain hours of the current day
-    const [remainHours, setRemainHours] = useState<number>(24 - dateNow.getHours() + 1);
+    const [remainHours, setRemainHours] = useState<number>(24 - dateNow.getHours());
     // remain minutes in current hour
     const [remainMinutes, setRemainMinutes] = useState<number>(60 - dateNow.getMinutes());
     //remaining seconds in current minutes
@@ -30,7 +28,6 @@ const Clock = () => {
 
 
         const timer = setTimeout(() => {
-
             setSeconds(prev => {
                 if (prev == 0) {
                     return 60;
@@ -38,8 +35,8 @@ const Clock = () => {
                     return --prev
                 }
             })
-            setRemainDays(eventDate.getDate() - dateNow.getDate() - 1)
-            setRemainHours(24 - dateNow.getHours() + 1)
+            setRemainDays(eventDate.getDate() - dateNow.getDate())
+            setRemainHours(24 - dateNow.getHours() - 14 + 5)
             setRemainMinutes(60 - dateNow.getMinutes())
             setRemainSeconds(60 - dateNow.getSeconds())
             setIsTimeLeft(eventDate > dateNow)
