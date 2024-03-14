@@ -14,7 +14,7 @@ const Clock = () => {
 
     const [remainDays, setRemainDays] = useState<number>(eventDate.getDate() - dateNow.getDate())
     //remain hours of the current day
-    const [remainHours, setRemainHours] = useState<number>(24 - dateNow.getHours() - 18);
+    const [remainHours, setRemainHours] = useState<number>(24 - dateNow.getHours());
     // remain minutes in current hour
     const [remainMinutes, setRemainMinutes] = useState<number>(60 - dateNow.getMinutes());
     //remaining seconds in current minutes
@@ -37,7 +37,7 @@ const Clock = () => {
                 }
             })
             setRemainDays(eventDate.getDate() - dateNow.getDate())
-            setRemainHours(24 - dateNow.getHours() - 18)
+            setRemainHours(24 - dateNow.getHours())
             setRemainMinutes(60 - dateNow.getMinutes())
             setRemainSeconds(60 - dateNow.getSeconds())
             setIsTimeLeft(eventDate > dateNow)
