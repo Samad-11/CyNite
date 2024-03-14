@@ -9,6 +9,8 @@ import FormSubmitButton from './FormSubmitButton'
 
 
 const Form = () => {
+    const uptoDate = new Date('March 14, 2024 07:59:00')
+    const dateNow = new Date();
     const { edgestore } = useEdgeStore();
     async function uploadImage(file: File) {
         if (file) {
@@ -218,10 +220,10 @@ const Form = () => {
                     className=" select select-bordered border-[5px] w-full  bg-transparent 
                 max-md:text-xs mb-3">
                     <option disabled value={""}>Select Game</option>
-                    <option value={'bgmi'}>BGMI</option>
+                    <option hidden={dateNow > uptoDate} value={'bgmi'}>BGMI</option>
                     <option value={'tekken_7'}>Tekken 7</option>
                     <option value={"stumble_guys"}>Stumble Guys</option>
-                    <option value={'valorant'}>Valorant</option>
+                    <option hidden={dateNow > uptoDate} value={'valorant'}>Valorant</option>
                 </select>
 
             }

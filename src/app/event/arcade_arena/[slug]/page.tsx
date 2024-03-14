@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { redirect } from 'next/navigation'
 import { games } from '@/lib/games'
+import { Span } from 'next/dist/trace'
 
 
 
@@ -20,6 +21,8 @@ export async function generateMetadata(
 }
 
 const page = ({ params }: { params: { slug: string } }) => {
+    const uptoDate = new Date('March 14, 2024 07:59:00')
+    const dateNow = new Date()
     const gameName = params.slug
 
     let game = games[0]
@@ -72,7 +75,9 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <Link href={'/registration'} className="registerbtn lg:hidden flex justify-center w-full mb-10">
                                 <button type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</button>
                             </Link>
-                            <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{game.name}</h1>
+                            <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{game.name}
+                                {((game.name.toLowerCase() == 'bgmi' || game.name.toLowerCase() == 'valorant') && (dateNow > uptoDate)) ? <span className='text-red-700'> Registration Closed</span> : ""}
+                            </h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
                             <div className="description my-5">
                                 {
@@ -201,7 +206,6 @@ const page = ({ params }: { params: { slug: string } }) => {
                                                 {(game.name == 'BGMI' || game.name == 'valorant') ? '14th March 2024, Online' :
                                                     '15th March 2024'
                                                 }
-
                                             </span>
                                         </div>
                                     </div>
