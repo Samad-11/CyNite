@@ -3,9 +3,10 @@ import React from 'react'
 
 const HeroBounceText = () => {
     const dateNow = new Date().getTime();
-    const eventDate = new Date('March 15,2024, 7:00:00').getTime();
+    const eventDate = new Date('March 15,2024, 8:45:00').getTime();
+    let distance = eventDate - dateNow
 
-    if (dateNow > eventDate) {
+    if (distance < 0) {
         return (
             <Link href={'#events'} className='flex justify-center items-center'>
                 <h1 className='flex justify-center items-center gap-3 animate-bounce  w-fit'>

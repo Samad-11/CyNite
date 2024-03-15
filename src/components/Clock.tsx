@@ -8,7 +8,7 @@ const Clock = () => {
     const dateNow = new Date();
     const eventDate = new Date('March 15,2024, 7:00:00');
     // Set the date we're counting down to
-    var countDownDate = new Date('March 15,2024, 07:00:00').getTime();
+    var countDownDate = new Date('March 15,2024, 08:45:00').getTime();
     const [remainDays, setRemainDays] = useState<number>(0)
     //remain hours of the current day
     const [remainHours, setRemainHours] = useState<number>(0);

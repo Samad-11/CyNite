@@ -25,7 +25,7 @@ export async function generateMetadata(
 // }
 const page = ({ params }: { params: { slug: string } }) => {
     const d = new Date().getTime()
-    const uptoDateAll = new Date('March 15, 2024 07:00:00').getTime()
+    const uptoDateAll = new Date('March 15, 2024 85:45:00').getTime()
     const eventName = params.slug
     let event = {
         name: 'tezar heist',

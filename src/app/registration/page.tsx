@@ -7,6 +7,7 @@ import { FaLongArrowAltDown } from 'react-icons/fa'
 import Link from 'next/link'
 import Footer2 from '@/components/Footer2'
 import { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 
 
 export const metadata: Metadata = {
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
     description: "Register here to participate in CYNET"
 }
 const Registration = () => {
+    const endTime = new Date("March 15, 2024 17:00:00").getTime()
+    const nowTime = new Date().getTime()
+
+
     return (
         <>
             <div className='hero min-h-screen w-screen bg-fixed bg-cover faunaOne'
@@ -26,7 +31,10 @@ const Registration = () => {
                             <Image src={icon} alt='icons' fill />
                             <div className=" w-[60%] h-[60%]  absolute 
                         top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-center">
-                                <p className='cinzel text-2xl md:text-5xl font-black text-base-200 text-center'>Register now for the greatest IT Fest of the Season</p>
+                                <p className='cinzel text-2xl md:text-5xl font-black text-base-200 text-center'>
+
+                                    {(endTime < nowTime) ? "Wait for the next season" : 'Register now for the greatest IT Fest of the Season'}
+                                </p>
                             </div>
                             <div className='absolute bottom-[15%] left-[35%]'>
                                 <Link href={'#formSection'} className='flex md:hidden justify-center items-center animate-bounce text-2xl font-bold cinzel'>Below <FaLongArrowAltDown /></Link>
@@ -46,5 +54,6 @@ const Registration = () => {
         </>
     )
 }
+
 
 export default Registration

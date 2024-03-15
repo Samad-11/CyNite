@@ -186,7 +186,7 @@ const Form = () => {
 
 
     const d = new Date().getTime()
-    const endDate = new Date('March 15,2024 7:00:00').getTime()
+    const endDate = new Date('March 15,2024 8:45:00').getTime()
 
     if (d > endDate) {
         return (

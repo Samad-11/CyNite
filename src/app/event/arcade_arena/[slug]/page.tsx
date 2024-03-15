@@ -23,7 +23,7 @@ export async function generateMetadata(
 const page = ({ params }: { params: { slug: string } }) => {
 
     const uptoDate = new Date('March 14, 2024 07:59:00')
-    const uptoDateAll = new Date('March 15, 2024 07:00:00').getTime()
+    const uptoDateAll = new Date('March 15, 2024 85:45:00').getTime()
     const dateNow = new Date()
     const d = dateNow.getTime()
     const gameName = params.slug
