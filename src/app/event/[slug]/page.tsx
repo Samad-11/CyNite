@@ -24,6 +24,8 @@ export async function generateMetadata(
 //     description: "Here's our IT department, the engine driving our digital journey. With expertise in every byte, we're the force behind seamless operations, innovation, and technological advancement."
 // }
 const page = ({ params }: { params: { slug: string } }) => {
+    const d = new Date().getTime()
+    const uptoDateAll = new Date('March 15, 2024 07:00:00').getTime()
     const eventName = params.slug
     let event = {
         name: 'tezar heist',
@@ -103,6 +105,10 @@ const page = ({ params }: { params: { slug: string } }) => {
                                     <br />
                                     {
                                         (event.name.toLowerCase() == 'quiz technopedia' ? <span className='text-red-700'> Registration Closed</span> : '')
+                                    }
+
+                                    {
+                                        (d > uptoDateAll) ? <span className='text-red-700'> Registration Closed</span> : ''
                                     }
                                 </h1>
                                 <hr className='border-[3px] border-neutral-content rounded-full' />

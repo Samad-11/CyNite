@@ -21,8 +21,11 @@ export async function generateMetadata(
 }
 
 const page = ({ params }: { params: { slug: string } }) => {
+
     const uptoDate = new Date('March 14, 2024 07:59:00')
+    const uptoDateAll = new Date('March 15, 2024 07:00:00').getTime()
     const dateNow = new Date()
+    const d = dateNow.getTime()
     const gameName = params.slug
 
     let game = games[0]
@@ -77,6 +80,10 @@ const page = ({ params }: { params: { slug: string } }) => {
                             </Link>
                             <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{game.name}
                                 {((game.name.toLowerCase() == 'bgmi' || game.name.toLowerCase() == 'valorant') && (dateNow > uptoDate)) ? <span className='text-red-700'> Registration Closed</span> : ""}
+
+                                {
+                                    (d > uptoDateAll) ? <span className='text-red-700'> Registration Closed</span> : ''
+                                }
                             </h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
                             <div className="description my-5">

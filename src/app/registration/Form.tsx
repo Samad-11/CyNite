@@ -185,10 +185,10 @@ const Form = () => {
 
 
 
-    const d = Date.now()
-    const endDate = new Date('March 15,2024 6:30:00')
+    const d = new Date().getTime()
+    const endDate = new Date('March 15,2024 7:00:00').getTime()
 
-    if (d > endDate.getTime()) {
+    if (d > endDate) {
         return (
             <div className='text-2xl faunaOne text-center leading-9 text-red-400'>
                 <h2>Online Registration is Closed</h2>
