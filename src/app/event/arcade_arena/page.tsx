@@ -55,7 +55,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                     <div className="grid grid-cols-10  px-8 py-5 text-neutral-content">
                         <div className="col-span-10 lg:col-span-7 border-r-4 border-x-neutral-content">
                             <div className="registerbtn lg:hidden flex justify-center w-full mb-10">
-                                <Link href={`/registration`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
+                                <Link href={``} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Closed</Link>
                             </div>
                             <h1 className='text-2xl lg:text-4xl cinzel font-extrabold tracking-widest text-primary'>{event.name}</h1>
                             <hr className='border-[3px] border-neutral-content rounded-full' />
@@ -78,12 +78,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                                 </div>
                             </div>
                             <div className="registerbtn max-lg:hidden flex justify-center w-full mb-10">
-                                <Link href={`/registration?`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
+                                <Link href={`?`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Closed</Link>
                             </div>
                         </div>
                         <div className="col-span-10 lg:col-span-3 pl-3">
                             <div className="registerbtn flex justify-center w-full mb-10">
-                                <Link href={`/registration`} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Register</Link>
+                                <Link href={``} type="button" className='btn animate-pulse text-neutral text-lg shadow-accent shadow-lg bg-neutral-content border-accent border-2 w-[90%] cinzel tracking-wide font-bold hover:bg-accent transition-all duration-300'>Closed</Link>
                             </div>
                             <div className="flex flex-col gap-7 items-center justify-center w-full">
                                 <div className='w-[90%] bg-accent shadow-md shadow-accent brightness-150 h-36 rounded-box p-4
