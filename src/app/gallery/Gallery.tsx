@@ -80,6 +80,7 @@ const Gallery = () => {
 
     ]
     const col2 = [
+        { image: simarPublicManager, name: 'Simarpreet kaur', desig: 'Manager Public Relation ' },
         { image: amritavice, name: 'Amrita Kumari', desig: 'Vice President' },
         { image: img6, name: 'Abdus Samad', desig: 'Manager Developer' },
         { image: vk2VicePresident, name: 'Priyanshu Maheshwari', desig: 'Vice President' },
@@ -90,7 +91,6 @@ const Gallery = () => {
         { image: shivamDeveloperAssDir, name: 'Shivam Kumar', desig: 'Assistant Director Developer ' },
 
         { image: img11, name: 'Shibani Badola', desig: 'Manager Content' },
-        { image: simarPublicManager, name: 'Simarpreet kaur', desig: 'Manager Public Relation ' },
 
         { image: rachelSocialManager, name: 'Rachel Arora', desig: 'Manager Social Media ' },
 
