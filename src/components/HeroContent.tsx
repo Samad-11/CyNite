@@ -29,9 +29,10 @@ const HeroContent = () => {
                     </p>
                 </div> */}
                 {/*  */}
-                <HeroBounceText />
+                {/* <HeroBounceText /> */}
+
                 {/* <HeroRegisterButton /> */}
-                <Clock />
+                { /* <Clock /> */}
                 <HeroEnigmaLogo2 />
             </div>
             <HeroSocialLinks />

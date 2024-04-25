@@ -17,7 +17,7 @@ export default function Home() {
 
       <ScrollYProgress />
       <Hero />
-      <EventSection />
+       {/* <EventSection /> */}
       <AboutSection />
       <SponsorSection />
       <CoordinatorSection />
